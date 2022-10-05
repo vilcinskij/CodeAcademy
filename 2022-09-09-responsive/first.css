@@ -1,0 +1,16 @@
+/* DESKTOP FIRST pavyzdys */
+@media screen and (max-width: 799px) {
+}
+@media screen and (max-width: 499px) {
+}
+@media screen and (max-width: 299px) {
+}
+
+
+/* MOBILE first pavyzdys */
+@media screen and (min-width: 300px) {
+}
+@media screen and (min-width: 500px) {
+}
+@media screen and (min-width: 800px) {
+}

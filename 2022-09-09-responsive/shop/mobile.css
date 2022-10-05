@@ -1,0 +1,77 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+body {
+    margin: 0;
+}
+
+.contacts {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    display: grid;
+    gap: 30px
+}
+
+.contacts .shops-list {
+    display: grid;
+    gap: 15px;
+}
+
+.contact-address .shops-list .shop-item .shop-item-description {
+    padding: 15px;
+    box-shadow: 1px 1px 5px gray;
+}
+
+iframe {
+    height: 100%;
+    width: 100%;
+}
+
+.contact-map {
+    order: -5;
+    height: 400px
+}
+
+/* MOBILE first pavyzdys */
+@media screen and (min-width: 450px) {
+    .contacts .shops-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (min-width: 600px) {
+    .contacts {
+        grid-template-columns: 1fr 1fr;
+    }
+    .contact-map {
+        order: 0;
+        height: auto;
+    }
+    .contacts .shops-list {
+        grid-template-columns: 1fr;
+    }
+
+}
+@media screen and (min-width: 800px) {
+    .contacts .shops-list {
+        grid-template-columns: 1fr 1fr;
+    }
+    .contacts {
+        grid-template-columns: 6fr 4fr;
+    }
+
+}
+
+@media screen and (min-width: 800px) {
+    .contacts {
+        grid-template-columns: 1fr 1fr;
+    }
+}

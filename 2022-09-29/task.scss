@@ -1,0 +1,15 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+}
+
+.max-width {
+    max-width: 900px;
+    margin: auto;
+    .tytle {
+        text-align: center;
+    }
+    .answers {
+        border: 2px dotted black;
+    }
+}

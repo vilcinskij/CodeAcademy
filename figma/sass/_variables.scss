@@ -1,0 +1,11 @@
+$page-max-width: 1160px;
+$main-text-font: "Avenir-Next-Regular";
+$buttons-transition: 0.5s;
+$min-sides-margin: 30px;
+
+$screen-xl: calc($page-max-width + $min-sides-margin * 2);
+$screen-fdb: 1100px;
+$screen-lg: 1000px;
+$screen-xmd: 800px;
+$screen-md: 600px;
+// $screen-sm: 400px;

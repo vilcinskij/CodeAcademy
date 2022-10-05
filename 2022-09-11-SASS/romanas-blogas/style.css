@@ -1,0 +1,128 @@
+@charset "UTF-8";
+.button,
+a.button {
+  background-color: #d14883;
+  color: #fff;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #d14883;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-bottom: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+body h1 {
+  color: green;
+  background-color: lightblue;
+  border: 5px dashed black;
+  margin: 30px;
+  padding: 30px;
+}
+body .posts-container {
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+body .posts-container .post-wrapper {
+  transition: box-shadow 0.3s;
+  padding: 15px 15px 30px;
+}
+body .posts-container .post-wrapper:hover {
+  box-shadow: 0 2px 5px 3px rgba(0, 0, 0, 0.1);
+}
+body .posts-container .post-wrapper:hover .post-title {
+  color: #d14883;
+  padding-left: 20px;
+  padding-right: 0;
+}
+body .posts-container .post-wrapper .post-title {
+  background-color: #f0f0f0;
+  padding-right: 20px;
+  transition: color 0.5s, padding-left 0.5s, padding-right 0.5s;
+}
+body .posts-container .post-wrapper .image-wrapper img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center 25%;
+     object-position: center 25%;
+}
+body .posts-container p.post-description:first-of-type:before {
+  content: "➵";
+  font-size: 20px;
+  color: var(--color-primary);
+  margin-right: 10px;
+}
+body .posts-container p.post-description:last-of-type:after {
+  content: "<...>";
+  margin-left: 5px;
+}
+
+a.button {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+button:hover,
+a.button:hover {
+  background-color: transparent;
+  color: #d14883;
+}
+
+/*
+
+
+
+
+
+button.secondary,
+a.button.secondary {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+button.secondary:hover,
+a.button.secondary:hover {
+  background-color: transparent;
+  color: var(--color-secondary);
+}
+
+button.outline, 
+a.button.outline {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+button.outline:hover,
+a.button.outline:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+button.outline.secondary,
+a.button.outline.secondary {
+  color: var(--color-secondary);
+}
+
+button.outline.secondary:hover,
+a.button.outline.secondary:hover {
+  background-color: var(--color-secondary);
+}
+
+
+
+
+
+
+*//*# sourceMappingURL=style.css.map */

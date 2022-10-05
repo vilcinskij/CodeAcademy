@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: green;
+    font-size: 25px;
+    color: white;
+    padding: 20px;
+    width: 70%;
+}
+
+@media screen and (max-width: 799px) {
+    .container {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:499px) {
+    .container {
+        font-size: 16px;
+        background-color: purple;
+    }
+
+}
+
+@media screen and (max-width: 299px) {
+    .container {
+        background-color: pink;
+        color: black;
+    }
+}
+
+.container-mobile {
+    background-color: pink;
+
+}
+
+@media screen and (min-width: 300px) {
+    .container-mobile {
+        background-color: purple;
+        color: white;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .container-mobile {
+        background-color: green;
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .container-mobile {
+        font-size: 25px;
+        width: 70%;
+    }
+}

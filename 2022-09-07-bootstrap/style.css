@@ -1,0 +1,14 @@
+body {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.menu-button {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+}
+
+.carousel-item {
+    height: 500px;
+}
