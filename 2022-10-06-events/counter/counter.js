@@ -1,16 +1,28 @@
 
 let numbers = document.querySelector('#numbers');
+
 let h3element = document.createElement('h3');
-let h3elementDefault = 5
-h3element.textContent = h3elementDefault;
+let h4Element = document.createElement('h4');
+let gradesList = document.createElement('ul');
+
 let buttonPlus = document.createElement('button');
 let buttonMinus = document.createElement('button');
 let resetButton = document.createElement('button');
 let plus2Button = document.createElement('button');
 let minus2Button = document.createElement('button');
 let saveGrade = document.createElement('button');
-let h4Element = document.createElement('h4');
-let gradesList = document.createElement('ul');
+let resetAllGradesButton = document.createElement('button');
+
+let gradeInput = document.createElement('input');
+
+gradeInput.type = 'number';
+gradeInput.max = '10';
+gradeInput.min = '1';
+gradeInput.value = '8';
+
+
+let h3elementDefault = 5
+h3element.textContent = h3elementDefault;
 
 
 buttonPlus.textContent = '+';
@@ -20,9 +32,10 @@ plus2Button.textContent = '+2';
 minus2Button.textContent = '-2';
 h4Element.textContent = 'Balai:';
 saveGrade.textContent = 'Įrašyti balą';
+resetAllGradesButton.textContent = 'Pašalinti įrašus'
 
-
-numbers.append(h3element, minus2Button, buttonMinus, buttonPlus, plus2Button, resetButton, saveGrade, h4Element, gradesList);
+numbers.append(gradeInput, h3element, minus2Button, buttonMinus, buttonPlus, plus2Button, resetButton, saveGrade, resetAllGradesButton, h4Element,
+    gradesList);
 
 buttonPlus.addEventListener('click', () => {
     h3element.textContent++;
@@ -73,7 +86,11 @@ minus2Button.addEventListener('click', () => {
 saveGrade.addEventListener('click', () => {
     let gradesListElemet = document.createElement('li');
     gradesListElemet.textContent = h3element.textContent;
-    gradesList.append(gradesListElemet)
+    gradesList.prepend(gradesListElemet);
+
+    gradesListElemet.addEventListener('click', () => {
+        gradesListElemet.remove()
+    })
 })
 
 
