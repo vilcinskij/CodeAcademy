@@ -17,6 +17,7 @@
 
 
 let studentForm = document.querySelector('#student-form');
+let studentList = document.querySelector('.studen-list');
 
 
 studentForm.addEventListener('submit', (event) => {
@@ -34,7 +35,7 @@ studentForm.addEventListener('submit', (event) => {
     // let age = event.target.elements.age.value;
     // let phone = event.target.elements.phone.value;
     // let email = event.target.elements['student-email'].value;
-    
+
 
     let elements = event.target.elements
     let name = elements.name.value;
@@ -44,20 +45,52 @@ studentForm.addEventListener('submit', (event) => {
     let email = elements['student-email'].value;
     let itKnowledge = elements['it-knowledge'].value;
     // let group = document.querySelector('[name="group"]:checked');
-    let group = elements.group.value
+    let group = elements.group.value;
 
-    console.log(group);
+    let studentItem = document.createElement('div');
+    studentItem.classList = 'student-item';
 
-    
-    console.log(name, surname, age, phone, email);
+    let nameElement = document.createElement('p');
+    nameElement.innerHTML = `Name: ${name}`
+
+    let surnameElement = document.createElement('p');
+    surnameElement.innerHTML = `Surname: ${surname}`
+
+    let ageElement = document.createElement('p');
+    ageElement.innerHTML = `Age: ${age}`
+
+    let emailElement = document.createElement('p');
+    emailElement.innerHTML = `Email: ${email}`
+
+    let phoneElement = document.createElement('p');
+    phoneElement.innerHTML = `Phone: ${phone}`
+
+    let itKnowledgeElement = document.createElement('p');
+    itKnowledgeElement.innerHTML = `IT Knowledge: ${itKnowledge}`
+
+    let groupElement = document.createElement('p');
+    groupElement.innerHTML = `Group: ${group}`
 
 
-    let output = `Vardas: ${name}, pavardė: ${surname}, amžius: ${age}, tel. nr.: ${phone}, el. paštas: ${email}, It knowledge: ${itKnowledge}`
+    studentList.prepend(studentItem);
 
-    console.dir(output);
+    studentItem.append(nameElement, surnameElement, ageElement, emailElement, phoneElement, itKnowledgeElement, groupElement)
 
-    document.querySelector('p').textContent = output;
+
+
+
 
     // event.targer.reset();
 })
 
+{/* <div class="studen-list">
+<div class="student-item">
+    <p>Name: John</p>
+    <p>Surname: John</p>
+    <p>DOB: John</p>
+    <p>Phone Nr.: John</p>
+    <p>Email.: John</p>
+    <p>IT knowledge: John</p>
+    <p>Group: John</p>
+</div>
+</div> */}
