@@ -43,12 +43,16 @@ studentForm.addEventListener('submit', (event) => {
     let phone = elements.phone.value;
     let email = elements['student-email'].value;
     let itKnowledge = elements['it-knowledge'].value;
+    // let group = document.querySelector('[name="group"]:checked');
+    let group = elements.group.value
+
+    console.log(group);
 
     
     console.log(name, surname, age, phone, email);
 
 
-    let output = `Vardas: ${name}, pavardė: ${surname}, amžius: ${age}, tel. nr.: ${phone}, el. paštas: ${email}, ${itKnowledge}`
+    let output = `Vardas: ${name}, pavardė: ${surname}, amžius: ${age}, tel. nr.: ${phone}, el. paštas: ${email}, It knowledge: ${itKnowledge}`
 
     console.dir(output);
 
@@ -57,26 +61,3 @@ studentForm.addEventListener('submit', (event) => {
     // event.targer.reset();
 })
 
-// let nameInput = document.createElement('input');
-// let surnameInput = document.createElement('input');
-// let ageInput = document.createElement('input');
-// let phoneInput = document.createElement('input');
-// let emailInput = document.createElement('input');
-// let itKnowledgeInput = document.createElement('input');
-// let groupInput = document.createElement('input');
-// let submitButton = document.createElement('input');
-
-
-// nameInput.type = 'text';
-// nameInput.id = 'name';
-// surnameInput.type = 'text';
-// ageInput.type = 'date';
-// phoneInput.type = 'number';
-// emailInput.type = 'email';
-// itKnowledgeInput.type = 'range';
-// groupInput.type = 'radio';
-// submitButton.type = 'submit';
-
-
-
-// studentForm.append(nameInput, surnameInput, ageInput, phoneInput, emailInput, itKnowledgeInput, groupInput, submitButton);

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <!-- <div class="form-container" id="student-form">
         <form action="" id="student-form">
@@ -17,19 +19,62 @@
 
     <div class="form-container-html" id="student-form">
         <form action="">
-            <input type="text" name="name" id="student-name" placeholder="Enter your name" >
-            <input type="text" name="surname" id="student-surname" placeholder="Enter your surname" >
-            <input type="date" name="age" id="student-age" placeholder="Enter your age" >
-            <input type="number" name="phone" id="student-phone"  placeholder="Enter your phone">
-            <input type="email" name="email" id="student-email"  placeholder="Enter your email" >
-            <input type="range" name="it-knowledge" id="srudent-it-knowledge">
+            <div>
+                <label for="student-name">Vardas:</label>
+                <input type="text" name="name" id="student-name" placeholder="Enter your name">
+            </div>
+            <div>
+                <label for="student-surname">Pavardė:</label>
+                <input type="text" name="surname" id="student-surname" placeholder="Enter your surname">
+            </div>
+            <div>
+                <label for="student-age">Gymimo data:</label>
+                <input type="date" name="age" id="student-age" placeholder="Enter your age">
+            </div>
+            <div>
+                <label for="student-phone">Telefono Nr.:</label>
+                <input type="number" name="phone" id="student-phone" placeholder="Enter your phone">
+            </div>
+            <div>
+                <label for="student-email">El. paštas:</label>
+                <input type="email" name="email" id="student-email" placeholder="Enter your email">
+            </div>
+            <div>
+                <label for="srudent-it-knowledge">IT žinių įvertinimas:</label>
+                <input type="range" name="it-knowledge" id="srudent-it-knowledge" min="1" max="10">
+            </div>
+            <h3>Choise your group</h3>
+            <div>
+                <input type="radio" name="group" id="student-groupe-1" value="feu 1" checked>
+                <label for="student-groupe-1">FEU 1gr.</label>
+            </div>
+            <div>
+                <input type="radio" name="group" id="student-groupe-2" value="feu 2">
+                <label for="student-groupe-2">FEU 2gr.</label>
+            </div>
+            <div>
+                <input type="radio" name="group" id="student-groupe-3" value="feu 3">
+                <label for="student-groupe-3">FEU 3gr.</label>
+            </div>
+            <div>
+                <input type="radio" name="group" id="student-groupe-4" value="feu 4">
+                <label for="student-groupe-4">FEU 4gr.</label>
+            </div>
+            <div>
+                <input type="radio" name="group" id="student-groupe-5" value="feu 5">
+                <label for="student-groupe-5">FEU 5gr.</label>
+            </div>
             <input type="submit" value="Create student">
         </form>
     </div>
-    <p>
+    <div class="studen-list">
+        <div class="student-item">
+            <p>Name: John</p>
+        </div>
+    </div>
 
-    </p>
-    
+
     <script src="contact.js"></script>
 </body>
+
 </html>
