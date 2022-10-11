@@ -17,7 +17,7 @@
 
 
 let studentForm = document.querySelector('#student-form');
-let studentList = document.querySelector('.studen-list');
+let studentList = document.querySelector('.student-list');
 
 
 studentForm.addEventListener('submit', (event) => {
@@ -47,6 +47,16 @@ studentForm.addEventListener('submit', (event) => {
     // let group = document.querySelector('[name="group"]:checked');
     let group = elements.group.value;
 
+    let interests = document.querySelectorAll('[name="interest"]:checked');
+
+    interests.forEach(interes => {
+        console.log(interes.value);
+    })
+
+    // console.dir(interests);
+
+
+
     let studentItem = document.createElement('div');
     studentItem.classList = 'student-item';
 
@@ -72,10 +82,15 @@ studentForm.addEventListener('submit', (event) => {
     groupElement.innerHTML = `Group: ${group}`
 
 
-    studentList.prepend(studentItem);
+    let interestWrapperElement = document.createElement('div');
+    interestWrapperElement.classList.add('interest-wrapper')
+
+
+
 
     studentItem.append(nameElement, surnameElement, ageElement, emailElement, phoneElement, itKnowledgeElement, groupElement)
 
+    studentList.prepend(studentItem);
 
 
 
@@ -83,14 +98,3 @@ studentForm.addEventListener('submit', (event) => {
     // event.targer.reset();
 })
 
-{/* <div class="studen-list">
-<div class="student-item">
-    <p>Name: John</p>
-    <p>Surname: John</p>
-    <p>DOB: John</p>
-    <p>Phone Nr.: John</p>
-    <p>Email.: John</p>
-    <p>IT knowledge: John</p>
-    <p>Group: John</p>
-</div>
-</div> */}

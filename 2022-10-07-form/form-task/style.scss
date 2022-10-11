@@ -1,0 +1,11 @@
+.student-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    .student-item {
+        border: 2px solid black;
+        border-radius: 5px;
+        margin: 10px 0;
+        padding: 0 10px;
+    }
+}
