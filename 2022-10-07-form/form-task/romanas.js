@@ -10,6 +10,8 @@
 // let studentForm = document.getElementById('student-form');
 let studentForm = document.querySelector('#student-form');
 let studentsList = document.querySelector('#students-list');
+
+
 function changeRangeOutput() {
     let itKnowledgeInput = document.querySelector('#student-it-knowledge');
     let itKnowledgeOutput = document.querySelector('#it-knowledge-output');
@@ -18,8 +20,12 @@ function changeRangeOutput() {
     });
 }
 changeRangeOutput();
+
+
+
 studentForm.addEventListener('submit', (event) => {
     event.preventDefault();
+
     // let name = document.querySelector('#student-name').value;
     // let surname = document.getElementById('student-surname').value;
     // let age = document.querySelector('[name="age"]').value;
@@ -31,6 +37,8 @@ studentForm.addEventListener('submit', (event) => {
     // let phone = event.target.elements.phone.value;
     // // let email = event.target.elements['student-email'].value;
     // let email = event.target.elements.email.value;
+
+
     let elements = event.target.elements;
     let name = elements.name.value;
     let surname = elements.surname.value;
@@ -43,6 +51,7 @@ studentForm.addEventListener('submit', (event) => {
     let group = elements.group.value;
     let interests = document.querySelectorAll('[name="interest"]:checked');
     let requiredInputs = event.target.querySelectorAll('.required');
+    
     let formIsValid = true;
     requiredInputs.forEach((input) => {
         if (!input.value) {
@@ -86,6 +95,7 @@ studentForm.addEventListener('submit', (event) => {
     interestTitleElement.textContent = 'Interests:';
 
     let interestListElement = document.createElement('ul');
+    
     interests.forEach(interest => {
         let interestItem = document.createElement('li');
         interestItem.textContent = interest.value;
@@ -95,7 +105,7 @@ studentForm.addEventListener('submit', (event) => {
     interestWrapperElement.append(interestTitleElement, interestListElement);
 
 
-    
+
     let privateInfoButton = document.createElement('button');
     privateInfoButton.textContent = 'Show personal info';
     privateInfoButton.classList.add('private-info-button', 'show');

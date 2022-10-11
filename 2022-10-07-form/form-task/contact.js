@@ -19,7 +19,7 @@ studentForm.addEventListener('submit', (event) => {
     // let email = event.target.elements['student-email'].value;
 
 
-    let elements = event.target.elements
+    let elements = event.target.elements;
     let name = elements.name.value;
     let surname = elements.surname.value;
     let age = elements.age.value;
@@ -28,13 +28,11 @@ studentForm.addEventListener('submit', (event) => {
     let itKnowledge = elements['it-knowledge'].value;
     // let group = document.querySelector('[name="group"]:checked');
     let group = elements.group.value;
-
-
     let interests = document.querySelectorAll('[name="interest"]:checked');
 
-    interests.forEach(interes => {
-        console.log(interes.value);
-    })
+
+    
+
 
     let studentItem = document.createElement('div');
     studentItem.classList = 'student-item';
@@ -63,6 +61,20 @@ studentForm.addEventListener('submit', (event) => {
     let interestWrapperElement = document.createElement('div');
     interestWrapperElement.classList.add('interest-wrapper')
 
+    
+    let interestsList = document.createElement('ul');
+
+    interests.forEach(interest => {
+        console.log(interest.value);
+
+        let interestsListItem = document.createElement('li');
+        interestsListItem.textContent = interest.value;
+        interestsList.append(interestsListItem)
+
+    })
+
+    
+
 
     let studentDeleteButton = document.createElement('button');
     studentDeleteButton.textContent = 'Delete student';
@@ -78,13 +90,28 @@ studentForm.addEventListener('submit', (event) => {
     privateInfoButton.classList.add('button', 'private-info-button');
 
 
+
+    let privateData = true;
+
     privateInfoButton.addEventListener('click', () => {
         let privateEmail = emailElement.querySelector('.hidden-area');
-        privateEmail.textContent =  email;
+        let privatePhone = phoneElement.querySelector('.hidden-area');
+
+        if (privateData) {
+            privateEmail.textContent = email;
+            privatePhone.textContent = phone;
+            privateInfoButton.textContent = 'Hide personal info';
+        } else {
+                    privateEmail.textContent = '****';
+                    privatePhone.textContent = '****';
+                    privateInfoButton.textContent = 'Show personal info';
+                }
+        privateData = !privateData;
     })
 
 
-    studentItem.append(nameElement, surnameElement, ageElement, emailElement, phoneElement, itKnowledgeElement, groupElement, privateInfoButton, studentDeleteButton)
+
+    studentItem.append(nameElement, surnameElement, ageElement, emailElement, phoneElement, itKnowledgeElement, groupElement, privateInfoButton, studentDeleteButton, interestsList)
 
     studentList.prepend(studentItem);
 
