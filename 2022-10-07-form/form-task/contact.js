@@ -29,8 +29,6 @@ studentForm.addEventListener('submit', (event) => {
     // let group = document.querySelector('[name="group"]:checked');
     let group = elements.group.value;
 
-    let emailData = '****';
-    let phonelData = '****';
 
     let interests = document.querySelectorAll('[name="interest"]:checked');
 
@@ -51,10 +49,10 @@ studentForm.addEventListener('submit', (event) => {
     ageElement.innerHTML = `Age: ${age}`
 
     let emailElement = document.createElement('p');
-    emailElement.innerHTML = `Email: ${emailData}`;
+    emailElement.innerHTML = `Email: <span class="hidden-area">****</span>`;
 
     let phoneElement = document.createElement('p');
-    phoneElement.innerHTML = `Phone: ${phonelData}`
+    phoneElement.innerHTML = `Phone: <span class="hidden-area">****</span>`
 
     let itKnowledgeElement = document.createElement('p');
     itKnowledgeElement.innerHTML = `IT Knowledge: ${itKnowledge}`
@@ -75,14 +73,14 @@ studentForm.addEventListener('submit', (event) => {
     })
 
 
-
     let privateInfoButton = document.createElement('button');
     privateInfoButton.textContent = 'Show personal info';
     privateInfoButton.classList.add('button', 'private-info-button');
 
+
     privateInfoButton.addEventListener('click', () => {
-        emailData = email;
-        phonelData = phone;
+        let privateEmail = emailElement.querySelector('.hidden-area');
+        privateEmail.textContent =  email;
     })
 
 

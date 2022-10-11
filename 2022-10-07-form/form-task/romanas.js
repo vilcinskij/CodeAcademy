@@ -57,31 +57,45 @@ studentForm.addEventListener('submit', (event) => {
     }
     let studentItem = document.createElement('div');
     studentItem.classList.add('student-item');
+
     let nameElement = document.createElement('p');
     nameElement.innerHTML = `<strong>Name:</strong> ${name}​`;
+
     let surnameElement = document.createElement('p');
     surnameElement.innerHTML = `<strong>Surname:</strong> ${surname}​`;
+
     let ageElement = document.createElement('p');
     ageElement.innerHTML = `<strong>Age:</strong> ${age}​`;
+
     let emailElement = document.createElement('p');
     emailElement.innerHTML = `<strong>Email:</strong> <span class="hidden-area">****</span>`;
+
     let phoneElement = document.createElement('p');
     phoneElement.innerHTML = `<strong>Phone:</strong> <span class="hidden-area">****</span>`;
+
     let itKnowledgeElement = document.createElement('p');
     itKnowledgeElement.innerHTML = `<strong>IT knowledge:</strong> ${itKnowledge}​`;
+
     let groupElement = document.createElement('p');
     groupElement.innerHTML = `<strong>Group:</strong> ${group}​`;
+
     let interestWrapperElement = document.createElement('div');
     interestWrapperElement.classList.add('interest-wrapper');
+
     let interestTitleElement = document.createElement('h3');
     interestTitleElement.textContent = 'Interests:';
+
     let interestListElement = document.createElement('ul');
     interests.forEach(interest => {
         let interestItem = document.createElement('li');
         interestItem.textContent = interest.value;
         interestListElement.append(interestItem);
     });
+
     interestWrapperElement.append(interestTitleElement, interestListElement);
+
+
+    
     let privateInfoButton = document.createElement('button');
     privateInfoButton.textContent = 'Show personal info';
     privateInfoButton.classList.add('private-info-button', 'show');
@@ -99,6 +113,7 @@ studentForm.addEventListener('submit', (event) => {
     //   }​
     //   privateInfoButton.classList.toggle('show');
     // }​);
+
     let dataHidden = true;
     privateInfoButton.addEventListener('click', () => {
         let privateEmail = emailElement.querySelector('.hidden-area');
