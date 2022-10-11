@@ -9,7 +9,7 @@
 }
 
 .button {
-    padding: 5px;
+    padding: 6px 12px;
     margin: 5px 0;
     border-radius: 5px;
     display: block;
@@ -17,7 +17,11 @@
 }
 
 .delete-button {
-    background-color: rgba(201, 26, 26, 0.733);
+    color: white;
+    background-color: #dc3545;
+    &:hover{
+        background-color: #bb2d3b;
+    }
 }
 
 

@@ -29,6 +29,9 @@ studentForm.addEventListener('submit', (event) => {
     // let group = document.querySelector('[name="group"]:checked');
     let group = elements.group.value;
 
+    let emailData = '****';
+    let phonelData = '****';
+
     let interests = document.querySelectorAll('[name="interest"]:checked');
 
     interests.forEach(interes => {
@@ -48,10 +51,10 @@ studentForm.addEventListener('submit', (event) => {
     ageElement.innerHTML = `Age: ${age}`
 
     let emailElement = document.createElement('p');
-    emailElement.innerHTML = `Email: ****`
+    emailElement.innerHTML = `Email: ${emailData}`;
 
     let phoneElement = document.createElement('p');
-    phoneElement.innerHTML = `Phone: ${phone}`
+    phoneElement.innerHTML = `Phone: ${phonelData}`
 
     let itKnowledgeElement = document.createElement('p');
     itKnowledgeElement.innerHTML = `IT Knowledge: ${itKnowledge}`
@@ -63,13 +66,11 @@ studentForm.addEventListener('submit', (event) => {
     interestWrapperElement.classList.add('interest-wrapper')
 
 
-
     let studentDeleteButton = document.createElement('button');
     studentDeleteButton.textContent = 'Delete student';
-    studentDeleteButton.classList.add('button');
-    studentDeleteButton.classList.add('delete-button');
+    studentDeleteButton.classList.add('button', 'delete-button');
 
-    studentDeleteButton.addEventListener('click', ()=>{
+    studentDeleteButton.addEventListener('click', () => {
         studentItem.remove();
     })
 
@@ -77,10 +78,12 @@ studentForm.addEventListener('submit', (event) => {
 
     let privateInfoButton = document.createElement('button');
     privateInfoButton.textContent = 'Show personal info';
-    privateInfoButton.classList.add('button');
-    privateInfoButton.classList.add('private-info-button');
+    privateInfoButton.classList.add('button', 'private-info-button');
 
-
+    privateInfoButton.addEventListener('click', () => {
+        emailData = email;
+        phonelData = phone;
+    })
 
 
     studentItem.append(nameElement, surnameElement, ageElement, emailElement, phoneElement, itKnowledgeElement, groupElement, privateInfoButton, studentDeleteButton)
