@@ -1,20 +1,3 @@
-// PIRMA DALIS:
-// Sukurti kontaktų formą.
-// 1. Kontaktų formoje turi būti šie laukeliai:
-//     1. Tekstinis laukelis vardui (privalomas).
-//     2. Tekstinis laukelis pavardei (privalomas).
-//     3. Skaičiaus laukelis amžiui (privalomas).
-//     4. Laukelis įvesti telefono numerį (neprivalomas).
-//     5. Laukelis įvesti el. paštą (privalomas).
-//     6. Range tipo laukelis, kuris skirtas įvertinti savo IT žinias nuo 1 iki 10. Galimas vertinimas tik sveikiems skaičiams.
-//     7. Radio tipo laukeliai, kuriuose pasirenkamas grupės numeris. Turi būti galimybė pasirinkti grupes nuo FEU 1gr. iki FEU 5gr.
-
-// Ją pridavus (submit):
-// 2. Žemiau kontaktų formos turi būtų atvaizduoti visi duomenys, pvz. „Amžius: 25m.".
-// 3. Kontaktų forma turi išsivalyti.
-
-// 4. Šalia kiekvieno įvesties (input) elemento, pridėti label elementą, kuris žymi laukelio pavadinimą.
-
 
 let studentForm = document.querySelector('#student-form');
 let studentList = document.querySelector('.student-list');
@@ -28,7 +11,6 @@ studentForm.addEventListener('submit', (event) => {
     // let age = document.querySelector('[name="age"]').value;
     // let phone = document.getElementsByName('phone')[0].value;
     // let email = studentForm.querySelector('#student-email').value;
-
 
     // let name = event.target.elements.name.value;
     // let surname = event.target.elements.surname.value;
@@ -53,10 +35,6 @@ studentForm.addEventListener('submit', (event) => {
         console.log(interes.value);
     })
 
-    // console.dir(interests);
-
-
-
     let studentItem = document.createElement('div');
     studentItem.classList = 'student-item';
 
@@ -70,7 +48,7 @@ studentForm.addEventListener('submit', (event) => {
     ageElement.innerHTML = `Age: ${age}`
 
     let emailElement = document.createElement('p');
-    emailElement.innerHTML = `Email: ${email}`
+    emailElement.innerHTML = `Email: ****`
 
     let phoneElement = document.createElement('p');
     phoneElement.innerHTML = `Phone: ${phone}`
@@ -81,14 +59,31 @@ studentForm.addEventListener('submit', (event) => {
     let groupElement = document.createElement('p');
     groupElement.innerHTML = `Group: ${group}`
 
-
     let interestWrapperElement = document.createElement('div');
     interestWrapperElement.classList.add('interest-wrapper')
 
 
 
+    let studentDeleteButton = document.createElement('button');
+    studentDeleteButton.textContent = 'Delete student';
+    studentDeleteButton.classList.add('button');
+    studentDeleteButton.classList.add('delete-button');
 
-    studentItem.append(nameElement, surnameElement, ageElement, emailElement, phoneElement, itKnowledgeElement, groupElement)
+    studentDeleteButton.addEventListener('click', ()=>{
+        studentItem.remove();
+    })
+
+
+
+    let privateInfoButton = document.createElement('button');
+    privateInfoButton.textContent = 'Show personal info';
+    privateInfoButton.classList.add('button');
+    privateInfoButton.classList.add('private-info-button');
+
+
+
+
+    studentItem.append(nameElement, surnameElement, ageElement, emailElement, phoneElement, itKnowledgeElement, groupElement, privateInfoButton, studentDeleteButton)
 
     studentList.prepend(studentItem);
 
