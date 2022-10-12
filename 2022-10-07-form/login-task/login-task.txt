@@ -19,3 +19,5 @@ ANTRA DALIS:
     6.2. Jeigu neatitinka, tai:
         6.2.1. Formoje pridėti elementą, kuriame parašyta jog prisijungimo vardas arba slaptažodis buvo neteisingas.
         6.2.2. Slaptažodžio laukelis turi išsivalyti.
+
+7. Formos submit tipo input elementas turėtų būti išjungtas (disabled) jeigu vartotojo vardas ir slaptažodis nėra įvestas.

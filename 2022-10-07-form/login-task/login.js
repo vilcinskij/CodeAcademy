@@ -25,6 +25,18 @@ const users = [
 let loginForm = document.querySelector('#login-form');
 let userAccess = document.querySelector('#user-accept');
 let submitButton = document.querySelector('#submit-button');
+let loginAnswer = document.querySelector('#login-answer');
+let loginLength = document.querySelector('#user-name');
+let passwordLength = document.querySelector('#user-password');
+
+// console.log(loginLenght.value.length);
+
+loginLength.addEventListener('change', () => {
+    if (loginLength.value.length > 3) {
+        console.log('ilgas');
+    }
+})
+
 
 userAccess.addEventListener('change', () => {
     if (userAccess.checked) {
@@ -33,18 +45,33 @@ userAccess.addEventListener('change', () => {
     } else {
         submitButton.classList.add('button-disabled');
         submitButton.setAttribute('disabled', true);
-
     }
 })
 
+
+
+
+
 loginForm.addEventListener('submit', (event) => {
     event.preventDefault();
+    loginAnswer.textContent = '';
 
-    let elements = event.target.elements;
-    let name = elements.name.value;
-    let password = elements.password.value;
+    let name = event.target.elements.name.value;
+    let password = event.target.elements.password.value;
 
     let existUser = users.filter((user) => {
-        userName === name;
+        return user.userName === name && user.userPassword === password;
     })
+    if (existUser.length > 0) {
+        let succsesLogin = document.createElement('h1');
+        succsesLogin.textContent = `You are successfully logged in!`;
+        loginAnswer.append(succsesLogin);
+    } else {
+        let failLogin = document.createElement('h3');
+        failLogin.textContent = `User name or password incorrect`;
+        loginAnswer.append(failLogin);
+        event.target.elements.password.value = '';
+    }
+    console.log(loginLength.value.length);
 })
+
