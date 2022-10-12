@@ -30,8 +30,25 @@ studentForm.addEventListener('submit', (event) => {
     let group = elements.group.value;
     let interests = document.querySelectorAll('[name="interest"]:checked');
 
+    let inputErrorMessages = event.target.querySelectorAll('.input-error-message');
+    inputErrorMessages.forEach((message) => {
+        message.remove();
+    })
 
-    
+    let requiredInputs = event.target.querySelectorAll('.required');
+    let formIsValid = true;
+
+    requiredInputs.forEach((input) => {
+        if (!input.value) {
+            formIsValid=false;
+            let inputErrorMessage = document.createElement('span');
+            inputErrorMessage.textContent = 'This field is required';
+            inputErrorMessage.classList.add('input-error-message', 'color-red');
+            input.classList.add('input-error');
+            input.after(inputErrorMessage);
+        }
+    })
+
 
 
     let studentItem = document.createElement('div');
@@ -61,7 +78,7 @@ studentForm.addEventListener('submit', (event) => {
     let interestWrapperElement = document.createElement('div');
     interestWrapperElement.classList.add('interest-wrapper')
 
-    
+
     let interestsList = document.createElement('ul');
 
     interests.forEach(interest => {
@@ -73,7 +90,7 @@ studentForm.addEventListener('submit', (event) => {
 
     })
 
-    
+
 
 
     let studentDeleteButton = document.createElement('button');
@@ -102,10 +119,10 @@ studentForm.addEventListener('submit', (event) => {
             privatePhone.textContent = phone;
             privateInfoButton.textContent = 'Hide personal info';
         } else {
-                    privateEmail.textContent = '****';
-                    privatePhone.textContent = '****';
-                    privateInfoButton.textContent = 'Show personal info';
-                }
+            privateEmail.textContent = '****';
+            privatePhone.textContent = '****';
+            privateInfoButton.textContent = 'Show personal info';
+        }
         privateData = !privateData;
     })
 
