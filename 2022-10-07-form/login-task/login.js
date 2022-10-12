@@ -33,20 +33,20 @@ let passwordLength = document.querySelector('#user-password');
 
 loginLength.addEventListener('change', () => {
     if (loginLength.value.length > 3) {
-        console.log('ilgas');
+        userAccess.addEventListener('change', () => {
+            if (userAccess.checked) {
+                submitButton.classList.remove('button-disabled');
+                submitButton.removeAttribute('disabled');
+            } else {
+                submitButton.classList.add('button-disabled');
+                submitButton.setAttribute('disabled', true);
+            }
+        })
+        
     }
 })
 
 
-userAccess.addEventListener('change', () => {
-    if (userAccess.checked) {
-        submitButton.classList.remove('button-disabled');
-        submitButton.removeAttribute('disabled');
-    } else {
-        submitButton.classList.add('button-disabled');
-        submitButton.setAttribute('disabled', true);
-    }
-})
 
 
 
