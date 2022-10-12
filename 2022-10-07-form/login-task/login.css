@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+  border: none;
+  box-sizing: border-box;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.button {
+  background-color: #0072BC;
+  color: white;
+  padding: 6px 12px;
+  margin: 5px 0;
+  border-radius: 5px;
+  display: block;
+  cursor: pointer;
+}
+
+.login-button {
+  width: 100%;
+}
+
+.button-disabled {
+  background-color: gray;
+  cursor: auto;
+}
+
+body {
+  background-color: #F2F7F8;
+  font-family: Helvetica, sans-serif;
+}
+
+.max-width {
+  max-width: 800px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.form-container {
+  font-size: 14px;
+  margin: auto;
+  width: 400px;
+  border: 3px solid #aaccef;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 20px;
+}
+.form-container .form-element {
+  margin: 10px 0;
+}
+.form-container .form-element .label {
+  font-weight: bold;
+  color: #666;
+}
+.form-container .form-element .check-box-label {
+  font-size: 13px;
+  margin-left: 3px;
+}
+.form-container .form-element .text-label {
+  display: block;
+  margin-bottom: 3px;
+}
+.form-container .form-element .text-input {
+  width: 97%;
+  padding: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #444;
+  border: 1px solid #bbb;
+}/*# sourceMappingURL=login.css.map */

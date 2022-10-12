@@ -6,3 +6,16 @@ PIRMA DALIS:
     2.3. Checkbox tipo input elementas skirtas pažymėti jog sutinkama su sąlygomis.
     2.4. Submit tipo input elementas skirtas priduoti (submit) formą.
 3. Visi input elementai (išskyrus submit) turi turėti label elementus.
+4. Formos submit tipo input elementas turėtų būti išjungtas (disabled) jeigu checkbox elementas nėra pažymėtas.
+
+
+
+ANTRA DALIS:
+5. Sukurti masyvą, kuriame būtų bent 5 nariai (objektai). Kiekvienas objektas turi:
+    5.1. userName property, kurio reikšmė yra vartotojo prisijungimo vardas (string).
+    5.2. userPassword property, kurio reikšmė yra vartotojo slaptažodis (string).
+6. Formos submit metu (formą galima priduoti tik tada jeigu yra pažymėtas checkbox input elementas), reikia patikrinti ar įrašytas vartotojo vardas ir slaptažodis atitinka bent vieną iš masyve esančių elementų.
+    6.1. Jeigu atitinka, tai ištrinti form'ą ir sukurti h1 elementą sveikinantį sėkmingai prisijungus.
+    6.2. Jeigu neatitinka, tai:
+        6.2.1. Formoje pridėti elementą, kuriame parašyta jog prisijungimo vardas arba slaptažodis buvo neteisingas.
+        6.2.2. Slaptažodžio laukelis turi išsivalyti.
