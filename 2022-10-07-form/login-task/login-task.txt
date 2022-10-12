@@ -1,0 +1,8 @@
+PIRMA DALIS:
+1. Sukurti login.html failą.
+2. Šiame puslapyje sukurti formą, kurioje yra:
+    2.1. Text tipo input elementas skirtas vartotojo prisijungimo vardui įrašyti.
+    2.2. Password tipo input elementas skirtas vartotojo slaptažodžiui įrašyti.
+    2.3. Checkbox tipo input elementas skirtas pažymėti jog sutinkama su sąlygomis.
+    2.4. Submit tipo input elementas skirtas priduoti (submit) formą.
+3. Visi input elementai (išskyrus submit) turi turėti label elementus.
