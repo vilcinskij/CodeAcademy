@@ -78,6 +78,9 @@ studentForm.addEventListener('submit', (event) => {
     let interestWrapperElement = document.createElement('div');
     interestWrapperElement.classList.add('interest-wrapper')
 
+    let interestTitleElement = document.createElement('h3');
+    interestTitleElement.textContent = 'Interests:'
+
 
     let interestsList = document.createElement('ul');
 
@@ -89,7 +92,6 @@ studentForm.addEventListener('submit', (event) => {
         interestsList.append(interestsListItem)
 
     })
-
 
 
 
@@ -126,9 +128,9 @@ studentForm.addEventListener('submit', (event) => {
         privateData = !privateData;
     })
 
+    interestWrapperElement.append(interestTitleElement, interestsList)
 
-
-    studentItem.append(nameElement, surnameElement, ageElement, emailElement, phoneElement, itKnowledgeElement, groupElement, privateInfoButton, studentDeleteButton, interestsList)
+    studentItem.append(nameElement, surnameElement, ageElement, emailElement, phoneElement, itKnowledgeElement, groupElement, interestWrapperElement, privateInfoButton, studentDeleteButton, )
 
     studentList.prepend(studentItem);
 
