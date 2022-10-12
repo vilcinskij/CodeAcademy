@@ -1,6 +1,7 @@
 
 let studentForm = document.querySelector('#student-form');
 let studentList = document.querySelector('.student-list');
+let createMessage = document.querySelector('.create-message')
 
 
 studentForm.addEventListener('submit', (event) => {
@@ -40,7 +41,7 @@ studentForm.addEventListener('submit', (event) => {
 
     requiredInputs.forEach((input) => {
         if (!input.value) {
-            formIsValid=false;
+            formIsValid = false;
             let inputErrorMessage = document.createElement('span');
             inputErrorMessage.textContent = 'This field is required';
             inputErrorMessage.classList.add('input-error-message', 'color-red');
@@ -81,23 +82,20 @@ studentForm.addEventListener('submit', (event) => {
     let interestTitleElement = document.createElement('h3');
     interestTitleElement.textContent = 'Interests:'
 
-
     let interestsList = document.createElement('ul');
-
     interests.forEach(interest => {
-        console.log(interest.value);
-
         let interestsListItem = document.createElement('li');
         interestsListItem.textContent = interest.value;
         interestsList.append(interestsListItem)
 
     })
 
-
-
     let studentDeleteButton = document.createElement('button');
     studentDeleteButton.textContent = 'Delete student';
     studentDeleteButton.classList.add('button', 'delete-button');
+
+
+
 
     studentDeleteButton.addEventListener('click', () => {
         studentItem.remove();
@@ -107,7 +105,6 @@ studentForm.addEventListener('submit', (event) => {
     let privateInfoButton = document.createElement('button');
     privateInfoButton.textContent = 'Show personal info';
     privateInfoButton.classList.add('button', 'private-info-button');
-
 
 
     let privateData = true;
@@ -128,15 +125,28 @@ studentForm.addEventListener('submit', (event) => {
         privateData = !privateData;
     })
 
+
+
+
+    let studentCreateMessage = document.createElement('p');
+    studentCreateMessage.textContent = `Student ${name} ${surname} added`
+
+    createMessage.append(studentCreateMessage)
+
+    setTimeout(() => {
+        studentCreateMessage.remove()
+    }, 3000)
+
+
+
     interestWrapperElement.append(interestTitleElement, interestsList)
 
-    studentItem.append(nameElement, surnameElement, ageElement, emailElement, phoneElement, itKnowledgeElement, groupElement, interestWrapperElement, privateInfoButton, studentDeleteButton, )
+    studentItem.append(nameElement, surnameElement, ageElement, emailElement, phoneElement, itKnowledgeElement, groupElement, interestWrapperElement, privateInfoButton, studentDeleteButton,)
 
     studentList.prepend(studentItem);
 
-
-
-
-    // event.targer.reset();
+    event.target.reset();
 })
 
+
+function checkInputdata() 

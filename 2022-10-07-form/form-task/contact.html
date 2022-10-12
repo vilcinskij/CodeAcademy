@@ -13,26 +13,26 @@
 <body>
     <div class="max-width">
         <div class="form-container-html" id="student-form">
-            <form action="">
+            <form action="" novalidate>
                 <div class="form-item">
                     <label for="student-name">Vardas:</label>
-                    <input type="text" name="name" id="student-name" placeholder="Enter your name">
+                    <input type="text" name="name" id="student-name" class="required" placeholder="Enter your name">
                 </div>
                 <div class="form-item">
                     <label for="student-surname">Pavardė:</label>
-                    <input type="text" name="surname" id="student-surname" placeholder="Enter your surname">
+                    <input type="text" name="surname" id="student-surname" class="required" placeholder="Enter your surname">
                 </div>
                 <div class="form-item">
-                    <label for="student-age">Gymimo data:</label>
-                    <input type="date" name="age" id="student-age" placeholder="Enter your age">
+                    <label for="student-age">Amžius:</label>
+                    <input type="number" name="age" id="student-age" class="required" placeholder="Enter your age">
                 </div>
                 <div class="form-item">
                     <label for="student-phone">Telefono Nr.:</label>
-                    <input type="number" name="phone" id="student-phone" placeholder="Enter your phone">
+                    <input type="number" name="phone" id="student-phone" class="required" placeholder="Enter your phone">
                 </div>
                 <div class="form-item">
                     <label for="student-email">El. paštas:</label>
-                    <input type="email" name="email" id="student-email" placeholder="Enter your email">
+                    <input type="email" name="email" id="student-email" class="required" placeholder="Enter your email">
                 </div>
                 <div class="form-item">
                     <label for="srudent-it-knowledge">IT žinių įvertinimas:</label>
@@ -88,6 +88,9 @@
                 </fieldset>
                 <input class="button" type="submit" value="Create student">
             </form>
+        </div>
+        <div class="create-message">
+
         </div>
         <div class="student-list">
         </div>
