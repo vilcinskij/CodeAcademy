@@ -1,0 +1,12 @@
+AUTOMOBILIŲ UŽDUOTIS:
+0. Formoje surinktą informaciją submit metu atvaizduoti ekrane aiškiu tekstu.
+1. Sukurti formą automobiliams filtruoti, kurioje būtų galimybė pasirinkti:
+    1.1. Checkbox tipo input elementas skirtas pažymėti naudotus automobilius.
+    1.2. Range tipo input elementas minimaliai kainai nurodyti.
+        1.2.1. Elemento minimali reikšmė 500
+        1.2.2. Elemento maksimali reikšmė 500 000
+        1.2.3. Keisti kainą galima kas 500
+    1.3. Range tipo input elementas maksimaliai kainai nurodyti (kurti tuo pačiu principu kaip ir 1.2 užduotyje).
+    1.4. Select elementas skirtas minimaliems metams nurodyti.
+    1.5. Select elementas skirtas maksimaliems metams nurodyti.
+    1.6. Select elementas skirtas spalvai nurodyti.
