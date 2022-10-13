@@ -21,3 +21,4 @@ ANTRA DALIS:
         6.2.2. Slaptažodžio laukelis turi išsivalyti.
 
 7. Formos submit tipo input elementas turėtų būti išjungtas (disabled) jeigu vartotojo vardas ir slaptažodis nėra įvestas.
+8. Formos submit tipo input elementas turėtų būti išjungtas (disabled) jeigu vartotojo vardas yra trumpesnis nei 5 simboliai ir slaptažodis yra trumpesnis nei 11 simboliai.

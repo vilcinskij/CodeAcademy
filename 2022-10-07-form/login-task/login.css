@@ -39,7 +39,7 @@ body {
   margin-top: 100px;
 }
 
-.form-container {
+.login-form {
   font-size: 14px;
   margin: auto;
   width: 400px;
@@ -48,22 +48,22 @@ body {
   border-radius: 10px;
   padding: 20px;
 }
-.form-container .form-element {
+.login-form .form-element {
   margin: 10px 0;
 }
-.form-container .form-element .label {
+.login-form .form-element .label {
   font-weight: bold;
   color: #666;
 }
-.form-container .form-element .check-box-label {
+.login-form .form-element .check-box-label {
   font-size: 13px;
   margin-left: 3px;
 }
-.form-container .form-element .text-label {
+.login-form .form-element .text-label {
   display: block;
   margin-bottom: 3px;
 }
-.form-container .form-element .text-input {
+.login-form .form-element .text-input {
   width: 97%;
   padding: 5px;
   font-size: 13px;

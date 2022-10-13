@@ -1,54 +1,58 @@
 const users = [
     {
-        userName: 'user1',
-        userPassword: 'password1',
+        userName: 'user01',
+        userPassword: 'password0001',
     },
     {
-        userName: 'user2',
-        userPassword: 'password2',
+        userName: 'user02',
+        userPassword: 'password0002',
     },
     {
-        userName: 'user3',
-        userPassword: 'password3',
+        userName: 'user03',
+        userPassword: 'password0003',
     },
     {
-        userName: 'user4',
-        userPassword: 'password4',
+        userName: 'user04',
+        userPassword: 'password0004',
     },
     {
-        userName: 'user5',
-        userPassword: 'password5',
+        userName: 'user05',
+        userPassword: 'password0005',
     },
 ]
 
-
 let loginForm = document.querySelector('#login-form');
-let userAccess = document.querySelector('#user-accept');
+
+let userAccept = document.querySelector('#user-accept');
+let nameInput = document.querySelector('#user-name');
+let passwordIput = document.querySelector('#user-password');
+
 let submitButton = document.querySelector('#submit-button');
+
 let loginAnswer = document.querySelector('#login-answer');
-let loginLength = document.querySelector('#user-name');
-let passwordLength = document.querySelector('#user-password');
 
-// console.log(loginLenght.value.length);
 
-loginLength.addEventListener('change', () => {
-    if (loginLength.value.length > 3) {
-        userAccess.addEventListener('change', () => {
-            if (userAccess.checked) {
-                submitButton.classList.remove('button-disabled');
-                submitButton.removeAttribute('disabled');
-            } else {
-                submitButton.classList.add('button-disabled');
-                submitButton.setAttribute('disabled', true);
-            }
-        })
-        
-    }
+userAccept.addEventListener('change', () => {
+    toggleLoginButton()
 })
 
+nameInput.addEventListener('input', ()=>{
+    toggleLoginButton()
+})
 
+passwordIput.addEventListener('input', ()=>{
+    toggleLoginButton()
+})
 
-
+function toggleLoginButton() {
+    if (userAccept.checked && nameInput.value.length > 5 && passwordIput.value.length > 11) {
+        submitButton.classList.remove('button-disabled');
+        submitButton.removeAttribute('disabled');
+    } else {
+        submitButton.classList.add('button-disabled');
+        submitButton.setAttribute('disabled', true);
+    }
+}
 
 
 
@@ -63,6 +67,7 @@ loginForm.addEventListener('submit', (event) => {
         return user.userName === name && user.userPassword === password;
     })
     if (existUser.length > 0) {
+        loginForm.remove();
         let succsesLogin = document.createElement('h1');
         succsesLogin.textContent = `You are successfully logged in!`;
         loginAnswer.append(succsesLogin);
@@ -72,6 +77,8 @@ loginForm.addEventListener('submit', (event) => {
         loginAnswer.append(failLogin);
         event.target.elements.password.value = '';
     }
-    console.log(loginLength.value.length);
+
+    console.log(nameInput.value.length);
+
 })
 
