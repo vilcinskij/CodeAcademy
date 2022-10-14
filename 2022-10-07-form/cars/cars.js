@@ -1098,31 +1098,27 @@ function renderCarsOptionElements(data) {
         carBrandOption.value = element.brand.toLowerCase();
         carBrandSelect.append(carBrandOption);
 
-        element.models.forEach(model => {
-            let carModelOption = document.createElement('option');
-            carModelOption.textContent = model;
-            carModelSelect.append(carModelOption)
-            console.log(carModelOption);
-        })       
+        // element.models.forEach(model => {
+        //     let carModelOption = document.createElement('option');
+        //     carModelOption.textContent = model;
+        //     carModelSelect.append(carModelOption)
+        //     console.log(carModelOption);
+        // })       
     })
+
+    let carBrandValue = document.querySelector('#car-brand');
+    carBrandValue.addEventListener('change', () => {
+        // console.log(carBrandValue.value);
+        // console.log(data);
+        let selectedBrand = carBrands.value;
+        data.find((car) => {
+            console.log(car.brand.toLowerCase());
+
+        })
+    })
+
 }
 
 
-// let brandValue = document.querySelector('#brand');
-// brandValue.addEventListener('change', () => {
-//     let result = carsInfo.filter(value => value.brand.toLowerCase() == brandValue.value);
-//     console.log(result);
-//     let model = document.createElement('div');
-//     carForm.append(model);
-//     let select = document.createElement('select');
-//     model.append(select);
-//     let option = document.createElement('option');
-//     option.setAttribute('selected', '');
-//     option.setAttribute('disabled', '');
-//     select.append(option);
-//     console.log(result[0].models.length);
-//     for (let i = 0; i < result[0].models.length; i++) {
-//         let optionList = document.createElement('option');
-//         optionList.value = result[0].models[i].toLowerCase();
-//         optionList.text = result[0].models[i];
-//         select.append(optionList);
+
+
