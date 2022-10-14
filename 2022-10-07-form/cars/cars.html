@@ -14,13 +14,24 @@
         <div class="form-container">
             <form action="" id="search-form" class="search-form">
                 <div class="form-control">
+                    <label for="car-brand">Car brand</label>
+                    <select name="car-brand" id="car-brand">
+                        <option value="" disabled selected>-----</option>
+                    </select>
+
+                    <label for="car-model">Car model</label>
+                    <select name="car-model" id="car-model">
+                        <option value="" disabled selected>-----</option>
+                    </select>
+                </div>
+                <div class="form-control">
                     <input type="checkbox" name="used-cars" id="used-cars">
                     <label for="used-cars">Used cars</label>
                 </div>
                 <div class="form-control">
                     <label for="min-price">Min price</label>
                     <input type="range" name="min-price" id="min-price" min="500" max="500000" step="500">
-                    
+
                     <label for="max-price">Max price</label>
                     <input type="range" name="max-price" id="max-price" min="500" max="500000" step="500">
                 </div>
@@ -71,8 +82,7 @@
                     </select>
                 </div>
                 <div>
-                    <input type="submit" name="submit" id="submit-button" value="SEARCH"
-                            class="button search-button">
+                    <input type="submit" name="submit" id="submit-button" value="SEARCH" class="button search-button">
                 </div>
             </form>
         </div>
@@ -82,4 +92,5 @@
     </div>
 </body>
 <script src="cars.js"></script>
+
 </html>
