@@ -3,6 +3,14 @@ let studentForm = document.querySelector('#student-form');
 let studentList = document.querySelector('.student-list');
 let createMessage = document.querySelector('.create-message')
 
+let itKnowledgeOutput = document.querySelector('#student-it-knowledge-output');
+let itKnowledgeInput = document.querySelector('#student-it-knowledge');
+itKnowledgeOutput.textContent = itKnowledgeInput.value;
+
+itKnowledgeInput.addEventListener('input', ()=>{
+    itKnowledgeOutput.textContent = itKnowledgeInput.value;
+})
+
 
 studentForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -56,13 +64,13 @@ studentForm.addEventListener('submit', (event) => {
     studentItem.classList = 'student-item';
 
     let nameElement = document.createElement('p');
-    nameElement.innerHTML = `Name: ${name}`
+    nameElement.innerHTML = `Name: ${name}`;
 
     let surnameElement = document.createElement('p');
-    surnameElement.innerHTML = `Surname: ${surname}`
+    surnameElement.innerHTML = `Surname: ${surname}`;
 
     let ageElement = document.createElement('p');
-    ageElement.innerHTML = `Age: ${age}`
+    ageElement.innerHTML = `Age: ${age}`;
 
     let emailElement = document.createElement('p');
     emailElement.innerHTML = `Email: <span class="hidden-area">****</span>`;
@@ -71,16 +79,16 @@ studentForm.addEventListener('submit', (event) => {
     phoneElement.innerHTML = `Phone: <span class="hidden-area">****</span>`
 
     let itKnowledgeElement = document.createElement('p');
-    itKnowledgeElement.innerHTML = `IT Knowledge: ${itKnowledge}`
+    itKnowledgeElement.innerHTML = `IT Knowledge: ${itKnowledge}`;
 
     let groupElement = document.createElement('p');
-    groupElement.innerHTML = `Group: ${group}`
+    groupElement.innerHTML = `Group: ${group}`;
 
     let interestWrapperElement = document.createElement('div');
-    interestWrapperElement.classList.add('interest-wrapper')
+    interestWrapperElement.classList.add('interest-wrapper');
 
     let interestTitleElement = document.createElement('h3');
-    interestTitleElement.textContent = 'Interests:'
+    interestTitleElement.textContent = 'Interests:';
 
     let interestsList = document.createElement('ul');
     interests.forEach(interest => {
@@ -93,21 +101,14 @@ studentForm.addEventListener('submit', (event) => {
     let studentDeleteButton = document.createElement('button');
     studentDeleteButton.textContent = 'Delete student';
     studentDeleteButton.classList.add('button', 'delete-button');
-
-
-
-
     studentDeleteButton.addEventListener('click', () => {
         studentItem.remove();
     })
 
-
     let privateInfoButton = document.createElement('button');
+    let privateData = true;
     privateInfoButton.textContent = 'Show personal info';
     privateInfoButton.classList.add('button', 'private-info-button');
-
-
-    let privateData = true;
 
     privateInfoButton.addEventListener('click', () => {
         let privateEmail = emailElement.querySelector('.hidden-area');
@@ -126,27 +127,19 @@ studentForm.addEventListener('submit', (event) => {
     })
 
 
-
-
     let studentCreateMessage = document.createElement('p');
     studentCreateMessage.textContent = `Student ${name} ${surname} added`
-
     createMessage.append(studentCreateMessage)
-
     setTimeout(() => {
         studentCreateMessage.remove()
     }, 3000)
 
-
-
     interestWrapperElement.append(interestTitleElement, interestsList)
-
     studentItem.append(nameElement, surnameElement, ageElement, emailElement, phoneElement, itKnowledgeElement, groupElement, interestWrapperElement, privateInfoButton, studentDeleteButton,)
-
     studentList.prepend(studentItem);
 
     event.target.reset();
 })
 
 
-function checkInputdata() 
+// function checkInputdata() 
