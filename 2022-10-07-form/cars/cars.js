@@ -1068,7 +1068,35 @@ const carsInfo = [
 const searchForm = document.querySelector('#search-form');
 let searchResult = document.querySelector('#search-result');
 let carBrandSelect = document.querySelector('#car-brand');
-let carModelSelect = document.querySelector('#car-model');
+let minPriceInput = document.querySelector('#min-price');
+let maxPriceInput = document.querySelector('#max-price');
+let yearFromInput = document.querySelector('#year-from');
+let yearTillInput = document.querySelector('#year-till');
+let colorInput = document.querySelector('#color');
+
+
+
+minPriceInput.value = localStorage.getItem('min-price');
+maxPriceInput.value = localStorage.getItem('max-price');
+yearFromInput.value = localStorage.getItem('year-from');
+yearTillInput.value = localStorage.getItem('year-till');
+colorInput.value = localStorage.getItem('color');
+
+minPriceInput.addEventListener('input', () => {
+    localStorage.setItem('min-price', minPriceInput.value)
+})
+maxPriceInput.addEventListener('input', () => {
+    localStorage.setItem('max-price', maxPriceInput.value)
+})
+yearFromInput.addEventListener('input', () => {
+    localStorage.setItem('year-from', yearFromInput.value)
+})
+yearTillInput.addEventListener('input', () => {
+    localStorage.setItem('year-till', yearTillInput.value)
+})
+color.addEventListener('input', () => {
+    localStorage.setItem('color', color.value)
+})
 
 renderCarsOptionElements(carsInfo);
 
@@ -1079,17 +1107,19 @@ searchForm.addEventListener('submit', event => {
     let elements = event.target.elements;
     let minPrice = elements['min-price'].value;
     let maxPrice = elements['max-price'].value;
-    let yeraFrom = elements['yera-from'].value;
+    let yearFrom = elements['year-from'].value;
     let yearTill = elements['year-till'].value;
     let color = elements.color.value;
     let usedCars = elements['used-cars'].checked;
     let usedCarText = usedCars ? ', used car is possible' : '.';
 
     let searchMessage = document.createElement('p');
-    searchMessage.textContent = `You looking for ${color} car which year from ${yeraFrom} till ${yearTill} and price range from ${minPrice}€ till ${maxPrice}€${usedCarText}`;
+    searchMessage.textContent = `You looking for ${color} car which year from ${yearFrom} till ${yearTill} and price range from ${minPrice}€ till ${maxPrice}€${usedCarText}`;
 
     searchResult.append(searchMessage);
 })
+
+
 
 function renderCarsOptionElements(data) {
     data.forEach(element => {
@@ -1097,28 +1127,20 @@ function renderCarsOptionElements(data) {
         carBrandOption.textContent = element.brand;
         carBrandOption.value = element.brand.toLowerCase();
         carBrandSelect.append(carBrandOption);
-
-        // element.models.forEach(model => {
-        //     let carModelOption = document.createElement('option');
-        //     carModelOption.textContent = model;
-        //     carModelSelect.append(carModelOption)
-        //     console.log(carModelOption);
-        // })       
     })
 
-    let carBrandValue = document.querySelector('#car-brand');
-    carBrandValue.addEventListener('change', () => {
-        // console.log(carBrandValue.value);
-        // console.log(data);
-        let selectedBrand = carBrands.value;
-        data.find((car) => {
-            console.log(car.brand.toLowerCase());
+    carBrandSelect.addEventListener('change', () => {
+        let carModelSelect = document.querySelector('#car-model');
+        carModelSelect.removeAttribute('disabled')
+        carModelSelect.innerHTML = '<option value="" disabled selected>-----</option>';
+        let selectedCarObject = data.find(car => car.brand.toLowerCase() === carBrandSelect.value);
 
+        selectedCarObject.models.forEach(element => {
+            let carModelOption = document.createElement('option');
+            carModelOption.textContent = element;
+            carModelSelect.append(carModelOption);
         })
     })
 
 }
-
-
-
 

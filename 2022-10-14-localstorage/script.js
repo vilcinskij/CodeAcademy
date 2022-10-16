@@ -20,10 +20,6 @@ console.log(localStorage.getItem('testStorage'));
 
 
 
-
-
-
-
 let button = document.querySelector('button');
 let span = document.querySelector('span')
 
@@ -34,4 +30,12 @@ button.addEventListener('click', () => {
 
     localStorage.setItem('counter', updatedCounter);
 
+})
+
+
+let input = document.querySelector('input');
+input.value = localStorage.getItem('inputStorageValue');
+input.addEventListener('input', () => {
+  console.log(input.value);
+  localStorage.setItem('inputStorageValue', input.value);
 })

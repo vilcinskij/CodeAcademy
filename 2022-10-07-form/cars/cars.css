@@ -18,6 +18,10 @@
   cursor: pointer;
 }
 
+select {
+  width: 120px;
+}
+
 .max-width {
   max-width: 800px;
   margin: auto;
