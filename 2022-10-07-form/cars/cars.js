@@ -1066,37 +1066,37 @@ const carsInfo = [
 ]
 
 const searchForm = document.querySelector('#search-form');
+
 let searchResult = document.querySelector('#search-result');
 let carBrandSelect = document.querySelector('#car-brand');
-let minPriceInput = document.querySelector('#min-price');
-let maxPriceInput = document.querySelector('#max-price');
-let yearFromInput = document.querySelector('#year-from');
-let yearTillInput = document.querySelector('#year-till');
-let colorInput = document.querySelector('#color');
 
 
+// let minPriceInput = document.querySelector('#min-price');
+// let maxPriceInput = document.querySelector('#max-price');
+// let yearFromInput = document.querySelector('#year-from');
+// let yearTillInput = document.querySelector('#year-till');
+// let colorInput = document.querySelector('#color');
+// minPriceInput.value = localStorage.getItem('min-price');
+// maxPriceInput.value = localStorage.getItem('max-price');
+// yearFromInput.value = localStorage.getItem('year-from');
+// yearTillInput.value = localStorage.getItem('year-till');
+// colorInput.value = localStorage.getItem('color');
 
-minPriceInput.value = localStorage.getItem('min-price');
-maxPriceInput.value = localStorage.getItem('max-price');
-yearFromInput.value = localStorage.getItem('year-from');
-yearTillInput.value = localStorage.getItem('year-till');
-colorInput.value = localStorage.getItem('color');
-
-minPriceInput.addEventListener('input', () => {
-    localStorage.setItem('min-price', minPriceInput.value)
-})
-maxPriceInput.addEventListener('input', () => {
-    localStorage.setItem('max-price', maxPriceInput.value)
-})
-yearFromInput.addEventListener('input', () => {
-    localStorage.setItem('year-from', yearFromInput.value)
-})
-yearTillInput.addEventListener('input', () => {
-    localStorage.setItem('year-till', yearTillInput.value)
-})
-color.addEventListener('input', () => {
-    localStorage.setItem('color', color.value)
-})
+// minPriceInput.addEventListener('input', () => {
+//     localStorage.setItem('min-price', minPriceInput.value)
+// })
+// maxPriceInput.addEventListener('input', () => {
+//     localStorage.setItem('max-price', maxPriceInput.value)
+// })
+// yearFromInput.addEventListener('input', () => {
+//     localStorage.setItem('year-from', yearFromInput.value)
+// })
+// yearTillInput.addEventListener('input', () => {
+//     localStorage.setItem('year-till', yearTillInput.value)
+// })
+// color.addEventListener('input', () => {
+//     localStorage.setItem('color', color.value)
+// })
 
 renderCarsOptionElements(carsInfo);
 
@@ -1105,6 +1105,7 @@ searchForm.addEventListener('submit', event => {
     searchResult.textContent = '';
 
     let elements = event.target.elements;
+
     let minPrice = elements['min-price'].value;
     let maxPrice = elements['max-price'].value;
     let yearFrom = elements['year-from'].value;
@@ -1118,7 +1119,6 @@ searchForm.addEventListener('submit', event => {
 
     searchResult.append(searchMessage);
 })
-
 
 
 function renderCarsOptionElements(data) {
@@ -1144,3 +1144,15 @@ function renderCarsOptionElements(data) {
 
 }
 
+
+
+function checkSimpleInput(id) {
+    let input = document.getElementById(id);
+    input.value = localStorage.getItem(id);
+    input.addEventListener('input', () => {
+        localStorage.setItem(id, input.value);
+    });
+}
+
+let simpleInputIds = ['year-till', 'year-from', 'min-price', 'max-price', 'color'];
+simpleInputIds.map(id => checkSimpleInput(id));
