@@ -19,33 +19,33 @@ const users = [
         userName: 'user05',
         userPassword: 'password0005',
     },
+    {
+        userName: 'aa',
+        userPassword: 'aaa',
+    },
 ]
 
 let loginForm = document.querySelector('#login-form');
-
 let userAccept = document.querySelector('#user-accept');
 let nameInput = document.querySelector('#user-name');
-let passwordIput = document.querySelector('#user-password');
-
+let passwordInput = document.querySelector('#user-password');
 let submitButton = document.querySelector('#submit-button');
-
 let loginAnswer = document.querySelector('#login-answer');
+
 
 
 userAccept.addEventListener('change', () => {
     toggleLoginButton()
 })
-
-nameInput.addEventListener('input', ()=>{
+nameInput.addEventListener('input', () => {
     toggleLoginButton()
 })
-
-passwordIput.addEventListener('input', ()=>{
+passwordInput.addEventListener('input', () => {
     toggleLoginButton()
 })
 
 function toggleLoginButton() {
-    if (userAccept.checked && nameInput.value.length > 5 && passwordIput.value.length > 11) {
+    if (userAccept.checked && nameInput.value.length > 1 && passwordInput.value.length > 2) {
         submitButton.classList.remove('button-disabled');
         submitButton.removeAttribute('disabled');
     } else {
@@ -53,8 +53,6 @@ function toggleLoginButton() {
         submitButton.setAttribute('disabled', true);
     }
 }
-
-
 
 loginForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -67,10 +65,10 @@ loginForm.addEventListener('submit', (event) => {
         return user.userName === name && user.userPassword === password;
     })
     if (existUser.length > 0) {
-        loginForm.remove();
-        let succsesLogin = document.createElement('h1');
-        succsesLogin.textContent = `You are successfully logged in!`;
-        loginAnswer.append(succsesLogin);
+        renderLoggedInView()
+
+        localStorage.setItem('isLoggedIn', true)
+
     } else {
         let failLogin = document.createElement('h3');
         failLogin.textContent = `User name or password incorrect`;
@@ -78,7 +76,53 @@ loginForm.addEventListener('submit', (event) => {
         event.target.elements.password.value = '';
     }
 
-    console.log(nameInput.value.length);
-
+    if (localStorage.getItem('logined') === 'true') {
+        localStorage.removeItem('user-password');
+        localStorage.removeItem('user-name');
+    }
 })
 
+function inputLocalStorage(input) {
+    let localStorageValue = localStorage.getItem(input.id)
+    if (input.type === 'checkbox') {
+
+        let isChecked = localStorageValue === 'true';
+        input.checked = isChecked;
+
+        input.addEventListener('input', () => {
+            localStorage.setItem(input.id, input.checked)
+        })
+    } else {
+        input.value = localStorageValue
+        input.addEventListener('input', () => {
+            localStorage.setItem(input.id, input.value)
+        })
+    }
+}
+
+inputLocalStorage(nameInput)
+inputLocalStorage(passwordInput)
+inputLocalStorage(userAccept)
+
+toggleLoginButton()
+
+function checkIfLoggedIn() {
+    let isLoggedIn = localStorage.getItem('isLoggedIn', true)
+    localStorage.removeItem('user-name')
+    localStorage.removeItem('user-password')
+    localStorage.removeItem('user-accept')
+    
+    if (isLoggedIn === 'true') {
+        renderLoggedInView()
+    }
+}
+
+checkIfLoggedIn()
+
+
+function renderLoggedInView() {
+    loginForm.remove();
+    let succsesLogin = document.createElement('h1');
+    succsesLogin.textContent = `You are successfully logged in!`;
+    loginAnswer.append(succsesLogin);
+}

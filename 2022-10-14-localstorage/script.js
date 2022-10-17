@@ -6,7 +6,7 @@ localStorage.setItem('testStorage', 'Labas');
 
 //Redaguoti LocalStorage narį
 
-localStorage.setItem('testStorage', 'Babas-labas');
+localStorage.setItem('testStorage', '-labas');
 
 // Gauti LocalStorage
 
@@ -33,9 +33,27 @@ button.addEventListener('click', () => {
 })
 
 
-let input = document.querySelector('input');
-input.value = localStorage.getItem('inputStorageValue');
-input.addEventListener('input', () => {
-  console.log(input.value);
-  localStorage.setItem('inputStorageValue', input.value);
-})
+// let input = document.querySelector('input');
+// input.value = localStorage.getItem('inputStorageValue');
+// input.addEventListener('input', () => {
+//   console.log(input.value);
+//   localStorage.setItem('inputStorageValue', input.value);
+// })
+
+
+
+let arr = [1, 2, 3, 5, 10];
+console.log(arr);
+console.log(typeof arr);
+
+localStorage.setItem('arr', arr);
+let arrFromLocal = localStorage.getItem('arr');
+console.log(arrFromLocal);
+console.log(typeof arrFromLocal);
+
+//Masyvo pavertimas į JSON
+
+console.log(arr);
+console.log(typeof arr);
+let strArr = JSON.stringify(arr)
+console.log(strArr);
