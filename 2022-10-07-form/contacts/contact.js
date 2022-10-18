@@ -1,3 +1,48 @@
+let initialData = [
+    {
+        name: 'John',
+        surname: 'Doe',
+        age: 30,
+        phone: 124578795,
+        email: 'name@surname.com',
+        itKnowledge: 8,
+        group: 'feu 5',
+        interest: ['JavaScript', 'PHP']
+    },
+    {
+        name: 'John',
+        surname: 'Doe',
+        age: 21,
+        phone: 58454884784,
+        email: 'name@surname.com',
+        itKnowledge: 8,
+        group: 'feu 3',
+        interest: ['C++', 'Java']
+    },
+    {
+        name: 'Petras',
+        surname: 'Petraitis',
+        age: 20,
+        phone: 4578963214,
+        email: 'name@surname.com',
+        itKnowledge: 8,
+        group: 'feu 4',
+        interest: ['Python', 'PHP']
+    },
+    {
+        name: 'Jonas',
+        surname: 'Jonaitis',
+        age: 24,
+        phone: 4545454545,
+        email: 'name@surname.com',
+        itKnowledge: 8,
+        group: 'feu 5',
+        interest: []
+    },
+]
+
+console.table(initialData)
+
 
 let studentForm = document.querySelector('#student-form');
 let studentList = document.querySelector('.student-list');
@@ -11,22 +56,8 @@ itKnowledgeInput.addEventListener('input', ()=>{
     itKnowledgeOutput.textContent = itKnowledgeInput.value;
 })
 
-
 studentForm.addEventListener('submit', (event) => {
     event.preventDefault();
-
-    // let name = document.querySelector('#student-name').value;
-    // let surname = document.getElementById('student-surname').value;
-    // let age = document.querySelector('[name="age"]').value;
-    // let phone = document.getElementsByName('phone')[0].value;
-    // let email = studentForm.querySelector('#student-email').value;
-
-    // let name = event.target.elements.name.value;
-    // let surname = event.target.elements.surname.value;
-    // let age = event.target.elements.age.value;
-    // let phone = event.target.elements.phone.value;
-    // let email = event.target.elements['student-email'].value;
-
 
     let elements = event.target.elements;
     let name = elements.name.value;
@@ -57,8 +88,6 @@ studentForm.addEventListener('submit', (event) => {
             input.after(inputErrorMessage);
         }
     })
-
-
 
     let studentItem = document.createElement('div');
     studentItem.classList = 'student-item';
@@ -125,7 +154,6 @@ studentForm.addEventListener('submit', (event) => {
         }
         privateData = !privateData;
     })
-
 
     let studentCreateMessage = document.createElement('p');
     studentCreateMessage.textContent = `Student ${name} ${surname} added`
