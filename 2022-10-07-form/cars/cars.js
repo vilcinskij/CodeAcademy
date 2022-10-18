@@ -1112,6 +1112,7 @@ searchForm.addEventListener('submit', event => {
     let yearTill = elements['year-till'].value;
     let color = elements.color.value;
     let usedCars = elements['used-cars'].checked;
+    let newCars = elements['new-cars'].checked;
     let usedCarText = usedCars ? ', used car is possible' : '.';
 
     let searchMessage = document.createElement('p');
@@ -1156,3 +1157,11 @@ function checkSimpleInput(id) {
 
 let simpleInputIds = ['year-till', 'year-from', 'min-price', 'max-price', 'color'];
 simpleInputIds.map(id => checkSimpleInput(id));
+
+
+function checkCheckboxInfo() {
+    let carType = document.querySelectorAll('[name="car-types"]:checked');
+    console.log(carType);
+}
+
+checkCheckboxInfo()

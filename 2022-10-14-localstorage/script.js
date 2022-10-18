@@ -41,19 +41,20 @@ button.addEventListener('click', () => {
 // })
 
 
+// Kito duomenų tipo patalpinimas į LocalStorage  
 
+let num = 10;
 let arr = [1, 2, 3, 5, 10];
-console.log(arr);
-console.log(typeof arr);
-
 localStorage.setItem('arr', arr);
 let arrFromLocal = localStorage.getItem('arr');
-console.log(arrFromLocal);
-console.log(typeof arrFromLocal);
 
 //Masyvo pavertimas į JSON
 
-console.log(arr);
-console.log(typeof arr);
-let strArr = JSON.stringify(arr)
-console.log(strArr);
+let strArr = JSON.stringify(arr);
+localStorage.setItem('strArr', strArr);
+
+// String'o (JSON) keitimas atgal į masyvą (ar kitą duoemnų tipą)
+
+let strArrFromLocal = localStorage.getItem('strArr');
+let convertedArrFromLocal = JSON.parse(strArrFromLocal);
+

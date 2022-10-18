@@ -32,6 +32,14 @@ let passwordInput = document.querySelector('#user-password');
 let submitButton = document.querySelector('#submit-button');
 let loginAnswer = document.querySelector('#login-answer');
 
+let logOutButton = document.createElement('button');
+logOutButton.textContent = 'LOGOUT';
+logOutButton.classList = 'button';
+
+logOutButton.addEventListener('click', () => {
+    localStorage.setItem('isLoggedIn', false);
+    location.reload();
+})
 
 
 userAccept.addEventListener('change', () => {
@@ -61,34 +69,26 @@ loginForm.addEventListener('submit', (event) => {
     let name = event.target.elements.name.value;
     let password = event.target.elements.password.value;
 
-    let existUser = users.filter((user) => {
-        return user.userName === name && user.userPassword === password;
-    })
+    let existUser = users.filter(user => user.userName === name && user.userPassword === password)
     if (existUser.length > 0) {
-        renderLoggedInView()
-
-        localStorage.setItem('isLoggedIn', true)
-
+        renderLoggedInView();
+        localStorage.removeItem('user-name');
+        localStorage.removeItem('user-password');
+        localStorage.removeItem('user-accept');
+        localStorage.setItem('isLoggedIn', JSON.stringify(true));
     } else {
         let failLogin = document.createElement('h3');
         failLogin.textContent = `User name or password incorrect`;
         loginAnswer.append(failLogin);
         event.target.elements.password.value = '';
     }
-
-    if (localStorage.getItem('logined') === 'true') {
-        localStorage.removeItem('user-password');
-        localStorage.removeItem('user-name');
-    }
 })
 
 function inputLocalStorage(input) {
     let localStorageValue = localStorage.getItem(input.id)
     if (input.type === 'checkbox') {
-
         let isChecked = localStorageValue === 'true';
         input.checked = isChecked;
-
         input.addEventListener('input', () => {
             localStorage.setItem(input.id, input.checked)
         })
@@ -107,22 +107,17 @@ inputLocalStorage(userAccept)
 toggleLoginButton()
 
 function checkIfLoggedIn() {
-    let isLoggedIn = localStorage.getItem('isLoggedIn', true)
-    localStorage.removeItem('user-name')
-    localStorage.removeItem('user-password')
-    localStorage.removeItem('user-accept')
-    
-    if (isLoggedIn === 'true') {
+    let isLoggedIn = JSON.parse(localStorage.getItem('isLoggedIn'))
+    if (isLoggedIn) {
         renderLoggedInView()
     }
 }
 
 checkIfLoggedIn()
 
-
 function renderLoggedInView() {
     loginForm.remove();
     let succsesLogin = document.createElement('h1');
     succsesLogin.textContent = `You are successfully logged in!`;
-    loginAnswer.append(succsesLogin);
+    loginAnswer.append(succsesLogin, logOutButton);
 }
