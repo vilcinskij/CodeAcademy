@@ -52,6 +52,7 @@ let itKnowledgeOutput = document.querySelector('#student-it-knowledge-output');
 let itKnowledgeInput = document.querySelector('#student-it-knowledge');
 itKnowledgeOutput.textContent = itKnowledgeInput.value;
 
+
 itKnowledgeInput.addEventListener('input', ()=>{
     itKnowledgeOutput.textContent = itKnowledgeInput.value;
 })
@@ -167,6 +168,7 @@ studentForm.addEventListener('submit', (event) => {
     studentList.prepend(studentItem);
 
     event.target.reset();
+    itKnowledgeOutput.textContent = itKnowledgeInput.value;
 })
 
 
