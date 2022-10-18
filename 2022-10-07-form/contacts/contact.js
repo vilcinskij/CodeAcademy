@@ -45,17 +45,20 @@ console.table(initialData)
 
 
 let studentForm = document.querySelector('#student-form');
-let studentList = document.querySelector('.student-list');
+let studentList = document.querySelector('#student-list');
 let createMessage = document.querySelector('.create-message')
 
-let itKnowledgeOutput = document.querySelector('#student-it-knowledge-output');
-let itKnowledgeInput = document.querySelector('#student-it-knowledge');
-itKnowledgeOutput.textContent = itKnowledgeInput.value;
 
-
-itKnowledgeInput.addEventListener('input', ()=>{
+function changeRangeOutput() {
+    let itKnowledgeInput = document.querySelector('#student-it-knowledge');
+    let itKnowledgeOutput = document.querySelector('#student-it-knowledge-output');
     itKnowledgeOutput.textContent = itKnowledgeInput.value;
-})
+    itKnowledgeInput.addEventListener('input', () => {
+        itKnowledgeOutput.textContent = itKnowledgeInput.value;
+    })
+}
+
+changeRangeOutput()
 
 studentForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -71,6 +74,7 @@ studentForm.addEventListener('submit', (event) => {
     let group = elements.group.value;
     let interests = document.querySelectorAll('[name="interest"]:checked');
 
+
     let inputErrorMessages = event.target.querySelectorAll('.input-error-message');
     inputErrorMessages.forEach((message) => {
         message.remove();
@@ -84,11 +88,15 @@ studentForm.addEventListener('submit', (event) => {
             formIsValid = false;
             let inputErrorMessage = document.createElement('span');
             inputErrorMessage.textContent = 'This field is required';
-            inputErrorMessage.classList.add('input-error-message', 'color-red');
+            inputErrorMessage.classList.add('input-error-message');
             input.classList.add('input-error');
             input.after(inputErrorMessage);
         }
     })
+
+    if (!formIsValid) {
+        return
+    }
 
     let studentItem = document.createElement('div');
     studentItem.classList = 'student-item';
@@ -133,6 +141,8 @@ studentForm.addEventListener('submit', (event) => {
     studentDeleteButton.classList.add('button', 'delete-button');
     studentDeleteButton.addEventListener('click', () => {
         studentItem.remove();
+        let removedStudentText = `Student ${name} ${surname} successfully removed`
+        renderAlertMessage(removedStudentText)
     })
 
     let privateInfoButton = document.createElement('button');
@@ -156,20 +166,24 @@ studentForm.addEventListener('submit', (event) => {
         privateData = !privateData;
     })
 
-    let studentCreateMessage = document.createElement('p');
-    studentCreateMessage.textContent = `Student ${name} ${surname} added`
-    createMessage.append(studentCreateMessage)
-    setTimeout(() => {
-        studentCreateMessage.remove()
-    }, 3000)
-
     interestWrapperElement.append(interestTitleElement, interestsList)
     studentItem.append(nameElement, surnameElement, ageElement, emailElement, phoneElement, itKnowledgeElement, groupElement, interestWrapperElement, privateInfoButton, studentDeleteButton,)
     studentList.prepend(studentItem);
 
+    let createdStudentText = `Student ${name} ${surname} added`
+    renderAlertMessage(createdStudentText);
+
+    changeRangeOutput();
     event.target.reset();
-    itKnowledgeOutput.textContent = itKnowledgeInput.value;
 })
 
+function renderAlertMessage(message) {
+    let studentCreateMessage = document.createElement('p');
+    studentCreateMessage.textContent = message;
+    studentCreateMessage.classList = 'new-student-message'
+    createMessage.append(studentCreateMessage);
+    setTimeout(() => {
+        studentCreateMessage.remove()
+    }, 3000)
+}
 
-// function checkInputdata() 
