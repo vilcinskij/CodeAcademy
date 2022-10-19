@@ -1093,7 +1093,6 @@ searchForm.addEventListener('submit', event => {
     searchResult.append(searchMessage);
 })
 
-
 function renderCarsOptionElements(data) {
     data.map(element => {
         let carBrandOption = document.createElement('option');
@@ -1101,7 +1100,6 @@ function renderCarsOptionElements(data) {
         carBrandOption.value = element.brand.toLowerCase();
         carBrandSelect.append(carBrandOption);
     })
-
     carBrandSelect.addEventListener('change', () => {
         let carModelSelect = document.querySelector('#car-model');
         carModelSelect.removeAttribute('disabled')
@@ -1116,6 +1114,9 @@ function renderCarsOptionElements(data) {
     })
 }
 
+let simpleInputIds = ['year-till', 'year-from', 'min-price', 'max-price', 'color'];
+simpleInputIds.map(id => checkSimpleInput(id));
+
 function checkSimpleInput(id) {
     let input = document.getElementById(id);
     input.value = localStorage.getItem(id);
@@ -1124,13 +1125,11 @@ function checkSimpleInput(id) {
     });
 }
 
-let simpleInputIds = ['year-till', 'year-from', 'min-price', 'max-price', 'color'];
-simpleInputIds.map(id => checkSimpleInput(id));
-
-
 function checkCheckboxInfo() {
     let carType = document.querySelectorAll('[name="car-types"]:checked');
     console.log(carType);
 }
 
 checkCheckboxInfo()
+
+

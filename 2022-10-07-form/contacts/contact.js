@@ -232,3 +232,29 @@ function checkInput(input, messageText) {
     inputErrorMessage.textContent = messageText;
 }
 
+let nameInput = document.querySelector('#student-name');
+let surnameInput = document.querySelector('#student-surname');
+let ageInput = document.querySelector('#student-age');
+let phoneInput = document.querySelector('#student-phone');
+let emailInput = document.querySelector('#student-email');
+let itKnowledgeInput = document.querySelector('#student-it-knowledge');
+
+
+
+function populateSimpleInput(input) {
+    input.addEventListener('input', (event) => {
+        localStorage.setItem(event.target.id, event.target.value)
+        console.log(event.target.value);
+    })
+    input = localStorage.getItem(input);
+    // console.log(input.value);
+}
+
+nameInput.value = localStorage.getItem('student-name')
+
+populateSimpleInput(nameInput)
+populateSimpleInput(surnameInput)
+populateSimpleInput(ageInput)
+populateSimpleInput(phoneInput)
+populateSimpleInput(emailInput)
+populateSimpleInput(itKnowledgeInput)
