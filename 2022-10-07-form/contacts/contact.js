@@ -205,6 +205,7 @@ studentForm.addEventListener('submit', event => {
 
     changeRangeOutput();
     event.target.reset();
+    localStorage.clear()
 })
 
 function changeRangeOutput() {
@@ -242,15 +243,12 @@ let itKnowledgeInput = document.querySelector('#student-it-knowledge');
 
 
 function populateSimpleInput(input) {
+    input.value = localStorage.getItem(input.id);
+    
     input.addEventListener('input', (event) => {
         localStorage.setItem(event.target.id, event.target.value)
-        console.log(event.target.value);
     })
-    input = localStorage.getItem(input);
-    // console.log(input.value);
 }
-
-nameInput.value = localStorage.getItem('student-name')
 
 populateSimpleInput(nameInput)
 populateSimpleInput(surnameInput)
