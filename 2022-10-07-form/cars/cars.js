@@ -1070,34 +1070,6 @@ const searchForm = document.querySelector('#search-form');
 let searchResult = document.querySelector('#search-result');
 let carBrandSelect = document.querySelector('#car-brand');
 
-
-// let minPriceInput = document.querySelector('#min-price');
-// let maxPriceInput = document.querySelector('#max-price');
-// let yearFromInput = document.querySelector('#year-from');
-// let yearTillInput = document.querySelector('#year-till');
-// let colorInput = document.querySelector('#color');
-// minPriceInput.value = localStorage.getItem('min-price');
-// maxPriceInput.value = localStorage.getItem('max-price');
-// yearFromInput.value = localStorage.getItem('year-from');
-// yearTillInput.value = localStorage.getItem('year-till');
-// colorInput.value = localStorage.getItem('color');
-
-// minPriceInput.addEventListener('input', () => {
-//     localStorage.setItem('min-price', minPriceInput.value)
-// })
-// maxPriceInput.addEventListener('input', () => {
-//     localStorage.setItem('max-price', maxPriceInput.value)
-// })
-// yearFromInput.addEventListener('input', () => {
-//     localStorage.setItem('year-from', yearFromInput.value)
-// })
-// yearTillInput.addEventListener('input', () => {
-//     localStorage.setItem('year-till', yearTillInput.value)
-// })
-// color.addEventListener('input', () => {
-//     localStorage.setItem('color', color.value)
-// })
-
 renderCarsOptionElements(carsInfo);
 
 searchForm.addEventListener('submit', event => {
@@ -1123,7 +1095,7 @@ searchForm.addEventListener('submit', event => {
 
 
 function renderCarsOptionElements(data) {
-    data.forEach(element => {
+    data.map(element => {
         let carBrandOption = document.createElement('option');
         carBrandOption.textContent = element.brand;
         carBrandOption.value = element.brand.toLowerCase();
@@ -1136,16 +1108,13 @@ function renderCarsOptionElements(data) {
         carModelSelect.innerHTML = '<option value="" disabled selected>-----</option>';
         let selectedCarObject = data.find(car => car.brand.toLowerCase() === carBrandSelect.value);
 
-        selectedCarObject.models.forEach(element => {
+        selectedCarObject.models.map(element => {
             let carModelOption = document.createElement('option');
             carModelOption.textContent = element;
             carModelSelect.append(carModelOption);
         })
     })
-
 }
-
-
 
 function checkSimpleInput(id) {
     let input = document.getElementById(id);

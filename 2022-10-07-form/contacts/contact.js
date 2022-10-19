@@ -41,26 +41,16 @@ let initialData = [
     },
 ]
 
-console.table(initialData)
+// console.table(initialData)
 
 
 let studentForm = document.querySelector('#student-form');
 let studentList = document.querySelector('#student-list');
 let createMessage = document.querySelector('.create-message')
 
-
-function changeRangeOutput() {
-    let itKnowledgeInput = document.querySelector('#student-it-knowledge');
-    let itKnowledgeOutput = document.querySelector('#student-it-knowledge-output');
-    itKnowledgeOutput.textContent = itKnowledgeInput.value;
-    itKnowledgeInput.addEventListener('input', () => {
-        itKnowledgeOutput.textContent = itKnowledgeInput.value;
-    })
-}
-
 changeRangeOutput()
 
-studentForm.addEventListener('submit', (event) => {
+studentForm.addEventListener('submit', event => {
     event.preventDefault();
 
     let elements = event.target.elements;
@@ -76,28 +66,68 @@ studentForm.addEventListener('submit', (event) => {
 
 
     let inputErrorMessages = event.target.querySelectorAll('.input-error-message');
-    inputErrorMessages.forEach((message) => {
-        message.remove();
-    })
+    inputErrorMessages.forEach(message => message.remove())
 
     let requiredInputs = event.target.querySelectorAll('.required');
     let formIsValid = true;
 
-    requiredInputs.forEach((input) => {
+
+    requiredInputs.forEach(input => {
+        input.classList.remove('input-error')
+
+        // console.dir(input.name)
+
         if (!input.value) {
             formIsValid = false;
-            let inputErrorMessage = document.createElement('span');
-            inputErrorMessage.textContent = 'This field is required';
-            inputErrorMessage.classList.add('input-error-message');
-            input.classList.add('input-error');
-            input.after(inputErrorMessage);
+
+            let messageText = 'This field is required';
+            checkInput(input, messageText)
+        } else if (input.name === 'name') {
+            if (input.value.length < 3) {
+                formIsValid = false;
+
+                let messageText = 'Name is too short. At least 3 symbols is required.';
+                checkInput(input, messageText)
+            }
+        } else if (input.name === 'surname') {
+            if (input.value.length < 3) {
+                formIsValid = false;
+
+                let messageText = 'Surname is too short. At least 3 symbols is required.';
+                checkInput(input, messageText)
+            }
+        } else if (input.name === 'phone') {
+            if (input.value.length < 8 || input.value.length > 12) {
+                formIsValid = false;
+
+                let messageText = 'Phone number is invalid.';
+                checkInput(input, messageText);
+            }
+        } else if (input.name === 'age') {
+            if (input.value < 0) {
+                formIsValid = false;
+
+                let messageText = 'Age can\'t be a negative number.';
+                checkInput(input, messageText);
+            } else if (input.value > 120) {
+                formIsValid = false;
+
+                let messageText = 'Age can\'t be more then 120 years.';
+                checkInput(input, messageText);
+            }
+        } else if (input.name === 'email') {
+            if (input.value.length < 9 || !input.value.includes('@') || !input.value.includes('.')) {
+                formIsValid = false;
+
+                let messageText = 'Email is incorrect.';
+                checkInput(input, messageText);
+            }
         }
     })
 
     if (!formIsValid) {
         return
     }
-
     let studentItem = document.createElement('div');
     studentItem.classList = 'student-item';
 
@@ -177,6 +207,13 @@ studentForm.addEventListener('submit', (event) => {
     event.target.reset();
 })
 
+function changeRangeOutput() {
+    let itKnowledgeInput = document.querySelector('#student-it-knowledge');
+    let itKnowledgeOutput = document.querySelector('#student-it-knowledge-output');
+    itKnowledgeOutput.textContent = itKnowledgeInput.value;
+    itKnowledgeInput.addEventListener('input', () => itKnowledgeOutput.textContent = itKnowledgeInput.value)
+}
+
 function renderAlertMessage(message) {
     let studentCreateMessage = document.createElement('p');
     studentCreateMessage.textContent = message;
@@ -185,5 +222,13 @@ function renderAlertMessage(message) {
     setTimeout(() => {
         studentCreateMessage.remove()
     }, 3000)
+}
+
+function checkInput(input, messageText) {
+    let inputErrorMessage = document.createElement('span');
+    inputErrorMessage.classList.add('input-error-message');
+    input.classList.add('input-error');
+    input.after(inputErrorMessage);
+    inputErrorMessage.textContent = messageText;
 }
 

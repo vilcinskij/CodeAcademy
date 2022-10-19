@@ -35,22 +35,14 @@ let loginAnswer = document.querySelector('#login-answer');
 let logOutButton = document.createElement('button');
 logOutButton.textContent = 'LOGOUT';
 logOutButton.classList = 'button';
-
 logOutButton.addEventListener('click', () => {
     localStorage.setItem('isLoggedIn', false);
     location.reload();
 })
 
-
-userAccept.addEventListener('change', () => {
-    toggleLoginButton()
-})
-nameInput.addEventListener('input', () => {
-    toggleLoginButton()
-})
-passwordInput.addEventListener('input', () => {
-    toggleLoginButton()
-})
+userAccept.addEventListener('change', () => toggleLoginButton());
+nameInput.addEventListener('input', () => toggleLoginButton());
+passwordInput.addEventListener('input', () => toggleLoginButton());
 
 function toggleLoginButton() {
     if (userAccept.checked && nameInput.value.length > 1 && passwordInput.value.length > 2) {
@@ -81,6 +73,8 @@ loginForm.addEventListener('submit', (event) => {
         failLogin.textContent = `User name or password incorrect`;
         loginAnswer.append(failLogin);
         event.target.elements.password.value = '';
+        localStorage.removeItem('user-password');
+
     }
 })
 
