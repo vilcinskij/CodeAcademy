@@ -235,8 +235,6 @@ let itKnowledgeInput = document.querySelector('#student-it-knowledge');
 let interestInputs = document.querySelectorAll('[name="interest"]');
 
 
-
-
 function populateCheckboxInputs(elements) {
     let localStorageInterests = JSON.parse(localStorage.getItem('interests'));
     if (localStorageInterests) {
@@ -253,51 +251,52 @@ function populateCheckboxInputs(elements) {
                 studentInterestsArr.push(interest.id)
             })
 
-
             localStorage.setItem('interests', JSON.stringify(studentInterestsArr));
         })
     });
 }
 
-
-
-studentForm.addEventListener('input', () => {
-
-
-    let groupInput = document.querySelector('[name="group"]:checked');
-    localStorage.setItem(groupInput.name, JSON.stringify(groupInput.id));
-})
-
-
-
-
-
-
+// studentForm.addEventListener('input', () => {
+//     let groupInput = document.querySelector('[name="group"]:checked');
+//     localStorage.setItem(groupInput.name, JSON.stringify(groupInput.id));
+// })
 
 function populateSimpleInput(input) {
     input.value = localStorage.getItem(input.id);
     input.addEventListener('input', event => localStorage.setItem(event.target.id, event.target.value))
 }
 
-function populateRadioInput() {
-
-}
-
-
 let localStorageGroup = JSON.parse(localStorage.getItem('group'));
 if (localStorageGroup) {
     document.getElementById(localStorageGroup).checked = true
 }
 
+// populateSimpleInput(nameInput)
+// populateSimpleInput(surnameInput)
+// populateSimpleInput(ageInput)
+// populateSimpleInput(phoneInput)
+// populateSimpleInput(emailInput)
+// populateSimpleInput(itKnowledgeInput)
+// populateCheckboxInputs(interestInputs)
 
+function formDataInLocalStorage(form) {
 
+    let localName = localStorage.getItem('name');
+    let localSurname = localStorage.getItem('surname');
+    let localAge = localStorage.getItem('age');
+    let localPhome = localStorage.getItem('phome');
+    let localEmail = localStorage.getItem('email');
+    let localItKnowledge = localStorage.getItem('knowledge');
+    let localGroup = localStorage.getItem('group');
+    
+    
 
-populateSimpleInput(nameInput)
-populateSimpleInput(surnameInput)
-populateSimpleInput(ageInput)
-populateSimpleInput(phoneInput)
-populateSimpleInput(emailInput)
-populateSimpleInput(itKnowledgeInput)
-populateCheckboxInputs(interestInputs)
+    console.log(form.elements.group.value);
 
+    form.addEventListener('input', (event) => {
+        let activeInput = event.target;
+        localStorage.setItem(activeInput.name, activeInput.value)
+    })
+}
 
+formDataInLocalStorage(studentForm)
