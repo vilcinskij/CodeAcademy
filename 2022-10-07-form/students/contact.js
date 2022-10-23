@@ -232,28 +232,46 @@ let ageInput = document.querySelector('#student-age');
 let phoneInput = document.querySelector('#student-phone');
 let emailInput = document.querySelector('#student-email');
 let itKnowledgeInput = document.querySelector('#student-it-knowledge');
+let interestInputs = document.querySelectorAll('[name="interest"]');
 
 
-let localStorageInterests = JSON.parse(localStorage.getItem('interests'));
-if (localStorageInterests) {
-    localStorageInterests.map(interest => document.getElementById(interest).checked = true)
+
+
+function populateCheckboxInputs(elements) {
+    let localStorageInterests = JSON.parse(localStorage.getItem('interests'));
+    if (localStorageInterests) {
+        localStorageInterests.map(interest => document.getElementById(interest).checked = true)
+    }
+
+    elements.forEach(element => {
+        element.addEventListener('input', () => {
+
+            let studentInterests = document.querySelectorAll('[name="interest"]:checked')
+            let studentInterestsArr = [];
+
+            studentInterests.forEach(interest => {
+                studentInterestsArr.push(interest.id)
+            })
+
+
+            localStorage.setItem('interests', JSON.stringify(studentInterestsArr));
+        })
+    });
 }
 
-let localStorageGroup = JSON.parse(localStorage.getItem('group'));
-if (localStorageGroup) {
-    document.getElementById(localStorageGroup).checked = true
-}
 
 
 studentForm.addEventListener('input', () => {
-    let interestsInput = document.querySelectorAll('[name="interest"]:checked');
-    let interestsArray = [];
-    interestsInput.forEach(interest => interestsArray.push(interest.id));
-    localStorage.setItem('interests', JSON.stringify(interestsArray));
+
 
     let groupInput = document.querySelector('[name="group"]:checked');
     localStorage.setItem(groupInput.name, JSON.stringify(groupInput.id));
 })
+
+
+
+
+
 
 
 function populateSimpleInput(input) {
@@ -261,9 +279,18 @@ function populateSimpleInput(input) {
     input.addEventListener('input', event => localStorage.setItem(event.target.id, event.target.value))
 }
 
-function populateradioInput() {
+function populateRadioInput() {
 
 }
+
+
+let localStorageGroup = JSON.parse(localStorage.getItem('group'));
+if (localStorageGroup) {
+    document.getElementById(localStorageGroup).checked = true
+}
+
+
+
 
 populateSimpleInput(nameInput)
 populateSimpleInput(surnameInput)
@@ -271,5 +298,6 @@ populateSimpleInput(ageInput)
 populateSimpleInput(phoneInput)
 populateSimpleInput(emailInput)
 populateSimpleInput(itKnowledgeInput)
+populateCheckboxInputs(interestInputs)
 
 
