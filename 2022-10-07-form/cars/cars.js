@@ -1120,27 +1120,22 @@ simpleInputIds.map(id => checkSimpleInput(id));
 function checkSimpleInput(id) {
     let input = document.getElementById(id);
     input.value = localStorage.getItem(id);
-    input.addEventListener('input', () => {
-        localStorage.setItem(id, input.value);
-    });
+    input.addEventListener('input', () => localStorage.setItem(id, input.value));
 }
 
 function checkCheckboxInfo() {
 
+    let localStorageCarTypes = JSON.parse(localStorage.getItem('car-types'))
+
+    if (localStorageCarTypes) {
+        localStorageCarTypes.map(carType => document.getElementById(carType).checked = true)
+    }
     searchForm.addEventListener('input', () => {
         let carTypes = document.querySelectorAll('[name="car-types"]:checked');
-
-        // console.dir(carTypes);
-
         let carTypesArray = [];
-
-        carTypes.forEach(type => {
-            carTypesArray.push(type.id);
-
-        })
-        console.log(carTypesArray);
+        carTypes.forEach(type => carTypesArray.push(type.id));
+        localStorage.setItem('car-types', JSON.stringify(carTypesArray));
     })
-
 }
 
 checkCheckboxInfo()

@@ -79,46 +79,39 @@ studentForm.addEventListener('submit', event => {
 
         if (!input.value) {
             formIsValid = false;
-
             let messageText = 'This field is required';
             checkInput(input, messageText)
         } else if (input.name === 'name') {
             if (input.value.length < 3) {
                 formIsValid = false;
-
                 let messageText = 'Name is too short. At least 3 symbols is required.';
                 checkInput(input, messageText)
             }
         } else if (input.name === 'surname') {
             if (input.value.length < 3) {
                 formIsValid = false;
-
                 let messageText = 'Surname is too short. At least 3 symbols is required.';
                 checkInput(input, messageText)
             }
         } else if (input.name === 'phone') {
             if (input.value.length < 8 || input.value.length > 12) {
                 formIsValid = false;
-
                 let messageText = 'Phone number is invalid.';
                 checkInput(input, messageText);
             }
         } else if (input.name === 'age') {
             if (input.value < 0) {
                 formIsValid = false;
-
                 let messageText = 'Age can\'t be a negative number.';
                 checkInput(input, messageText);
             } else if (input.value > 120) {
                 formIsValid = false;
-
                 let messageText = 'Age can\'t be more then 120 years.';
                 checkInput(input, messageText);
             }
         } else if (input.name === 'email') {
             if (input.value.length < 9 || !input.value.includes('@') || !input.value.includes('.')) {
                 formIsValid = false;
-
                 let messageText = 'Email is incorrect.';
                 checkInput(input, messageText);
             }
@@ -241,13 +234,35 @@ let emailInput = document.querySelector('#student-email');
 let itKnowledgeInput = document.querySelector('#student-it-knowledge');
 
 
+let localStorageInterests = JSON.parse(localStorage.getItem('interests'));
+if (localStorageInterests) {
+    localStorageInterests.map(interest => document.getElementById(interest).checked = true)
+}
+
+let localStorageGroup = JSON.parse(localStorage.getItem('group'));
+if (localStorageGroup) {
+    document.getElementById(localStorageGroup).checked = true
+}
+
+
+studentForm.addEventListener('input', () => {
+    let interestsInput = document.querySelectorAll('[name="interest"]:checked');
+    let interestsArray = [];
+    interestsInput.forEach(interest => interestsArray.push(interest.id));
+    localStorage.setItem('interests', JSON.stringify(interestsArray));
+
+    let groupInput = document.querySelector('[name="group"]:checked');
+    localStorage.setItem(groupInput.name, JSON.stringify(groupInput.id));
+})
+
 
 function populateSimpleInput(input) {
     input.value = localStorage.getItem(input.id);
-    
-    input.addEventListener('input', (event) => {
-        localStorage.setItem(event.target.id, event.target.value)
-    })
+    input.addEventListener('input', event => localStorage.setItem(event.target.id, event.target.value))
+}
+
+function populateradioInput() {
+
 }
 
 populateSimpleInput(nameInput)
@@ -256,3 +271,5 @@ populateSimpleInput(ageInput)
 populateSimpleInput(phoneInput)
 populateSimpleInput(emailInput)
 populateSimpleInput(itKnowledgeInput)
+
+
