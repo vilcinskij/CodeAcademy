@@ -1130,8 +1130,13 @@ function checkCheckboxInfo() {
     searchForm.addEventListener('input', ()=>{
         let carTypes = document.querySelectorAll('[name="car-types"]:checked');
 
-        console.dir(carTypes);
+        // console.dir(carTypes);
 
+        let carTypesArray = [];
+
+        carTypes.forEach(type => {
+            console.log(type.id);
+        })
     } )
 
 }
