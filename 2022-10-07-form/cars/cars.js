@@ -1127,7 +1127,7 @@ function checkSimpleInput(id) {
 
 function checkCheckboxInfo() {
 
-    searchForm.addEventListener('input', ()=>{
+    searchForm.addEventListener('input', () => {
         let carTypes = document.querySelectorAll('[name="car-types"]:checked');
 
         // console.dir(carTypes);
@@ -1135,9 +1135,11 @@ function checkCheckboxInfo() {
         let carTypesArray = [];
 
         carTypes.forEach(type => {
-            console.log(type.id);
+            carTypesArray.push(type.id);
+
         })
-    } )
+        console.log(carTypesArray);
+    })
 
 }
 
