@@ -226,72 +226,17 @@ function checkInput(input, messageText) {
     inputErrorMessage.textContent = messageText;
 }
 
-let nameInput = document.querySelector('#student-name');
-let surnameInput = document.querySelector('#student-surname');
-let ageInput = document.querySelector('#student-age');
-let phoneInput = document.querySelector('#student-phone');
-let emailInput = document.querySelector('#student-email');
-let itKnowledgeInput = document.querySelector('#student-it-knowledge');
-let interestInputs = document.querySelectorAll('[name="interest"]');
-
-
-function populateCheckboxInputs(elements) {
-    let localStorageInterests = JSON.parse(localStorage.getItem('interests'));
-    if (localStorageInterests) {
-        localStorageInterests.map(interest => document.getElementById(interest).checked = true)
-    }
-
-    elements.forEach(element => {
-        element.addEventListener('input', () => {
-
-            let studentInterests = document.querySelectorAll('[name="interest"]:checked')
-            let studentInterestsArr = [];
-
-            studentInterests.forEach(interest => {
-                studentInterestsArr.push(interest.id)
-            })
-
-            localStorage.setItem('interests', JSON.stringify(studentInterestsArr));
-        })
-    });
-}
-
-// studentForm.addEventListener('input', () => {
-//     let groupInput = document.querySelector('[name="group"]:checked');
-//     localStorage.setItem(groupInput.name, JSON.stringify(groupInput.id));
-// })
-
-function populateSimpleInput(input) {
-    input.value = localStorage.getItem(input.id);
-    input.addEventListener('input', event => localStorage.setItem(event.target.id, event.target.value))
-}
-
-let localStorageGroup = JSON.parse(localStorage.getItem('group'));
-if (localStorageGroup) {
-    document.getElementById(localStorageGroup).checked = true
-}
-
-// populateSimpleInput(nameInput)
-// populateSimpleInput(surnameInput)
-// populateSimpleInput(ageInput)
-// populateSimpleInput(phoneInput)
-// populateSimpleInput(emailInput)
-// populateSimpleInput(itKnowledgeInput)
 // populateCheckboxInputs(interestInputs)
 
 function formDataInLocalStorage(form) {
-
-    let localName = localStorage.getItem('name');
-    let localSurname = localStorage.getItem('surname');
-    let localAge = localStorage.getItem('age');
-    let localPhome = localStorage.getItem('phome');
-    let localEmail = localStorage.getItem('email');
-    let localItKnowledge = localStorage.getItem('knowledge');
-    let localGroup = localStorage.getItem('group');
+    form.elements.name.value = localStorage.getItem('name');
+    form.elements.surname.value = localStorage.getItem('surname');
+    form.elements.age.value = localStorage.getItem('age');
+    form.elements.phone.value = localStorage.getItem('phone');
+    form.elements.email.value = localStorage.getItem('email');
+    form.elements['it-knowledge'].value = localStorage.getItem('it-knowledge');
+    form.elements.group.value = localStorage.getItem('group');
     
-    
-
-    console.log(form.elements.group.value);
 
     form.addEventListener('input', (event) => {
         let activeInput = event.target;
