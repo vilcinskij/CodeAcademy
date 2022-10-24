@@ -7,10 +7,10 @@ let initialData = [
         email: 'name@surname.com',
         itKnowledge: 8,
         group: 'feu 5',
-        interest: ['JavaScript', 'PHP']
+        interest: ['JavaScript', 'PHP', 'C++']
     },
     {
-        name: 'John',
+        name: 'Bill',
         surname: 'Doe',
         age: 21,
         phone: 58454884784,
@@ -39,16 +39,119 @@ let initialData = [
         group: 'feu 5',
         interest: []
     },
-]
-
+    {
+        name: 'Rokas',
+        surname: 'Rokaitis',
+        age: 85,
+        phone: 45558884545,
+        email: 'name@surname5.com',
+        itKnowledge: 8,
+        group: 'feu 4',
+        interest: ["Java"]
+    }
+];
 // console.table(initialData)
-
 
 let studentForm = document.querySelector('#student-form');
 let studentList = document.querySelector('#student-list');
-let createMessage = document.querySelector('.create-message')
+let createMessage = document.querySelector('.create-message');
 
-changeRangeOutput()
+initialData.map(student => renderSingleStudent(student))
+
+function renderSingleStudent(element) {  
+        let name = element.name;
+        let surname = element.surname;
+        let age = element.age;
+        let phone = element.phone;
+        let email = element.email;
+        let itKnowledge = element.itKnowledge;
+        let group = element.group;
+        let interests = element.interest;
+
+
+        let studentItem = document.createElement('div');
+        studentItem.classList = 'student-item';
+
+        let nameElement = document.createElement('p');
+        nameElement.innerHTML = `Name: ${name}`;
+
+        let surnameElement = document.createElement('p');
+        surnameElement.innerHTML = `Surname: ${surname}`;
+
+        let ageElement = document.createElement('p');
+        ageElement.innerHTML = `Age: ${age}`;
+
+        let emailElement = document.createElement('p');
+        emailElement.innerHTML = `Email: <span class="hidden-area">****</span>`;
+
+        let phoneElement = document.createElement('p');
+        phoneElement.innerHTML = `Phone: <span class="hidden-area">****</span>`
+
+        let itKnowledgeElement = document.createElement('p');
+        itKnowledgeElement.innerHTML = `IT Knowledge: ${itKnowledge}`;
+
+        let groupElement = document.createElement('p');
+        groupElement.innerHTML = `Group: ${group}`;
+
+        let interestWrapperElement = document.createElement('div');
+        interestWrapperElement.classList.add('interest-wrapper');
+
+        let interestTitleElement = document.createElement('h3');
+        interestTitleElement.textContent = 'Interests:';
+
+        let interestsList = document.createElement('ul');
+        interests.map(interest => {
+            let interestsListItem = document.createElement('li');
+            interestsListItem.textContent = interest;
+            interestsList.append(interestsListItem);
+        })
+
+        let studentDeleteButton = document.createElement('button');
+        studentDeleteButton.textContent = 'Delete student';
+        studentDeleteButton.classList.add('button', 'delete-button');
+        studentDeleteButton.addEventListener('click', () => {
+            studentItem.remove();
+            let removedStudentText = `Student ${name} ${surname} successfully removed`
+            renderAlertMessage(removedStudentText)
+        })
+
+        let privateInfoButton = document.createElement('button');
+        let privateData = true;
+        privateInfoButton.textContent = 'Show personal info';
+        privateInfoButton.classList.add('button', 'private-info-button');
+
+        privateInfoButton.addEventListener('click', () => {
+            let privateEmail = emailElement.querySelector('.hidden-area');
+            let privatePhone = phoneElement.querySelector('.hidden-area');
+
+            if (privateData) {
+                privateEmail.textContent = email;
+                privatePhone.textContent = phone;
+                privateInfoButton.textContent = 'Hide personal info';
+            } else {
+                privateEmail.textContent = '****';
+                privatePhone.textContent = '****';
+                privateInfoButton.textContent = 'Show personal info';
+            }
+            privateData = !privateData;
+        })
+
+        interestWrapperElement.append(interestTitleElement, interestsList)
+        studentItem.append(nameElement, surnameElement, ageElement, emailElement, phoneElement, itKnowledgeElement, groupElement, interestWrapperElement, privateInfoButton, studentDeleteButton,)
+        studentList.prepend(studentItem);
+
+    
+}
+
+
+
+
+
+
+
+
+
+changeRangeOutput();
 
 studentForm.addEventListener('submit', event => {
     event.preventDefault();
@@ -60,13 +163,11 @@ studentForm.addEventListener('submit', event => {
     let phone = elements.phone.value;
     let email = elements['student-email'].value;
     let itKnowledge = elements['it-knowledge'].value;
-    // let group = document.querySelector('[name="group"]:checked');
     let group = elements.group.value;
     let interests = document.querySelectorAll('[name="interest"]:checked');
 
-
     let inputErrorMessages = event.target.querySelectorAll('.input-error-message');
-    inputErrorMessages.forEach(message => message.remove())
+    inputErrorMessages.forEach(message => message.remove());
 
     let requiredInputs = event.target.querySelectorAll('.required');
     let formIsValid = true;
@@ -155,8 +256,7 @@ studentForm.addEventListener('submit', event => {
     interests.forEach(interest => {
         let interestsListItem = document.createElement('li');
         interestsListItem.textContent = interest.value;
-        interestsList.append(interestsListItem)
-
+        interestsList.append(interestsListItem);
     })
 
     let studentDeleteButton = document.createElement('button');
@@ -193,7 +293,7 @@ studentForm.addEventListener('submit', event => {
     studentItem.append(nameElement, surnameElement, ageElement, emailElement, phoneElement, itKnowledgeElement, groupElement, interestWrapperElement, privateInfoButton, studentDeleteButton,)
     studentList.prepend(studentItem);
 
-    let createdStudentText = `Student ${name} ${surname} added`
+    let createdStudentText = `Student ${name} ${surname} added`;
     renderAlertMessage(createdStudentText);
 
     changeRangeOutput();
@@ -226,8 +326,6 @@ function checkInput(input, messageText) {
     inputErrorMessage.textContent = messageText;
 }
 
-// populateCheckboxInputs(interestInputs)
-
 function formDataInLocalStorage(form) {
     form.elements.name.value = localStorage.getItem('name');
     form.elements.surname.value = localStorage.getItem('surname');
@@ -236,12 +334,22 @@ function formDataInLocalStorage(form) {
     form.elements.email.value = localStorage.getItem('email');
     form.elements['it-knowledge'].value = localStorage.getItem('it-knowledge');
     form.elements.group.value = localStorage.getItem('group');
-    
-    console.log(form.elements);
+
+    let localInterests = JSON.parse(localStorage.getItem('interest'));
+    if (localInterests) {
+        localInterests.map(inerestValue => {
+            document.querySelector(`[value="${inerestValue}"]`).checked = true
+        })
+    }
 
     form.addEventListener('input', (event) => {
         let activeInput = event.target;
         localStorage.setItem(activeInput.name, activeInput.value)
+
+        let interestsArray = [];
+        let formIneterest = document.querySelectorAll('[name="interest"]:checked');
+        formIneterest.forEach(interest => interestsArray.push(interest.value));
+        localStorage.setItem('interest', JSON.stringify(interestsArray));
     })
 }
 
