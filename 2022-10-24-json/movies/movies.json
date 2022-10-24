@@ -12,10 +12,10 @@
             "adventure",
             "Fantasy"
         ],
-        "director": [
+        "directors": [
             "Jaume Collet-Serra"
         ],
-        "actors": [
+        "cast": [
             "Dwayne Johnson",
             "Aldis Hodge",
             "Pierce Brosnan"
@@ -34,10 +34,10 @@
             "adventure",
             "Drama"
         ],
-        "director": [
+        "directors": [
             "Rishab Shetty"
         ],
-        "actors": [
+        "cast": [
             "Rishab Shetty",
             "Sapthami Gowda",
             "Kishore Kumar G."
@@ -56,11 +56,11 @@
             "adventure",
             "Drama"
         ],
-        "director": [
+        "directors": [
             "Ryan J. Condal",
             "George R.R. Martin"
         ],
-        "actors": [
+        "cast": [
             "Rhys Ifans",
             "Matt Smith",
             "Fabien Frankel"
@@ -79,11 +79,11 @@
             "Crime",
             "Drama"
         ],
-        "director": [
+        "directors": [
             "Ian Brennan",
             "Ryan Murphy"
         ],
-        "actors": [
+        "cast": [
             "Evan Peters",
             "Richard Jenkins",
             "Molly Ringwald"
@@ -102,10 +102,10 @@
             "Comedy",
             "Thriller"
         ],
-        "director": [
+        "directors": [
             "David Leitch"
         ],
-        "actors": [
+        "cast": [
             "Brad Pitt",
             "Joey King",
             "Aaron Taylor-Johnson"
@@ -124,10 +124,10 @@
             "Adventure",
             "Comedy"
         ],
-        "director": [
+        "directors": [
             "Michael Giacchino"
         ],
-        "actors": [
+        "cast": [
             "Gael García Bernal",
             "Laura Donnelly",
             "Harriet Sansom Harris"
@@ -145,10 +145,10 @@
             "Action",
             "Drama"
         ],
-        "director": [
+        "directors": [
             "Joseph Kosinski"
         ],
-        "actors": [
+        "cast": [
             "Tom Cruise",
             "Jennifer Connelly",
             "Miles Teller"
@@ -167,7 +167,7 @@
             "Adventure",
             "Drama"
         ],
-        "director": [
+        "directors": [
             "Tony Gilroy"
         ],
         "actors": [
@@ -189,10 +189,10 @@
             "Drama",
             "Thriller"
         ],
-        "director": [
+        "directors": [
             "Vince Gilligan"
         ],
-        "actors": [
+        "cast": [
             "Bryan Cranston",
             "Aaron Paul",
             "Anna Gunn"
@@ -211,11 +211,11 @@
             "Adventure",
             "Comedy"
         ],
-        "director": [
+        "directors": [
             "Dan Kwan",
             "Daniel Scheinert"
         ],
-        "actors": [
+        "cast": [
             "Michelle Yeoh",
             "Stephanie Hsu",
             "Jamie Lee Curtis"

@@ -12,5 +12,5 @@ let obj = {
     getAdressInfo() {
         return `Address is ${this.address.street} ${this.address.city} ${this.address.country}`
     },
-    education
 }
+
