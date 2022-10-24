@@ -237,6 +237,7 @@ function formDataInLocalStorage(form) {
     form.elements['it-knowledge'].value = localStorage.getItem('it-knowledge');
     form.elements.group.value = localStorage.getItem('group');
     
+    console.log(form.elements);
 
     form.addEventListener('input', (event) => {
         let activeInput = event.target;
