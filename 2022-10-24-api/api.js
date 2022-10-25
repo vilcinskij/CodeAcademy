@@ -32,14 +32,26 @@ categoryForm.addEventListener('submit', event => {
 
 searchForm.addEventListener('submit', event => {
     event.preventDefault()
-    let searchInput = document.querySelector('#search-input').value;
+    let searchInput = event.target.elements['search-input'].value;
     fetch(`https://api.chucknorris.io/jokes/search?query=${searchInput}`)
         .then(res => res.json())
-        .then(joke => {
-            if (joke.result.length >= 0) {
-                let randomElement = Math.floor(Math.random() * joke.result.length);
-                chuckJoke.textContent = joke.result[randomElement].value;
-            } else {console.log('chack will kill you');}
+        .then(data => {
+            let jokes = data.result;
+            let length = data.total;
+
+            if(!jokes) {
+                chuckJoke.textContent = data.message
+                return
+            }
+
+            if (length < 1) {
+                chuckJoke.textContent = 'No joke';
+                return;
+            }
+            let randomIndex = Math.floor(Math.random() * length);
+            let randomJoke = jokes[randomIndex].value;
+            chuckJoke.textContent = randomJoke;
+
         })
 })
 
