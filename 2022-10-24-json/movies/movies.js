@@ -15,12 +15,13 @@ fetch('./movies.json')
             let title = document.createElement('h4');
             title.textContent = `${movie.title} (${movie.year})`;
             title.classList.add('card-title');
-
+            
             let description = document.createElement('p');
             description.textContent = movie.description;
-
+            
             let ranking = document.createElement('span');
             ranking.textContent = `${movie.rating.average} (${movie.rating.votes})`
+            ranking.classList.add('card-subtitle', 'mb-2');
 
             let genres = addList(movie.genres);
             let directors = addList(movie.directors); 
