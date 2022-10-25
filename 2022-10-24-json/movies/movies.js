@@ -13,19 +13,34 @@ fetch('./movies.json')
             moviesListItem.style.width = '360px'
 
             let title = document.createElement('h4');
-            title.textContent = `${movie.title}, ${movie.year}`;
+            title.textContent = `${movie.title} (${movie.year})`;
             title.classList.add('card-title');
 
             let description = document.createElement('p');
             description.textContent = movie.description;
 
+            let ranking = document.createElement('span');
+            ranking.textContent = `${movie.rating.average} (${movie.rating.votes})`
+
             let genres = addList(movie.genres);
             let directors = addList(movie.directors); 
             let cast = addList(movie.cast); 
-            
+
+            let genresWrapper = document.createElement('div');
+            genresWrapper.innerHTML= '<h5>Genres</h5>';
+            genresWrapper.append(genres);
+
+            let castWrapper = document.createElement('div');
+            castWrapper.innerHTML= '<h5>Cast</h5>';
+            castWrapper.append(cast);
+
+            let directorsWrapper = document.createElement('div');
+            directorsWrapper.innerHTML= '<h5>Directors</h5>';
+            directorsWrapper.append(directors);
+
 
             moviesContainer.append(moviesListItem)
-            moviesListItem.append(title, genres, description, directors, cast);
+            moviesListItem.append(title, ranking, genresWrapper, description, directorsWrapper, castWrapper);
         })
     })
 
@@ -37,4 +52,8 @@ function addList(elementsArr) {
         list.append(listElement);
     })
     return list
+}
+
+function listWrapper(list) {
+    
 }
