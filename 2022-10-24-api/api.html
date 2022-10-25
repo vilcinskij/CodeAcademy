@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="bootstrap.css"> -->
     <title>API</title>
 </head>
-<body>
-    
 
+<body>
+    <div>
+        <input class="btn btn-primary" type="button" id="random-joke-button" value="Random joke">
+    </div>
+
+    <div>
+        <form action="" id="joke-by-category">
+            <label for="joke-category-select">Joke category</label>
+            <select name="joke-category-select" id="joke-category-select">
+
+            </select>
+            <input type="submit" value="Get joke by category">
+        </form>
+    </div>
+    <div>
+        <form action="" id="search-form">
+            <input type="text" id="search-input">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+
+    <div>
+        <p id="chuck-joke"></p>
+    </div>
+
+    <!-- <script src="bootstrap.bundle.js"></script> -->
     <script src="api.js"></script>
 </body>
+
 </html>
