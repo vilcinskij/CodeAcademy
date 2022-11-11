@@ -78,15 +78,24 @@
 // // both (2, 5)
 
 
-function greeting() {
-    let time = 15;
-    let isLoggedIn = false;
-    let personName = 'John';
-    let isBrithday = false;
+// function greeting() {
+//     let time = 15;
+//     let isLoggedIn = false;
+//     let personName = 'John';
+//     let isBrithday = false;
 
-    let greeting;
-    let nameText;
-    let brithdayText;
+//     let greeting;
+//     let nameText;
+//     let brithdayText;
 
-    let  greetingElement = document.querySelector('p')
+//     let  greetingElement = document.querySelector('p')
+// }
+
+let num = 5 
+let func = () => {
+    let num = 4
+    console.log(this.num);
 }
+
+func()
+console.log('labas');
