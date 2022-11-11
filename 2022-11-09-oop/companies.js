@@ -12,14 +12,14 @@ class Company {
         this.subsidiaries = subsidiaries;
     }
     addActivity(newActivity) {
-       return this.activityAreas.push(newActivity)    
+        return this.activityAreas.push(newActivity)
     }
-    
+
     // 7.2
     getActivityList() {
         return this.activityAreas.join(', ');
     }
-    
+
     // 9.2
     removeActivity(remove) {
         let updatedActivityAres = this.activityAreas.filter((location) => {
@@ -92,10 +92,10 @@ let subcompany2 = {
             apartment: 13,
         },
     },
-    
+
     subsidaries: [],
     // 8.2
-    
+
 }
 
 
@@ -108,4 +108,8 @@ let subcompany2 = {
 // console.log(subcompany2.getActivityList());
 // console.log(subcompany2.activityAreas);
 
-console.log(company1.addActivity('labas'));
+// console.log(company1.addActivity('labas'));
+
+
+
+
