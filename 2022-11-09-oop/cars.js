@@ -6,7 +6,7 @@ class Car {
         this.basePrice = Number(basePrice);
     }
     turnOn() {
-        console.log(this.brand, 'vroom')
+        console.log(this.brand, 'vrooom')
     }
     getPrice() {
         if (this.engine == 'electric') {
