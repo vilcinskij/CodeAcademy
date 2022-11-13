@@ -17,7 +17,7 @@ UŽDUOTIS 1
 
 
 
-UŽDUOTIS 2
+UŽDUOTIS 2. COMPANIES
 
 1. Sukurti įmonės klasę. <br>
 2. Klasė turės: <br>
@@ -56,7 +56,8 @@ UŽDUOTIS 2
        9.2. Veiklos rūšį iš veiklų masyvo.
 
 
-UŽDUOTIS:
+UŽDUOTIS 3. CARS
+
 1. Susikurkite konstruktorių car, kuris priims brand, model, engine ir turės metodą 'turnOn' - kuris alertins 'vrooom'. Sukurkite du objektus ir patikrinkite ar veikia. <br>
 2. Pakoreguokite šį konstruktorių ir pridėkite papildomą property 'basePrice' ir metodą 'getPrice'. basePrice propertį įrašys sukuriant objektą, tačiau getPric priklausimai nuo variklio išmes kokia yra galutinė kaina. Jei variklis 'electric' - kaina bus +10,000; jei 'diesel' +5,000; jei 'petrol' - kaina tokia kokia ir basePrice. <br>
 3. Pridėti funkciją 'getDiscount', kuri, kaip argumentą, priima nuolaidos dydį ir grąžina kainą su nuolaida. <br>
@@ -73,15 +74,14 @@ UŽDUOTIS:
        6.3. Jeigu nurodytos spalvos nėra tarp bazinių spalvų, tai automobilio kaina turėtų padidėti 3000. <br>
 7. Sukurti metodą 'renderElement', kuris sukurią html elementą, jame atvaizduoja automobilio informaciją (modelį, brandą, variklio tipą, kilometražą, spalvą, bazinę kainą) ir šį elementą išveda į ekraną. <br>
        7.1. Pridėti property 'image', kuris turėtų būti nuotrauka ir šią nuotrauką, taip pat, pridėti į formuluojamą elementą. <br>
-
-8. HTML faile sukurti form'ą.
-8.1. Formoje galima įrašyti automobilio:
-       8.1. Brand'ą
-       8.2. Modelį
-       8.3. Variklio tipą
-       8.4. Bazinę kainą
-       8.5. Kilometražą
-       8.6. Spalvą
-       8.7. Nuorodą į automobilio nuotrauką
-8.2. Formos submit metu, informaciją surinkti ir sukurti automobilio objektą, naudojant Car klasę.
-8.3. Panaudoti 'renderElement' metodą ir atvaizduoti automobilio HTML elementą ekrane.
+8. HTML faile sukurti form'ą. <br>
+8.1. Formoje galima įrašyti automobilio: <br>
+       8.1. Brand'ą <br>
+       8.2. Modelį <br>
+       8.3. Variklio tipą <br>
+       8.4. Bazinę kainą <br>
+       8.5. Kilometražą <br>
+       8.6. Spalvą <br>
+       8.7. Nuorodą į automobilio nuotrauką <br>
+8.2. Formos submit metu, informaciją surinkti ir sukurti automobilio objektą, naudojant Car klasę. <br>
+8.3. Panaudoti 'renderElement' metodą ir atvaizduoti automobilio HTML elementą ekrane. <br>
