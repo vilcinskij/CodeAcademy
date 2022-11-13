@@ -28,7 +28,7 @@ class Car {
         }
     }
     getDiscount(discount) {
-        let discountPrice = Number(this.basePrice - (this.basePrice * (discount / 100)));
+        let discountPrice = Number(this.basePrice - (this.basePrice / 100 * discount));
         console.log(`Price with discount: ${discountPrice}`);
     }
 }

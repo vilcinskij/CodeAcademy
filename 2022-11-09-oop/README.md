@@ -1,4 +1,5 @@
-UŽDUOTIS
+UŽDUOTIS 1
+
 0. Sukurti 3 objektus: keturkampis1, keturkampis2 ir keturkampis3.
 1. Visiems keturkampių objektams pridėti plotį ir aukštį.
 2. Kiekvienam keturkampio objektui pridėti po funkciją, kuri skaičiuoja plotą.
@@ -16,26 +17,27 @@ UŽDUOTIS
 
 
 
-UŽDUOTIS:
-1. Sukurti įmonės klasę.
-2. Klasė turės:
-2.1. Property „company name" ir priskirti įmonės pavadinimo reikšmę.
-2.2. Property „opened" ir priskirti įmonės įkūrimo metų reikšmę.
-2.3. Property „companyCode" ir priskirti įmonės kodo reikšmę.
-2.4. Property „employees" ir priskirti įmonėje dirbančių darbuotojų kiekio reikšmę.
-2.5. Property „ceo" ir priskirti įmonės vadovo reikšmę.
-2.6. Property „nvo" ir priskirti boolean reikšmę (ar įmonė turi NVO statusą).
-2.7. Property „workingLocation" ir priskirti įmonės veiklos šalių value (turi būti bent 2 veiklos šalys).
-2.8. Property „activityAreas" ir priskirti įmonės veiklos sričių reikšmę (turi būti bent dvi veiklos sritys).
-2.9. Property „contacts", kuris turės:
-      2.9.1. „phone"
-      2.9.2. „email"
-      2.9.3. „address", kuris turės:
-          2.9.3.1. „country"
-          2.9.3.2. „city"
-          2.9.3.3. „street"
-          2.9.3.4. „apartment"
-2.10. Property „subsidiary", kurio reikšmė bus naujas objektas.
+UŽDUOTIS 2
+
+1. Sukurti įmonės klasę. <br>
+2. Klasė turės: <br>
+       2.1. Property „company name" ir priskirti įmonės pavadinimo reikšmę. <br>
+       2.2. Property „opened" ir priskirti įmonės įkūrimo metų reikšmę. <br>
+       2.3. Property „companyCode" ir priskirti įmonės kodo reikšmę. <br>
+       2.4. Property „employees" ir priskirti įmonėje dirbančių darbuotojų kiekio reikšmę. <br>
+       2.5. Property „ceo" ir priskirti įmonės vadovo reikšmę. <br>
+       2.6. Property „nvo" ir priskirti boolean reikšmę (ar įmonė turi NVO statusą). <br>
+       2.7. Property „workingLocation" ir priskirti įmonės veiklos šalių value (turi būti bent 2 veiklos šalys). <br>
+       2.8. Property „activityAreas" ir priskirti įmonės veiklos sričių reikšmę (turi būti bent dvi veiklos sritys). <br>
+       2.9. Property „contacts", kuris turės: <br>
+             2.9.1. „phone" <br>
+             2.9.2. „email" <br>
+             2.9.3. „address", kuris turės: <br>
+                 2.9.3.1. „country" <br>
+                 2.9.3.2. „city" <br>
+                 2.9.3.3. „street" <br>
+                 2.9.3.4. „apartment" <br>
+       2.10. Property „subsidiary", kurio reikšmė bus naujas objektas. <br>
 
 
 5. Sukurti funkciją, kuri sukuria adreso string'ą: „Vilniaus st. 15, Vilnius, Lithuania.".
@@ -54,7 +56,7 @@ UŽDUOTIS:
        9.2. Veiklos rūšį iš veiklų masyvo.
 
 
-
+UŽDUOTIS:
 1. Susikurkite konstruktorių car, kuris priims brand, model, engine ir turės metodą 'turnOn' - kuris alertins 'vrooom'. Sukurkite du objektus ir patikrinkite ar veikia.
 2. Pakoreguokite šį konstruktorių ir pridėkite papildomą property 'basePrice' ir metodą 'getPrice'. basePrice propertį įrašys sukuriant objektą, tačiau getPric priklausimai nuo variklio išmes kokia yra galutinė kaina. Jei variklis 'electric' - kaina bus +10,000; jei 'diesel' +5,000; jei 'petrol' - kaina tokia kokia ir basePrice.
 3. Pridėti funkciją 'getDiscount', kuri, kaip argumentą, priima nuolaidos dydį ir grąžina kainą su nuolaida.
