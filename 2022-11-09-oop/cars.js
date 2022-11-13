@@ -4,34 +4,45 @@ class Car {
         this.model = model;
         this.engine = engine;
         this.basePrice = Number(basePrice);
-        this.price = this.getPrice();
         this.mileage = Number(mileage);
+        this.price = this.getPrice()
+        this.enginePrice = this.getEnginePrice();
+        this.mileagePrice = this.getMileagePrice();
         this.color = color;
         this.baseColors = ['black', 'red', 'blue', 'silver', 'white', 'special blue']
     }
     turnOn() {
         console.log(this.brand, 'vrooom')
     }
-    getPrice() {
+    getEnginePrice() {
         if (this.engine === 'electric') {
-            return this.basePrice + 10000;
+            return 10000;
         }
         if (this.engine == 'diesel') {
-            return this.basePrice + 5000;
+            return 5000;
         }
         if (this.engine == 'petrol') {
             return this.basePrice;
         }
         if (this.engine == 'hybrid') {
-            return this.basePrice + 7500;
+            return 7500;
         }
-        return this.basePrice;
+        return 0;
     }
-    getDiscount(discount) {
-        let discountPrice = Number(this.basePrice - (this.basePrice / 100 * discount));
-        console.log(`Price with discount: ${discountPrice}`);
+
+    getPrice() {
+        return this.basePrice + this.enginePrice
     }
-    mileageDiscountPrice() {
+
+    getDiscount(discountPercentage) {
+        if (!discountPercentage || discountPercentage < 0 || discountPercentage > 100) {
+            return this.price;
+        }
+        const discount = this.price / 100 * discountPercentage;
+        return this.price - discount;
+    }
+
+    getMileagePrice() {
         if (this.mileage > 400000) {
             return this.price / 100 * 50
         }
@@ -47,16 +58,25 @@ class Car {
         if (this.mileage > 0) {
             return this.price / 100 * 10
         }
-        return this.price
+        return 0
     }
     colorPrice() {
         if (this.color === 'special blue') {
             return this.price + 500
         }
         if (this.baseColors.find(color => color === this.color)) {
-            return this.price 
+            return this.price
         }
-        return  this.price + 3000
+        return this.price + 3000
+    }
+    renderElement() {
+        const carsWrapper = document.getElementById('cars-wrapper');
+        const carTitle = document.createElement('h4')
+        carTitle.textContent = `${this.brand} ${this.model}`;
+        const carEngine = this.engine;
+        const carBasePrice = this.basePrice;
+
+        carsWrapper.append(carTitle, carEngine, carBasePrice)
     }
 }
 
@@ -65,6 +85,7 @@ const car2 = new Car('VW', 'Polo', 'diesel', 10000, 400001, 'orange');
 const car3 = new Car('Tesla', 'Model S', 'electric', 10000, 20001);
 const car4 = new Car('Toyota', 'Prius', 'hybrid', 10000, 50001);
 
+car2.renderElement()
 
 // console.log(car3.price);
 console.log(car2.colorPrice());
