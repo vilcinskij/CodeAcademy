@@ -75,13 +75,13 @@ UŽDUOTIS 3. CARS
 7. Sukurti metodą 'renderElement', kuris sukurią html elementą, jame atvaizduoja automobilio informaciją (modelį, brandą, variklio tipą, kilometražą, spalvą, bazinę kainą) ir šį elementą išveda į ekraną. <br>
        7.1. Pridėti property 'image', kuris turėtų būti nuotrauka ir šią nuotrauką, taip pat, pridėti į formuluojamą elementą. <br>
 8. HTML faile sukurti form'ą. <br>
-8.1. Formoje galima įrašyti automobilio: <br>
-       8.1. Brand'ą <br>
-       8.2. Modelį <br>
-       8.3. Variklio tipą <br>
-       8.4. Bazinę kainą <br>
-       8.5. Kilometražą <br>
-       8.6. Spalvą <br>
-       8.7. Nuorodą į automobilio nuotrauką <br>
-8.2. Formos submit metu, informaciją surinkti ir sukurti automobilio objektą, naudojant Car klasę. <br>
-8.3. Panaudoti 'renderElement' metodą ir atvaizduoti automobilio HTML elementą ekrane. <br>
+       8.1. Formoje galima įrašyti automobilio: <br>
+              8.1. Brand'ą <br>
+              8.2. Modelį <br>
+              8.3. Variklio tipą <br>
+              8.4. Bazinę kainą <br>
+              8.5. Kilometražą <br>
+              8.6. Spalvą <br>
+              8.7. Nuorodą į automobilio nuotrauką <br>
+       8.2. Formos submit metu, informaciją surinkti ir sukurti automobilio objektą, naudojant Car klasę. <br>
+       8.3. Panaudoti 'renderElement' metodą ir atvaizduoti automobilio HTML elementą ekrane. <br>
