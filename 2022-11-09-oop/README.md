@@ -57,23 +57,22 @@ UŽDUOTIS 2
 
 
 UŽDUOTIS:
-1. Susikurkite konstruktorių car, kuris priims brand, model, engine ir turės metodą 'turnOn' - kuris alertins 'vrooom'. Sukurkite du objektus ir patikrinkite ar veikia.
-2. Pakoreguokite šį konstruktorių ir pridėkite papildomą property 'basePrice' ir metodą 'getPrice'. basePrice propertį įrašys sukuriant objektą, tačiau getPric priklausimai nuo variklio išmes kokia yra galutinė kaina. Jei variklis 'electric' - kaina bus +10,000; jei 'diesel' +5,000; jei 'petrol' - kaina tokia kokia ir basePrice.
-3. Pridėti funkciją 'getDiscount', kuri, kaip argumentą, priima nuolaidos dydį ir grąžina kainą su nuolaida.
-4. Pridėti property 'mileage' ir papildoti automobilių objektus pridedant jų ridą.
-5. Pakoreguoti kainų funkcijas:
-       5.1. Jeigu rida daugiau nei 0, tai kaina sumažėja 10%.
-       5.2. Jeigu rida daugiau nei 20000, tai kaina sumažėja 15%.
-       5.3. Jeigu rida daugiau nei 50000, tai kaina sumažėja 20%.
-       5.4. Jeigu rida daugiau nei 100000, tai kaina sumažėja 30%.
-       5.5. Jeigu rida daugiau nei 400000, tai kaina sumažėja 50%.
-6. Pridėti property 'baseColors'. Tai bus masyvas su bazinėmis spalvomis (juoda, raudona, mėlyna, sidabrinė, balta, 'special blue'). Jų pakeisti negalima, nes yra sukuriamos tiesiogiai klasės constructor funkcijoje.
-       6.1. Pridėti property 'color', kuria galima papildyti kuriant automobilio objektą pagal klasę. Jeigu kuriant objektą, spalva nėra nurodoma, tai pagal nutylėjimą ji bus juoda.
-       6.2. Jeigu nurodyta spalva yra 'special blue', tai automobilio kaina turi padidėti 500.
-       6.3. Jeigu nurodytos spalvos nėra tarp bazinių spalvų, tai automobilio kaina turėtų padidėti 3000.
-
-7. Sukurti metodą 'renderElement', kuris sukurią html elementą, jame atvaizduoja automobilio informaciją (modelį, brandą, variklio tipą, kilometražą, spalvą, bazinę kainą) ir šį elementą išveda į ekraną.
-       7.1. Pridėti property 'image', kuris turėtų būti nuotrauka ir šią nuotrauką, taip pat, pridėti į formuluojamą elementą.
+1. Susikurkite konstruktorių car, kuris priims brand, model, engine ir turės metodą 'turnOn' - kuris alertins 'vrooom'. Sukurkite du objektus ir patikrinkite ar veikia. <br>
+2. Pakoreguokite šį konstruktorių ir pridėkite papildomą property 'basePrice' ir metodą 'getPrice'. basePrice propertį įrašys sukuriant objektą, tačiau getPric priklausimai nuo variklio išmes kokia yra galutinė kaina. Jei variklis 'electric' - kaina bus +10,000; jei 'diesel' +5,000; jei 'petrol' - kaina tokia kokia ir basePrice. <br>
+3. Pridėti funkciją 'getDiscount', kuri, kaip argumentą, priima nuolaidos dydį ir grąžina kainą su nuolaida. <br>
+4. Pridėti property 'mileage' ir papildoti automobilių objektus pridedant jų ridą. <br>
+5. Pakoreguoti kainų funkcijas: <br>
+       5.1. Jeigu rida daugiau nei 0, tai kaina sumažėja 10%. <br>
+       5.2. Jeigu rida daugiau nei 20000, tai kaina sumažėja 15%. <br>
+       5.3. Jeigu rida daugiau nei 50000, tai kaina sumažėja 20%. <br>
+       5.4. Jeigu rida daugiau nei 100000, tai kaina sumažėja 30%. <br>
+       5.5. Jeigu rida daugiau nei 400000, tai kaina sumažėja 50%. <br>
+6. Pridėti property 'baseColors'. Tai bus masyvas su bazinėmis spalvomis (juoda, raudona, mėlyna, sidabrinė, balta, 'special blue'). Jų pakeisti negalima, nes yra sukuriamos tiesiogiai klasės constructor funkcijoje. <br>
+       6.1. Pridėti property 'color', kuria galima papildyti kuriant automobilio objektą pagal klasę. Jeigu kuriant objektą, spalva nėra nurodoma, tai pagal nutylėjimą ji bus juoda. <br>
+       6.2. Jeigu nurodyta spalva yra 'special blue', tai automobilio kaina turi padidėti 500. <br>
+       6.3. Jeigu nurodytos spalvos nėra tarp bazinių spalvų, tai automobilio kaina turėtų padidėti 3000. <br>
+7. Sukurti metodą 'renderElement', kuris sukurią html elementą, jame atvaizduoja automobilio informaciją (modelį, brandą, variklio tipą, kilometražą, spalvą, bazinę kainą) ir šį elementą išveda į ekraną. <br>
+       7.1. Pridėti property 'image', kuris turėtų būti nuotrauka ir šią nuotrauką, taip pat, pridėti į formuluojamą elementą. <br>
 
 8. HTML faile sukurti form'ą.
 8.1. Formoje galima įrašyti automobilio:
