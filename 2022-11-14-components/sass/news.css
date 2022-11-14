@@ -39,6 +39,15 @@ img {
   height: auto;
 }
 
+body {
+  background-color: #f2f2f2;
+}
+
+.max-width {
+  max-width: 1230px;
+  margin: 0 auto;
+}
+
 .link-button {
   text-align: center;
   display: inline-block;
@@ -84,13 +93,13 @@ img {
   padding-top: 30px;
 }
 
-body {
-  background-color: #f2f2f2;
-}
-
-.max-width {
-  max-width: 1230px;
-  margin: 0 auto;
+.all-news-link {
+  font-family: BwNistaInt-Bd;
+  display: block;
+  font-size: 24px;
+  padding: 33px 60px 33px 40px;
+  background-color: white;
+  border-radius: 8px;
 }
 
 .main-grid {
@@ -105,7 +114,7 @@ body {
   font-family: "BwGradual-Bold", sans-serif;
   font-size: 42px;
 }
-.main-grid .news .big-news {
+.main-grid .news-wrapper .main-news {
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 1fr;
@@ -113,39 +122,35 @@ body {
        column-gap: 30px;
   margin: 30px 0;
 }
-.main-grid .news .big-news .big-news-item {
+.main-grid .news-wrapper .main-news .main-news-item {
   background-color: white;
   height: 100%;
   display: grid;
   grid-template-rows: 1fr 1fr;
 }
-.main-grid .news .big-news .big-news-item h3 {
+.main-grid .news-wrapper .main-news .main-news-item h3 {
   font-size: 24px;
 }
-.main-grid .news .big-news .big-news-item img {
+.main-grid .news-wrapper .main-news .main-news-item img {
+  width: 100%;
   max-height: 235px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-.main-grid .news .big-news .big-news-item .new-card-info {
+.main-grid .news-wrapper .main-news .main-news-item .new-card-info {
   padding: 38px;
 }
-
-.main-grid .news .big-news .big-news-item .new-card-info span {
+.main-grid .news-wrapper .main-news .main-news-item .new-card-info span {
   font-size: 12px;
 }
-
-.main-grid .news .big-news .big-news-item .new-card-info span:first-child {
+.main-grid .news-wrapper .main-news .main-news-item .new-card-info span:first-child {
   display: block;
   margin-bottom: 13px;
   color: #1200ff;
   font-family: BwNistaInt-Bd, sans-serif;
   letter-spacing: 1.2px;
 }
-
-/* ----------------------------------------- */
-.main-grid .news .small-news {
+.main-grid .news-wrapper .second-news {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -154,33 +159,27 @@ body {
   row-gap: 30px;
   margin-bottom: 30px;
 }
-
-.main-grid .news .small-news .small-news-item {
+.main-grid .news-wrapper .second-news .second-news-item {
   padding: 0 15px 0 0;
   display: grid;
   grid-template-columns: var(--small-news-img-width) 1fr;
   row-gap: 30px;
 }
-
-.main-grid .news .small-news .small-news-item .img-container {
+.main-grid .news-wrapper .second-news .second-news-item .img-container {
   width: var(--small-news-img-width);
   height: 80px;
 }
-
-.main-grid .news .small-news .small-news-item h3 {
+.main-grid .news-wrapper .second-news .second-news-item h3 {
   font-size: 14px;
   margin: 0 0 11px;
 }
-
-.main-grid .news .small-news .small-news-item .new-card-info {
+.main-grid .news-wrapper .second-news .second-news-item .new-card-info {
   padding: 0 0 0 20px;
 }
-
-.main-grid .news .small-news .small-news-item span {
+.main-grid .news-wrapper .second-news .second-news-item span {
   font-size: 12px;
 }
-
-.main-grid .news .small-news .small-news-item span:first-child {
+.main-grid .news-wrapper .second-news .second-news-item span:first-child {
   display: block;
   margin-bottom: 12px;
   font-family: BwNistaInt-Bd, sans-serif;
@@ -188,29 +187,16 @@ body {
   color: #1200ff;
   margin: 0 0 12px;
 }
-
-.main-grid .news .small-news .small-news-item span:last-child {
+.main-grid .news-wrapper .second-news .second-news-item span:last-child {
   margin: 10px 0 0;
 }
 
 /* ----------------------------------------- */
-.all-news {
-  font-family: BwNistaInt-Bd;
-  display: block;
-  font-size: 24px;
-  padding: 33px 60px 33px 40px;
-  background-color: white;
-  border-radius: 8px;
-}
-
-/* ----------------------------------------- */
-.right-side h2 {
+.sidebar h2 {
   margin: 0 0 25px;
   padding: 0;
 }
-
-/* ----------------------------------------- */
-.podcasts .podcasts-list .podcast-item {
+.sidebar .podcasts .podcasts-list .podcast-item {
   background-color: white;
   width: 100%;
   margin-bottom: 30px;
@@ -218,38 +204,31 @@ body {
   grid-template-columns: 70px 1fr 70px;
   grid-template-rows: 70px 1fr;
 }
-
-.podcasts .podcasts-list .podcast-item .duration {
+.sidebar .podcasts .podcasts-list .podcast-item .duration {
   display: flex;
   background-color: black;
 }
-
-.podcasts .podcasts-list .podcast-item .duration span {
+.sidebar .podcasts .podcasts-list .podcast-item .duration span {
   margin: auto;
   justify-content: center;
   align-self: center;
   font-size: 14px;
   color: white;
 }
-
-.podcasts .podcasts-list .podcast-item .play-button {
+.sidebar .podcasts .podcasts-list .podcast-item .play-button {
   border: solid 1px;
 }
-
-.podcasts .podcasts-list .podcast-item .podcast-info {
+.sidebar .podcasts .podcasts-list .podcast-item .podcast-info {
   grid-column: 1/4;
   grid-row: 2/3;
   padding: 17px 20px;
 }
-
-.podcasts .podcasts-list .podcast-item .podcast-info h3 {
+.sidebar .podcasts .podcasts-list .podcast-item .podcast-info h3 {
   font-size: 14px;
 }
-
-.podcasts .podcasts-list .podcast-item .podcast-info span {
+.sidebar .podcasts .podcasts-list .podcast-item .podcast-info span {
   font-size: 12px;
 }
-
 /* ----------------------------------------- */
 .events-card {
   margin-bottom: 50px;
@@ -310,7 +289,6 @@ main a.aplikuok {
   width: 110px;
   height: 110px;
 }
-
 main a.aplikuok img {
   width: 100%;
   height: 100%;
