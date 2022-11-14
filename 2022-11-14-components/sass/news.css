@@ -196,7 +196,7 @@ body {
   margin: 0 0 25px;
   padding: 0;
 }
-.sidebar .podcasts .podcasts-list .podcast-item {
+.sidebar .podcasts .podcasts-wrapper .podcast {
   background-color: white;
   width: 100%;
   margin-bottom: 30px;
@@ -204,54 +204,44 @@ body {
   grid-template-columns: 70px 1fr 70px;
   grid-template-rows: 70px 1fr;
 }
-.sidebar .podcasts .podcasts-list .podcast-item .duration {
+.sidebar .podcasts .podcasts-wrapper .podcast .duration {
   display: flex;
   background-color: black;
 }
-.sidebar .podcasts .podcasts-list .podcast-item .duration span {
+.sidebar .podcasts .podcasts-wrapper .podcast .duration span {
   margin: auto;
   justify-content: center;
   align-self: center;
   font-size: 14px;
   color: white;
 }
-.sidebar .podcasts .podcasts-list .podcast-item .play-button {
+.sidebar .podcasts .podcasts-wrapper .podcast .play-button {
   border: solid 1px;
 }
-.sidebar .podcasts .podcasts-list .podcast-item .podcast-info {
+.sidebar .podcasts .podcasts-wrapper .podcast .podcast-info {
   grid-column: 1/4;
   grid-row: 2/3;
   padding: 17px 20px;
 }
-.sidebar .podcasts .podcasts-list .podcast-item .podcast-info h3 {
+.sidebar .podcasts .podcasts-wrapper .podcast .podcast-info h3 {
   font-size: 14px;
 }
-.sidebar .podcasts .podcasts-list .podcast-item .podcast-info span {
+.sidebar .podcasts .podcasts-wrapper .podcast .podcast-info span {
   font-size: 12px;
 }
-/* ----------------------------------------- */
-.events-card {
-  margin-bottom: 50px;
-}
-
-.testcon img {
-  height: 100%;
-}
-
-.events .events-item {
+.sidebar .events .events-wrapper .event {
+  margin-top: 50px;
   background-color: black;
   color: white;
   padding: 20px;
 }
-
-.events .events-item .event-date {
+.sidebar .events .events-wrapper .event .event-date {
   max-width: 60px;
   text-align: center;
   margin: -50px 0 29px 10px;
   position: relative;
 }
-
-.events .events-item .event-date .day {
+.sidebar .events .events-wrapper .event .event-date .day {
   background-color: white;
   color: black;
   font-family: BwNistaInt-Bd;
@@ -261,8 +251,7 @@ body {
   line-height: 1.2;
   border-radius: 8px 8px 0 0;
 }
-
-.events .events-item .event-date .month {
+.sidebar .events .events-wrapper .event .event-date .month {
   font-size: 10px;
   background-color: #ff00e9;
   text-transform: uppercase;
@@ -270,15 +259,22 @@ body {
   border-radius: 0 0 8px 8px;
   letter-spacing: 1px;
 }
-
-.events .events-item span {
+.sidebar .events .events-wrapper .event span {
   font-size: 10px;
   text-transform: uppercase;
   margin-bottom: 3px;
 }
-
-.events .events-item h3 {
+.sidebar .events .events-wrapper .event h3 {
   font-size: 24px;
+}
+
+/* ----------------------------------------- */
+.events-card {
+  margin-bottom: 50px;
+}
+
+.testcon img {
+  height: 100%;
 }
 
 /* ----------------------------------------- */
