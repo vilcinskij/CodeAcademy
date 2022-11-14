@@ -7,7 +7,8 @@ class Car {
         this.mileage = Number(mileage);
         this.price = this.getPrice()
         this.enginePrice = this.getEnginePrice();
-        this.mileagePrice = this.getMileagePrice();
+        this.mileageDiscountPercentage = this.getMileageDiscountPercentage();
+        this.mileageDiscount = this.getMileageDiscount();
         this.color = color;
         this.baseColors = ['black', 'red', 'blue', 'silver', 'white', 'special blue']
     }
@@ -42,21 +43,21 @@ class Car {
         return this.price - discount;
     }
 
-    getMileagePrice() {
+    getMileageDiscountPercentage() {
         if (this.mileage > 400000) {
-            return this.price / 100 * 50
+            return 50
         }
         if (this.mileage > 100000) {
-            return this.price / 100 * 30
+            return 30
         }
         if (this.mileage > 50000) {
-            return this.price / 100 * 20
+            return 20
         }
         if (this.mileage > 20000) {
-            return this.price / 100 * 15
+            return 15
         }
         if (this.mileage > 0) {
-            return this.price / 100 * 10
+            return 10
         }
         return 0
     }
@@ -70,6 +71,7 @@ class Car {
         return this.price + 3000
     }
     renderElement() {
+        const carElement = document.createElement('div')
         const carsWrapper = document.getElementById('cars-wrapper');
         const carTitle = document.createElement('h4')
         carTitle.textContent = `${this.brand} ${this.model}`;
@@ -88,6 +90,6 @@ const car4 = new Car('Toyota', 'Prius', 'hybrid', 10000, 50001);
 car2.renderElement()
 
 // console.log(car3.price);
-console.log(car2.colorPrice());
+// console.log(car2.colorPrice());
 // car1.getDiscount(10);
 // car3.getDiscount(50);
