@@ -2,7 +2,12 @@ import { createElement } from "../functions.js";
 
 export default function () {
     const podcast = createElement({ tag: 'div', classes: 'podcast' });
-    podcast.innerHTML= ` <dvi class="artist-img">
+    const artistImgContainer = createElement({ tag: 'div', classes: 'artist-img' });
+    const artistImg = createElement({ tag: 'img', src: 'img/podcast-artist.png', alt: 'artist-img' });
+    const durationContainer  = createElement({ tag: 'div', classes: 'duration' });
+    const durationContent  = createElement({ tag: 'div', content: 'Trukmė: 7:55' });
+    podcast.innerHTML= ` 
+                        <dvi class="artist-img">
                             <img src="img/podcast-artist.png" alt="">
                         </dvi>
                         <dvi class="duration">

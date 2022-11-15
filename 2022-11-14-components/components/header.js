@@ -1,7 +1,7 @@
 import { createElement } from "./functions.js";
 
 export default function () {
-    const headerElement = createElement({ tag: 'header', classes: 'main-header' });
+    const header = createElement({ tag: 'header', classes: 'main-header' });
     const maxWidth = createElement({ tag: 'div', classes: 'max-width' });
 
     const logoBox = createElement({ tag: 'div', classes: 'logo-box' });
@@ -26,14 +26,14 @@ export default function () {
         mainMenu.append(menuItem)
     });
 
-    const callButton = createElement({tag: 'a', href:'tel:+37066366555', content:'SKAMBINTI', classes: 'link-button'})
+    const callButton = createElement({ tag: 'a', href: 'tel:+37066366555', content: 'SKAMBINTI', classes: 'link-button' })
 
     logoBox.append(logo)
 
     navigation.append(mainMenu, callButton)
 
     maxWidth.append(logoBox, navigation);
-    headerElement.append(maxWidth);
+    header.append(maxWidth);
 
-    return headerElement
+    return header
 }
