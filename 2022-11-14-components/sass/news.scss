@@ -182,12 +182,15 @@
     }
 
     .events {
+        
         .events-wrapper {
+            
             .event {
                 margin-top: 50px;
                 background-color: black;
                 color: white;
                 padding: 20px;
+                
 
                 .event-date {
                     max-width: 60px;
@@ -215,6 +218,7 @@
                         border-radius: 0 0 8px 8px;
                         letter-spacing: 1px;
                     }
+                    
                 }
 
                 span {
@@ -227,6 +231,8 @@
                     font-size: 24px;
                 }
             }
+
+            
         }
     }
 }

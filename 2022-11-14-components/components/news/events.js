@@ -5,7 +5,9 @@ export default function () {
     const events = createElement({ tag: 'section', classes: 'events' });
     const wrapperTitle = createElement({tag: 'h2', content: 'Renginiai'})
     const eventsWrapper = createElement({tag: 'div', classes: 'events-wrapper'})
-    eventsWrapper.append(event(), event(), event(), event(), event())
+    const moreEvents = createElement({tag: 'a', classes: 'all-news-link', content: 'Daugiau'});
+    
+    eventsWrapper.append(event(), event(), event(), event(), event(), moreEvents)
     events.append(wrapperTitle, eventsWrapper);
     return events
 }
