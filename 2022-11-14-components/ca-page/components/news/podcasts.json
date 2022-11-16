@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Pojūčius pirštų galiukams sugrąžinti gali smegenų implantas",
+        "date": "2021-09-02",
+        "duration": "7:55",
+        "img": {
+            "patch": "./img/podcast-artist.png"
+        },
+        "link": "#"
+    },
+    {
+        "title": "Elektrinių povandeninių dronų kompanija pasirengusi tapti vandenynų „SpaceX“",
+        "date": "2021-08-25",
+        "duration": "7:54",
+        "img": {
+            "patch": "./img/podcast-artist.png"
+        },
+        "link": "#"
+    },
+    {
+        "title": "Kaip gyvensime 2031-aisiais? 10 esminių prognozių",
+        "date": "2021-08-18",
+        "duration": "9:22",
+        "img": {
+            "patch": "./img/podcast-artist.png"
+        },
+        "link": "#"
+    },
+    {
+        "title": "Jei virtualus pasaulis taps realybe, jos neturėtų valdyti „Facebook“",
+        "date": "2021-08-11",
+        "duration": "8:32",
+        "img": {
+            "patch": "./img/podcast-artist.png"
+        },
+        "link": "#"
+    }
+]

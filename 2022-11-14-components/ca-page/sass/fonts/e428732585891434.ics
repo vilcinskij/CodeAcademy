@@ -1,0 +1,43 @@
+BEGIN:VCALENDAR
+PRODID:-//Facebook//NONSGML Facebook Events V1.0//EN
+X-PUBLISHED-TTL:PT12H
+X-ORIGINAL-URL:https://www.facebook.com/events/428732585891434/
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTAMP:20220819T100013Z
+LAST-MODIFIED:20220819T100013Z
+CREATED:20220819T090006Z
+SEQUENCE:3607
+ORGANIZER;CN=CodeAcademy:MAILTO:noreply@facebookmail.com
+DTSTART:20220905T130000Z
+DTEND:20220905T160000Z
+UID:e428732585891434@facebook.com
+SUMMARY:Intro: Dirbtinis intelektas ir Duomenų mokslas
+URL:https://www.facebook.com/events/428732585891434/
+DESCRIPTION:Rugsėjo 5 dieną susitikime Onlin
+ e renginyje\, kuriame kartu su savo
+  sričių specialistais kalbėsime
+  apie Dirbtinį intelektą ir Duom
+ enų mokslą. 💡📊\n\nRenginio m
+ etu apie šias sritis sužinosite 
+ ne tik iš teorinės pusės\, bet i
+ r išgirsite apie įspūdingus pro
+ jektus\, kuriuose buvo pasitelktas 
+ būtent Dirbtinis intelektas ir Du
+ omenų mokslas. ⚙️\n\nJeigu turi
+  klausimų – drąsiai klausk jau
+  dabar! Specialistai į tavo klaus
+ imus atsakys renginio metu 👉 ht
+ tps://bit.ly/3QyXSNZ \n\nNepamiršk 
+ paspausti „Dalyvausiu“ (arba „
+ Going“)\, kad nepraleistum su ren
+ giniu susijusios informacijos.\n\n\nh
+ ttps://www.facebook.com/events/428
+ 732585891434/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+PARTSTAT:ACCEPTED
+END:VEVENT
+END:VCALENDAR

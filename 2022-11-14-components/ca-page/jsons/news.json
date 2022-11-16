@@ -1,0 +1,33 @@
+[
+    {
+        "title": "Dezinformacija ir kibernetinis pavojus: kaip apsisaugoti?",
+        "category": "Naujienos",
+        "date": "2022-03-23",
+        "img": {
+            "patch": "./img/main-news-1.jpg",
+            "alt": "Dezinformacija ir kibernetinis pavojus: kaip apsisaugoti?"
+        }
+        
+    },
+    {
+        "title": "„CodeAcademy“ projektinė veikla – indėlis į gražesnę ateitį",
+        "category": "Naujienos",
+        "date": "2021-11-09",
+        "img": {
+            "patch": "./img/main-news-2.jpg",
+            "alt": "„CodeAcademy“ projektinė veikla – indėlis į gražesnę ateitį"
+        }
+        
+    
+    },
+    {
+        "title": "",
+        "category": "",
+        "date": "",
+        "img": {
+            "patch": "",
+            "alt": ""
+        }
+        
+    }
+]
