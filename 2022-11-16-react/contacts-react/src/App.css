@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+body {
+    margin: 0;
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 20px;
+}
+
+@media screen and (max-width: 999px) {
+    .contacts {
+        grid-template-columns: 6fr 4fr;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .contacts {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contacts .shops-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .contacts {
+        grid-template-columns: 1fr;
+        
+    }
+    .contact-map {
+        order: -5;
+    }
+}
