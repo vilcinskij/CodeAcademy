@@ -1,7 +1,7 @@
 import './ContactMap.css'
 import Iframe from 'react-iframe'
 
-export default function ContactMap(props) {
+export default function ContactMap({MapSrc}) {
     return (
         <div className="contact-map">
             <Iframe

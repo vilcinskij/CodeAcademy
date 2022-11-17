@@ -1,3 +1,5 @@
-export default function ShopsWrapperTitle() {
-    return (<h2>Find Us</h2>)
+export default function ShopsWrapperTitle(props) {
+    return (
+        <h2>{props.title}</h2>
+    )
 }

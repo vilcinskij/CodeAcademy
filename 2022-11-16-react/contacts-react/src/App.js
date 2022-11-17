@@ -9,10 +9,10 @@ function App() {
     <div className="App">
       <section className='content-wrapper'>
         <div className='shops-wrapper'>
-          <ShopsWrapperTitle></ShopsWrapperTitle>
+          <ShopsWrapperTitle title="Find us"></ShopsWrapperTitle>
           <ShopsList></ShopsList>
         </div>
-          <ContactMap></ContactMap>
+        <ContactMap></ContactMap>
       </section>
     </div>
   );
