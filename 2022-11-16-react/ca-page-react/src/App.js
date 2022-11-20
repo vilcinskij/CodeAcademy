@@ -6,6 +6,7 @@ import Header from './components/Header/Header';
 import NewsItem from './components/NewsItem/NewsItem';
 import SectionTitle from './components/SectionTitle/SectionTitle';
 import Sidebar from './components/Sidebar/Sidebar';
+import { ReactComponent as ArrowIcon } from './img/svg/arrowIcon.svg';
 
 function App() {
   return (
@@ -26,11 +27,14 @@ function App() {
                 <NewsItem type="second-news-item"></NewsItem>
                 <NewsItem type="second-news-item"></NewsItem>
               </div>
+              <div className='all-ewents button-wrapper'>
               <a href="./" className="all-news-link">Visos naujienos</a>
+              <img src={ArrowIcon} alt="arrow icon"/>
+              </div>
             </section>
             <Sidebar>
-            <section className="podcasts">
-            <SectionTitle content="Podcastai ir radijo laidos"></SectionTitle>
+              <section className="podcasts">
+                <SectionTitle content="Podcastai ir radijo laidos"></SectionTitle>
                 <div className="podcasts-wrapper">
                   <Podcast></Podcast>
                   <Podcast></Podcast>
@@ -39,7 +43,7 @@ function App() {
                 </div>
               </section>
               <section className="events">
-              <SectionTitle content="Renginiai"></SectionTitle>
+                <SectionTitle content="Renginiai"></SectionTitle>
                 <div className="events-wrapper">
                   <Event></Event>
                   <Event></Event>
