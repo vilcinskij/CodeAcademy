@@ -1,13 +1,13 @@
-import aplikuok from '../../img/aplikuok.png';
 import { ReactComponent as IgLogo } from '../../img/svg/igLogo.svg';
 import { ReactComponent as FbLogo } from '../../img/svg/fbLogo.svg';
 import { ReactComponent as InLogo } from '../../img/svg/inLogo.svg';
+import MaxWidth from '../UI/MaxWidth/MaxWidth';
 
 
 export default function Footer() {
     return (
         <footer className="main-footer" >
-            <div className="max-width">
+            <MaxWidth>
                 <div className="footer-logo">
                     <img src="https://codeacademy.lt/wp-content/themes/codeacademy/dist/images/codeacademy-white.svg" alt="CodeAcademy logo white" />
                 </div>
@@ -61,10 +61,7 @@ export default function Footer() {
                         © By UAB Programuok | CodeAcademy šeimos narys – <a href="./">CodeAcademy Kids</a>
                     </p>
                 </div>
-                <div className="footer-decoration-img">
-                    <img src={aplikuok} alt="" />
-                </div>
-            </div>
+            </MaxWidth>
         </footer >
     )
 }

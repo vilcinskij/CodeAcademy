@@ -7,13 +7,16 @@ import NewsItem from './components/NewsItem/NewsItem';
 import SectionTitle from './components/SectionTitle/SectionTitle';
 import Sidebar from './components/Sidebar/Sidebar';
 import { ReactComponent as ArrowIcon } from './img/svg/arrowIcon.svg';
+import MaxWidth from './components/UI/MaxWidth/MaxWidth';
+import Main from './components/UI/Main/Main';
+import AplikuokButton from './components/UI/AplikuokButton/AplikuokButton';
 
 function App() {
   return (
     <div className="App">
       <Header></Header>
-      <main>
-        <div className="max-width">
+      <Main>
+        <MaxWidth>
           <div className="main-grid">
             <section className="news-wrapper">
               <SectionTitle content="Naujienos"></SectionTitle>
@@ -27,9 +30,9 @@ function App() {
                 <NewsItem type="second-news-item"></NewsItem>
                 <NewsItem type="second-news-item"></NewsItem>
               </div>
-              <div className='all-news button-wrapper'>
-              <a href="./" className="all-news-link">Visos naujienos</a>
-              <ArrowIcon />
+              <div className='all-ewents button-wrapper'>
+                <a href="./" className="all-news-link">Visos naujienos</a>
+                <ArrowIcon />
               </div>
             </section>
             <Sidebar>
@@ -52,11 +55,9 @@ function App() {
               </section>
             </Sidebar>
           </div>
-        </div>
-        <a href="./" className="aplikuok">
-          <img src="./img/aplikuok.png" alt="" />
-        </a>
-      </main>
+        </MaxWidth>
+        <AplikuokButton />
+      </Main>
       <Footer></Footer>
     </div>
   );
