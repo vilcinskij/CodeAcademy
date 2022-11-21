@@ -7,6 +7,7 @@ import MaxWidth from './components/UI/MaxWidth/MaxWidth';
 import ApplyButton from './components/UI/ApplyButton/ApplyButton';
 import NewsPage from './pages/News/NewsPage';
 import ProgramsPage from './pages/Programs/ProgramsPage';
+import HomePage from './pages/Home/HomePage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Routes>
             <Route path="/naujienos" element={<NewsPage />} />
             <Route path="/programos" element={<ProgramsPage />} />
+            <Route path="/" element={<HomePage />} />
           </Routes>
         </MaxWidth>
         <ApplyButton />

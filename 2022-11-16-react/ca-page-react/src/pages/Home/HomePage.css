@@ -1,0 +1,229 @@
+h1 {
+    font-size: 100px;
+    margin: 0 0 23ps;
+  }
+  
+  .main-header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .main-header .max-width {
+    display: flex;
+  }
+  .main-header .main-navigation {
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    margin-left: 60px;
+  }
+  .main-header .main-navigation ul.main-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    list-style-type: none;
+    padding-left: 0;
+    row-gap: 20px;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+  .main-header .main-navigation ul.main-menu li a {
+    color: white;
+    text-decoration: none;
+    padding-top: 30px;
+  }
+  
+  .section-1 {
+    margin: 0 0 0 100px;
+    max-width: 670px;
+    padding-top: 85px;
+    padding-bottom: 300px;
+  }
+  
+  .section-1 p {
+    font-size: 17px;
+    max-width: 370px;
+  }
+  
+  .link-button {
+    text-align: center;
+    display: inline-block;
+    padding: 13px 30px 11px;
+    background-color: blue;
+    border-radius: 50px;
+    color: white;
+  }
+  
+  section.hero-box {
+    background-color: black;
+    color: white;
+  }
+  
+  .for-users {
+    display: flex;
+    margin: 0 100px;
+    padding: 0 0 139px;
+  }
+  
+  .students {
+    padding: 0 115px 0 0;
+  }
+  
+  .bussines {
+    padding: 0 0 0 115px;
+    border-left: solid 1px white;
+  }
+  
+  .for-users .link-button {
+    margin: 33px 0 0;
+  }
+  
+  .puls {
+    padding: 131px 0 0;
+  }
+  
+  /* .puls-header {
+      display: flex;
+  } */
+  .puls h2 {
+    font-size: 72px;
+    margin: 0 0 74px;
+  }
+  
+  .puls p {
+    max-width: 470px;
+    margin-left: 200px;
+  }
+  
+  .stat-data {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 200px;
+    padding-right: 168px;
+  }
+  
+  .stat-data li {
+    width: 50%;
+    margin-bottom: 88px;
+  }
+  
+  .stat-data-value {
+    font-size: 100px;
+    margin-bottom: 15px;
+  }
+  
+  .stat-data-text {
+    font-size: 72px;
+    margin-bottom: 21px;
+  }
+  
+  .i-can {
+    background-color: #0f02b7;
+    color: white;
+  }
+  
+  .i-can-flex {
+    display: flex;
+    width: 50%;
+  }
+  
+  .i-can-text {
+    padding: 178px 0 140px;
+    width: 50%;
+  }
+  
+  .i-can-text h2 {
+    font-size: 72px;
+    margin-bottom: 26px;
+  }
+  
+  .i-can-img {
+    width: 50%;
+    /* background-color: black; */
+  }
+  
+  .i-can-img img {
+    max-width: 200%;
+  }
+  
+  .i-can .link-button {
+    color: black;
+    background-color: white;
+    margin-top: 19px;
+  }
+  
+  .video-container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 140px 0 136px;
+  }
+  
+  .video-container iframe {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .differences {
+    /* background-color: green; */
+    padding: 178px 0 133px;
+  }
+  
+  .differences .max-width .section-title {
+    font-size: 72px;
+  }
+  
+  .differences .max-width p {
+    font-size: 24px;
+    font-size: 24px;
+    margin-top: 65px;
+    padding-left: 201px;
+    max-width: 771px;
+  }
+  
+  .differences .max-width table {
+    max-width: 1170px;
+    width: 100%;
+    margin-top: 133px;
+    font-size: 14px;
+  }
+  
+  .differences .max-width table tr td {
+    padding: 21px 3px;
+  }
+  
+  .differences .max-width table tr td:first-child {
+    /* background-color: red; */
+    padding-left: 30px;
+  }
+  
+  .differences .max-width table tr td:not(:first-child) {
+    text-align: center;
+  }
+  
+  .differences .max-width table tr td:nth-child(2) {
+    background-color: #0f02b7;
+    color: white;
+  }
+  
+  .differences .max-width table tr:first-child td:nth-child(2) {
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .differences .max-width table tr:last-child td:nth-child(2) {
+    border-radius: 0 0 8px 8px;
+  }
+  
+  section.your-way {
+    background-color: blue;
+  }
+  
+  section.events {
+    background-color: blue;
+  }
