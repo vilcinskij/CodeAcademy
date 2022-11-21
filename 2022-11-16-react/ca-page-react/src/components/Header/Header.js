@@ -12,9 +12,9 @@ export default function Header() {
                     <ul className="main-menu">
                         <li className="menu-item"><a href="./">Studentams</a></li>
                         <li className="menu-item"><a href="./">Verslui</a></li>
-                        <li className="menu-item"><a href="./">Programos</a></li>
+                        <li className="menu-item"><a href="/programos">Programos</a></li>
                         <li className="menu-item"><a href="./">Apie mus</a></li>
-                        <li className="menu-item"><a href="./">Naujienos</a></li>
+                        <li className="menu-item"><a href="/naujienos">Naujienos</a></li>
                         <li className="menu-item"><a href="./">IT Testas</a></li>
                         <li className="menu-item"><a href="./">Kontaktai</a></li>
                         <li className="menu-item"><a href="./">EN</a></li>

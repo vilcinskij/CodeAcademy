@@ -1,4 +1,4 @@
-import aplikuok from '../../../img/aplikuok.png'
+import aplikuok from '../../../img/Apply.png'
 
 export default function AplikuokButton() {
     return (

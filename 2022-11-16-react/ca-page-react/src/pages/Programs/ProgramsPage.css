@@ -1,0 +1,120 @@
+ h1 {
+     font-family: BwNistaInt-Bd;
+     font-size: 72px;
+     margin: 40px 0 32px;
+ }
+
+ /* .main-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  } */
+ .main-grid .programs-filter {
+     width: 100%;
+     background-color: white;
+     padding: 45px 40px 40px;
+     position: -webkit-sticky;
+     position: sticky;
+     top: 30px;
+ }
+
+ .main-grid .programs-filter h2 {
+     margin-bottom: 16px;
+ }
+
+ .main-grid .programs-filter .filter-item {
+     margin-bottom: 15px;
+ }
+
+ .main-grid .programs-filter .filter-item label {
+     display: block;
+     font-family: BwNistaInt-Bd;
+     font-weight: 700;
+     font-size: 14px;
+     margin-bottom: 3px;
+ }
+
+ .main-grid .programs-filter .filter-item select {
+     width: 100%;
+     padding: 13px 35px 11px 20px;
+     background-color: #f2f2f2;
+     font-family: BwNistaInt-Bd;
+     font-size: 10px;
+     text-transform: uppercase;
+     border-radius: 20px;
+     border: none;
+ }
+
+ .main-grid .programs-filter .reset-filter {
+     font-family: BwNistaInt-Bd;
+     border: 1px solid #1200ff;
+     color: #1200ff;
+     font-size: 10px;
+     border-radius: 20px;
+     padding: 13px 30px 11px;
+     text-transform: uppercase;
+     text-align: center;
+ }
+
+ .main-grid .programs-list {
+     width: 100%;
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     -moz-column-gap: 30px;
+     column-gap: 30px;
+     row-gap: 30px;
+ }
+
+ .main-grid .programs-list .programs-items {
+     width: 100%;
+     background-color: white;
+     padding: 40px 40px 25px;
+     height: 100%;
+     position: relative;
+ }
+
+ .main-grid .programs-list .programs-items .programs-item-label {
+     display: inline-block;
+     background-color: #ff00e9;
+     color: white;
+     padding: 12px 17px 11px;
+     text-transform: uppercase;
+     font-size: 10px;
+     line-height: 1.11;
+     text-align: center;
+     border-radius: 15px;
+     position: absolute;
+     right: -15px;
+ }
+
+ .main-grid .programs-list .programs-items img {
+     max-width: 97px;
+ }
+
+ .main-grid .programs-list .programs-items h2 {
+     font-family: BwNistaInt-Bd;
+     line-height: 1.17;
+     margin-bottom: 18px;
+ }
+
+ .main-grid .programs-list .programs-items p {
+     margin-bottom: 14px;
+     font-size: 14px;
+     line-height: 1.76;
+ }
+
+ .main-grid .programs-list .programs-items ul {
+     display: flex;
+ }
+
+ .main-grid .programs-list .programs-items ul li {
+     font-family: BwNistaInt-Bd;
+     line-height: 1.5;
+     font-size: 12px;
+     letter-spacing: 1.2px;
+     text-transform: uppercase;
+     font-weight: 700;
+     margin: 0 18px 10px 0;
+ }
