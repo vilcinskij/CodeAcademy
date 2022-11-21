@@ -1,5 +1,19 @@
-import MaxWidth from '../../components/UI/MaxWidth/MaxWidth'
-import './ProgramsPage.css'
+import { ReactComponent as SalesforceLogo } from '../../img/programs/salesforce.svg'
+import MaxWidth from '../../components/UI/MaxWidth/MaxWidth';
+import ProgramsItem from '../../components/ProgramsItem/ProgramsItem';
+
+import './ProgramsPage.css';
+
+const programsArr = [
+    {
+        title: "„Salesforce“ CRM – pradedančių",
+        description: "„Salesforce“ – įmonės operacinė sistema, leidžianti skirtingiems padaliniams sklandžiai dalintis informacija, sėkmingiau aptarnauti klientus, didinti produktyvumą, o svarbiausia – efektyviau išnaudoti sukauptus duomenis.",
+        features: {
+            level: '1 lygys',
+            time: 'Vakarais'
+        }
+    }
+]
 
 export default function ProgramsPage() {
     return (
@@ -57,25 +71,9 @@ export default function ProgramsPage() {
                         <div className="reset-filter">Išvalyti</div>
                     </div>
                 </section>
-
-
                 <section className="programs-list">
-                    <a href="./">
-                        <div className="programs-items">
-                            <span className="programs-item-label">Naujas</span>
-                            <div>
-                                <img src="./img/salesforce.svg" alt="" />
-                            </div>
-                            <h2>„Salesforce“ CRM – pradedančių</h2>
-                            <p> „Salesforce“ – įmonės operacinė sistema, leidžianti skirtingiems padaliniams sklandžiai
-                                dalintis informacija, sėkmingiau aptarnauti klientus, didinti produktyvumą, o
-                                svarbiausia – efektyviau išnaudoti sukauptus duomenis.</p>
-                            <ul>
-                                <li className="level">1 LYGIS</li>
-                                <li className="type">VAKARAIS</li>
-                            </ul>
-                        </div>
-                    </a>
+                    {programsArr.map((item, i)=>{return })}
+                    <ProgramsItem />
                     <a href="./">
                         <div className="programs-items">
                             <span className="programs-item-label">Finansuojama UŽT</span>
