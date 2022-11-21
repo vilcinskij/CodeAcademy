@@ -1,4 +1,6 @@
 import MaxWidth from "../UI/MaxWidth/MaxWidth";
+import { Link } from "react-router-dom";
+
 
 export default function Header() {
     return (
@@ -10,14 +12,14 @@ export default function Header() {
                 </div>
                 <nav className="main-nav">
                     <ul className="main-menu">
-                        <li className="menu-item"><a href="./">Studentams</a></li>
-                        <li className="menu-item"><a href="./">Verslui</a></li>
-                        <li className="menu-item"><a href="/programos">Programos</a></li>
-                        <li className="menu-item"><a href="./">Apie mus</a></li>
-                        <li className="menu-item"><a href="/naujienos">Naujienos</a></li>
-                        <li className="menu-item"><a href="./">IT Testas</a></li>
-                        <li className="menu-item"><a href="./">Kontaktai</a></li>
-                        <li className="menu-item"><a href="./">EN</a></li>
+                        <li className="menu-item"><Link to="./">Studentams</Link></li>
+                        <li className="menu-item"><Link to="./">Verslui</Link></li>
+                        <li className="menu-item"><Link to="/programos">Programos</Link></li>
+                        <li className="menu-item"><Link to="./">Apie mus</Link></li>
+                        <li className="menu-item"><Link to="/naujienos">Naujienos</Link></li>
+                        <li className="menu-item"><Link to="./">IT Testas</Link></li>
+                        <li className="menu-item"><Link to="./">Kontaktai</Link></li>
+                        <li className="menu-item"><Link to="./">EN</Link></li>
                     </ul>
                     <a className="link-button" href="tel:+37066366555">SKAMBINTI</a>
                 </nav>
