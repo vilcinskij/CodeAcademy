@@ -27,9 +27,9 @@ function App() {
                 <NewsItem type="second-news-item"></NewsItem>
                 <NewsItem type="second-news-item"></NewsItem>
               </div>
-              <div className='all-ewents button-wrapper'>
+              <div className='all-news button-wrapper'>
               <a href="./" className="all-news-link">Visos naujienos</a>
-              <img src={ArrowIcon} alt="arrow icon"/>
+              <ArrowIcon />
               </div>
             </section>
             <Sidebar>

@@ -155,13 +155,14 @@
     margin-top: 252px;
   }
   
-  .all-news-link {
+  .button-wrapper {
     font-family: BwNistaInt-Bd;
-    display: block;
+    display: flex;
     font-size: 24px;
     padding: 33px 60px 33px 40px;
     background-color: white;
     border-radius: 8px;
+    justify-content: space-between;
   }
   
   .main-grid {
