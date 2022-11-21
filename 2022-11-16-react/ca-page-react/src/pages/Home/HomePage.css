@@ -3,7 +3,7 @@ h1 {
     margin: 0 0 23ps;
   }
   
-  .main-header {
+  /* .main-header {
     background-color: black;
     display: flex;
     justify-content: space-between;
@@ -37,7 +37,7 @@ h1 {
     color: white;
     text-decoration: none;
     padding-top: 30px;
-  }
+  } */
   
   .section-1 {
     margin: 0 0 0 100px;

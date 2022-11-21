@@ -1,8 +1,9 @@
+import MaxWidth from '../../components/UI/MaxWidth/MaxWidth'
 import './ProgramsPage.css'
 
 export default function ProgramsPage() {
     return (
-        <div>
+        <MaxWidth>
             <div>
                 <h1>Programos</h1>
             </div>
@@ -124,6 +125,6 @@ export default function ProgramsPage() {
                     </a>
                 </section>
             </div>
-        </div>
+        </MaxWidth>
     )
 }
