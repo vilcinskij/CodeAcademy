@@ -2,6 +2,7 @@
 import { Routes, Route } from 'react-router-dom'
 import './App.css';
 import Navigation from './components/Navigation/Navigation';
+import TodoPage from './components/TodoPage/TodoPage';
 import Home from './pages/Home/Home';
 import ShoppingPage from './pages/ShoppingPage/ShoppingPage';
 
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/shopping-list' element={<ShoppingPage />} />
+        <Route path='/todo' element={<TodoPage />} />
         <Route path='*' element={<h1>404 ERROR</h1>} />
       </Routes>
     </>
