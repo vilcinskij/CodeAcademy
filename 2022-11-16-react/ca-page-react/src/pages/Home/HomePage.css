@@ -1,43 +1,7 @@
-h1 {
+.hero-box h1 {
     font-size: 100px;
     margin: 0 0 23ps;
   }
-  
-  /* .main-header {
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 25px;
-    padding-bottom: 25px;
-  }
-  .main-header .max-width {
-    display: flex;
-  }
-  .main-header .main-navigation {
-    display: flex;
-    align-items: center;
-    -moz-column-gap: 30px;
-         column-gap: 30px;
-    margin-left: 60px;
-  }
-  .main-header .main-navigation ul.main-menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    list-style-type: none;
-    padding-left: 0;
-    row-gap: 20px;
-    -moz-column-gap: 30px;
-         column-gap: 30px;
-  }
-  .main-header .main-navigation ul.main-menu li a {
-    color: white;
-    text-decoration: none;
-    padding-top: 30px;
-  } */
   
   .section-1 {
     margin: 0 0 0 100px;
@@ -224,6 +188,6 @@ h1 {
     background-color: blue;
   }
   
-  section.events {
+  .home-page-section.events {
     background-color: blue;
   }

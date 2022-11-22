@@ -1,3 +1,4 @@
+import './Footer.css'
 import { ReactComponent as IgLogo } from '../../img/svg/igLogo.svg';
 import { ReactComponent as FbLogo } from '../../img/svg/fbLogo.svg';
 import { ReactComponent as InLogo } from '../../img/svg/inLogo.svg';

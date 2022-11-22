@@ -1,7 +1,8 @@
+import './NewsPage.css'
 import Event from '../../components/Event/Event';
 import Podcast from '../../components/Podcast/Podcast';
 import NewsItem from '../../components/NewsItem/NewsItem';
-import SectionTitle from '../../components/SectionTitle/SectionTitle';
+import SectionTitle from '../../components/UI/SectionTitle/SectionTitle';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import { ReactComponent as ArrowIcon } from '../../img/svg/arrowIcon.svg';
 import MaxWidth from '../../components/UI/MaxWidth/MaxWidth';

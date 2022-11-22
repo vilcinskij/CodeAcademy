@@ -2,7 +2,7 @@
 import { Routes, Route } from 'react-router-dom'
 import './App.css';
 import Navigation from './components/Navigation/Navigation';
-import TodoPage from './components/TodoPage/TodoPage';
+import TodoPage from './pages/TodoPage/TodoPage';
 import Home from './pages/Home/Home';
 import ShoppingPage from './pages/ShoppingPage/ShoppingPage';
 

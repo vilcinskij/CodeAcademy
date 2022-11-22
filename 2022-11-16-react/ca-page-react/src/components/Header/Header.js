@@ -1,3 +1,4 @@
+import './Header.css'
 import MaxWidth from "../UI/MaxWidth/MaxWidth";
 import { Link } from "react-router-dom";
 

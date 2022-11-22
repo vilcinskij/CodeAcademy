@@ -1,0 +1,88 @@
+.main-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    padding-bottom: 85px;
+  }
+  .main-grid h2 {
+    font-family: "BwGradual-Bold", sans-serif;
+    font-size: 42px;
+  }
+  .main-grid .news-wrapper .main-news {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    margin: 30px 0;
+  }
+  .main-grid .news-wrapper .main-news .main-news-item {
+    background-color: white;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+  .main-grid .news-wrapper .main-news .main-news-item h3 {
+    font-size: 24px;
+  }
+  .main-grid .news-wrapper .main-news .main-news-item img {
+    width: 100%;
+    max-height: 235px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .main-grid .news-wrapper .main-news .main-news-item .new-card-info {
+    padding: 38px;
+  }
+  .main-grid .news-wrapper .main-news .main-news-item .new-card-info span {
+    font-size: 12px;
+  }
+  .main-grid .news-wrapper .main-news .main-news-item .new-card-info span:first-child {
+    display: block;
+    margin-bottom: 13px;
+    color: #1200ff;
+    font-family: BwNistaInt-Bd, sans-serif;
+    letter-spacing: 1.2px;
+  }
+  .main-grid .news-wrapper .second-news {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    row-gap: 30px;
+    margin-bottom: 30px;
+  }
+  .main-grid .news-wrapper .second-news .second-news-item {
+    padding: 0 15px 0 0;
+    display: grid;
+    grid-template-columns: var(--small-news-img-width) 1fr;
+    row-gap: 30px;
+  }
+  .main-grid .news-wrapper .second-news .second-news-item .img-container {
+    width: var(--small-news-img-width);
+    height: 80px;
+  }
+  .main-grid .news-wrapper .second-news .second-news-item h3 {
+    font-size: 14px;
+    margin: 0 0 11px;
+  }
+  .main-grid .news-wrapper .second-news .second-news-item .new-card-info {
+    padding: 0 0 0 20px;
+  }
+  .main-grid .news-wrapper .second-news .second-news-item span {
+    font-size: 12px;
+  }
+  .main-grid .news-wrapper .second-news .second-news-item span:first-child {
+    display: block;
+    margin-bottom: 12px;
+    font-family: BwNistaInt-Bd, sans-serif;
+    letter-spacing: 1.2px;
+    color: #1200ff;
+    margin: 0 0 12px;
+  }
+  .main-grid .news-wrapper .second-news .second-news-item span:last-child {
+    margin: 10px 0 0;
+  }

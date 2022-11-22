@@ -33,8 +33,8 @@ export default function ShoppingPage() {
     }
 
     return (
-        <div>
-            <h1>Shopping List</h1>
+        <div className="page-content">
+            <h2 className="page- title">Shopping List</h2>
             {renderFunctionList()}
         </div>
     )

@@ -1,17 +1,16 @@
 import { ReactComponent as SalesforceLogo } from '../../img/programs/salesforce.svg'
 
-export default function ProgramsItem() {
+export default function ProgramsItem({data}) {
+    let { title, description, label, features, logo } = data
     return (
         <a href="./">
             <div className="programs-items">
-                <span className="programs-item-label">Naujas</span>
+                <span className="programs-item-label">{label}</span>
                 <div className='item-logo'>
-                    <SalesforceLogo />
+                    {logo}
                 </div>
-                <h2>„Salesforce“ CRM – pradedančių</h2>
-                <p> „Salesforce“ – įmonės operacinė sistema, leidžianti skirtingiems padaliniams sklandžiai
-                    dalintis informacija, sėkmingiau aptarnauti klientus, didinti produktyvumą, o
-                    svarbiausia – efektyviau išnaudoti sukauptus duomenis.</p>
+                <h2>{title}</h2>
+                <p>{description}</p>
                 <ul>
                     <li className="level">1 LYGIS</li>
                     <li className="type">VAKARAIS</li>

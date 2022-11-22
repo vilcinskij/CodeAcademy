@@ -1,0 +1,77 @@
+.sidebar h2 {
+    margin: 0 0 25px;
+    padding: 0;
+  }
+  .sidebar .podcasts .podcasts-wrapper .podcast {
+    background-color: white;
+    width: 100%;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 70px 1fr 70px;
+    grid-template-rows: 70px 1fr;
+  }
+  .sidebar .podcasts .podcasts-wrapper .podcast .duration {
+    display: flex;
+    background-color: black;
+  }
+  .sidebar .podcasts .podcasts-wrapper .podcast .duration span {
+    margin: auto;
+    justify-content: center;
+    align-self: center;
+    font-size: 14px;
+    color: white;
+  }
+  .sidebar .podcasts .podcasts-wrapper .podcast .play-button {
+    border: solid 1px;
+  }
+  .sidebar .podcasts .podcasts-wrapper .podcast .podcast-info {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    padding: 17px 20px;
+  }
+  .sidebar .podcasts .podcasts-wrapper .podcast .podcast-info h3 {
+    font-size: 14px;
+  }
+  .sidebar .podcasts .podcasts-wrapper .podcast .podcast-info span {
+    font-size: 12px;
+  }
+  .sidebar .events .events-wrapper .event {
+    margin-top: 50px;
+    background-color: black;
+    padding: 20px;
+  }
+  .sidebar .events .events-wrapper .event a {
+    color: white;
+  }
+  .sidebar .events .events-wrapper .event a .event-date {
+    max-width: 60px;
+    text-align: center;
+    margin: -50px 0 29px 10px;
+    position: relative;
+  }
+  .sidebar .events .events-wrapper .event a .event-date .day {
+    background-color: white;
+    color: black;
+    font-family: BwNistaInt-Bd;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 9px 4px 10px;
+    line-height: 1.2;
+    border-radius: 8px 8px 0 0;
+  }
+  .sidebar .events .events-wrapper .event a .event-date .month {
+    font-size: 10px;
+    background-color: #ff00e9;
+    text-transform: uppercase;
+    padding: 6px 6px 5px;
+    border-radius: 0 0 8px 8px;
+    letter-spacing: 1px;
+  }
+  .sidebar .events .events-wrapper .event a span {
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+  .sidebar .events .events-wrapper .event a h3 {
+    font-size: 24px;
+  }
