@@ -19,7 +19,7 @@ CARS užduotis:<br>
     1.4. Bazinę kainą<br>
     1.5. Kilometražą<br>
     1.6. Spalvą<br>
-    1.7. Nuorodą į automobilio nuotrauką<br>
+        1.7. Nuorodą į automobilio nuotrauką<br>
 2. Tokiu pačiu principu, kaip pirmoje užduotyje, išvesti automobilių informaciją į ekraną. <br>
 3. Pridėti stilių.<br>
 <br>
