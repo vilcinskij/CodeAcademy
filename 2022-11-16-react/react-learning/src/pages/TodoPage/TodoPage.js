@@ -5,7 +5,7 @@ const TodoPage = () => {
     let todoList = [
         {
             title: 'Task1',
-            done: true
+            done: false
         },
         {
             title: 'Task2',
@@ -21,16 +21,18 @@ const TodoPage = () => {
         },
 
     ]
-    function renderTodoList() {
+    function renderTodoItem() {
         let todoItem = todoList.map((item, i) => {
-            <TodoItem key={i} data={item} />
+            return <TodoItem key={i} data={item} />
         })
-        console.log(todoItem);
         return todoItem
     }
 
     return (
-        renderTodoList()
+        <div className=''>
+            <h2>{todoList.length > 0 ? 'ToDo List:' : 'No items'}</h2>
+            {todoList.length > 0 && renderTodoItem()}
+        </div>
     )
 }
 
