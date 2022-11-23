@@ -1,0 +1,10 @@
+
+.car-item {
+    border: 2px solid black;
+    margin-top: 20px;
+    padding: 10px;
+    width: 250px;
+}
+.car-img {
+    max-width: 200px;
+}

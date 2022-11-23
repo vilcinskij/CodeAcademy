@@ -6,6 +6,7 @@ import TodoPage from './pages/TodoPage/TodoPage';
 import Home from './pages/Home/Home';
 import ShoppingPage from './pages/ShoppingPage/ShoppingPage';
 import CitiesPage from './pages/CitiesPage/CitiesPage';
+import CarsPage from './pages/CarsPage/CarsPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/shopping-list' element={<ShoppingPage />} />
         <Route path='/todo' element={<TodoPage />} />
+        <Route path='/cars' element={<CarsPage />} />
         <Route path='/cities' element={<CitiesPage />} />
         <Route path='*' element={<h1>404 ERROR</h1>} />
       </Routes>
