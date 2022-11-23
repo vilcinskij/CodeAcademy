@@ -7,6 +7,7 @@ export default function Navigation() {
             <li><Link to='/shopping-list'>Shopping List</Link></li>
             <li><Link to='/todo'>Todo</Link></li>
             <li><Link to='/cars'>Cars</Link></li>
+            <li><Link to='/cities'>Cities</Link></li>
         </ul>
     )
 }

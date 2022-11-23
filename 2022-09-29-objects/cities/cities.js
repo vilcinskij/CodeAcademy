@@ -83,8 +83,8 @@ let cities = [
         name: 'New York',
         population: 8800000,
         location: {
-            continent: 'USA',
-            country: 'North America',
+            continent: 'North America',
+            country: 'USA',
         },
         touristAttractions: ['Central Park', 'Brooklyn Bridge', 'Grand Central Terminal', 'Statue of Liberty', 'Times Square'],
         isCapital: false,

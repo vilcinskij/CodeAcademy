@@ -32,10 +32,15 @@ export default function ShoppingPage() {
         return listElement
     }
 
+    let pageTitle = list.length > 0 ? 'Shopping List' : 'No items'
+
     return (
         <div className="page-content">
-            <h2 className="page- title">Shopping List</h2>
-            {renderFunctionList()}
+            <h2 className="page-title">{pageTitle}</h2>
+
+            <div>
+                {renderFunctionList()}
+            </div>
         </div>
     )
 }

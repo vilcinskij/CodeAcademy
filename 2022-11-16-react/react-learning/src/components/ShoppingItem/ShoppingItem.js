@@ -1,7 +1,10 @@
-export default function ShoppingItem(props) {
+
+
+
+export default function ShoppingItem({title, done}) {
     return (
-        <div>
-            <span>{props.title}</span>
+        <div className='shoppingItem'>
+            <span>{title}</span>
         </div>
     )
 }
