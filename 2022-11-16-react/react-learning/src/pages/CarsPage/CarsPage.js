@@ -41,17 +41,20 @@ let carsArr = [
     }
 ]
 
-    function renderCarItem() {
-        let car = carsArr.map((car, index) => {
-            return <CarItem key={index} data={car}/>
-        })
-        return car
-    }
+function renderCarItem() {
+    let car = carsArr.map((car, index) => {
+        return <CarItem key={index} data={car} />
+    })
+    return car
+}
 
 const CarsPage = () => {
     return (
-        <div className='cars-list'>
-            {renderCarItem()}
+        <div className='page-content'>
+            <h2 className='page-title'>Cars:</h2>
+            <div className='cars-list'>
+                {renderCarItem()}
+            </div>
         </div>
     )
 }

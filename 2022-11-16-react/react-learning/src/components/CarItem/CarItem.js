@@ -6,7 +6,7 @@ const CarItem = ({ data }) => {
     let carTitle = model ? `${brand} (${model})` : brand
     return (
         <div className='car-item'>
-            <h2 className='car-title'>{carTitle}</h2>
+            <h3 className='car-title'>{carTitle}</h3>
             <div className='car-img'>
                 <img src={image} alt={`car ${brand} ${model} ${color}"`} />
             </div>

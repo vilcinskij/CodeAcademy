@@ -101,45 +101,12 @@ let cities = [
     },
 ]
 
-
-// function task1_6_1(arr) {
-//     for (let i = 0; i < cities.length; i++) {
-
-//         let cityWapper = document.querySelector('#cities-wrapper')
-
-
-//         let name = cities[i].name;
-//         let population = cities[i].population;
-//         let continent = cities[i].location.continent;
-//         let country = cities[i].location.country;
-//         let isCapital = cities[i].isCapital;
-
-//         let cityItem = `<div class="city-item">
-//                         <h2 class="city-name">${name}</h2>
-//                         <p>${name} is located in ${continent}, ${country} and has population of ${population} people</p>
-//                         </div>`
-//         cityWapper.innerHTML += cityItem;
-
-//        }
-// }
-// task1_6_1(cities);
-
-
-
-
 function task1_6_2() {
     cities.map(city => {
         let cityWapper = document.querySelector('#cities-wrapper')
 
-        let { name, population, isCapital, touristAttractions } = city
-        let { continent, country } = city.location
-
-        // let name = city.name;
-        // let population = city.population;
-        // let continent = city.location.continent;
-        // let country = city.location.country;
-        // let isCapital = city.isCapital;
-        // let touristAttractions = city.touristAttractions;
+        let { name, population, isCapital, touristAttractions } = city;
+        let { continent, country } = city.location;
         let capitalCity = '';
         let capitalText = '';
         let atractionItem = '';
@@ -158,8 +125,6 @@ function task1_6_2() {
 
         })
 
-
-
         if (isCapital) {
             capitalCity = ` (capital)`
             capitalText = ` ${name} is the capital of ${country}.`
@@ -173,9 +138,6 @@ function task1_6_2() {
                        ${touristAttractionsWrapper}
                        </div>`
         cityWapper.innerHTML += cityItem;
-
-
-
 
     })
 }

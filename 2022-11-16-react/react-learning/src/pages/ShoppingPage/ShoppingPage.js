@@ -27,7 +27,7 @@ export default function ShoppingPage() {
 
     function renderFunctionList() {
         let listElement = list.map((element, index) => {
-            return <ShoppingItem key={index} title={element.title} />
+            return <ShoppingItem key={index} data={element} />
         })
         return listElement
     }

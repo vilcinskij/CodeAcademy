@@ -109,6 +109,7 @@ const CitiesPage = () => {
         <div className='page-content'>
             {cities.length > 0 && (
                 <div>
+                    <h2 className='page-title'>Cities:</h2>
                     {cities.map((city, index) => <CityItem key={index} data={city} />)}
                 </div>
             )}

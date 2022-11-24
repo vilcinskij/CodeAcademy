@@ -1,9 +1,20 @@
+import { useState } from "react";
 
+export default function ShoppingItem({ data: { title, done } }) {
 
-export default function ShoppingItem({ title, done }) {
+    const [isDone, setIsDone] = useState(done);
+
+    function doneHandler() {
+        setIsDone(!isDone);
+    }
+
+    let buttonText;
+    !isDone ? buttonText = 'Add' : buttonText = 'Remove';
+
     return (
         <div className='shoppingItem'>
-            <span>{title}</span>
+            <button onClick={doneHandler}>{buttonText}</button>
+            <span>{isDone && ' ✔ ' }{title}</span>
         </div>
     )
 }
