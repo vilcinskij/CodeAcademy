@@ -5,7 +5,7 @@ export default function ShoppingItem({ data: { title, done } }) {
     const [isDone, setIsDone] = useState(done);
 
     function doneHandler() {
-        setIsDone(!isDone);
+        setIsDone(prevState => !prevState);
     }
 
     let buttonText;
