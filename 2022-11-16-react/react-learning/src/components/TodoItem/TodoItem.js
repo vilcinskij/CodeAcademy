@@ -7,7 +7,7 @@ const TodoItem = ({ data: { title, done } }) => {
     const [status, setStatus] = useState(done);
 
     function statusHandle() {
-        setStatus(!status);
+        setStatus(prevState => !prevState);
     }
 
     let progressText = status ? 'Done' : 'In progress';
