@@ -8,7 +8,7 @@ const CarItem = ({ data }) => {
         <div className='car-item'>
             <h3 className='car-title'>{carTitle}</h3>
             <div className='car-img'>
-                <img src={image} alt={`car ${brand} ${model} ${color}"`} />
+                <img src={image} alt={`car ${brand} ${model} ${color}`} />
             </div>
 
             {(engine || basePrice || millage || color) && (
