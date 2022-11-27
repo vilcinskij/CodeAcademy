@@ -14,8 +14,8 @@ const CounterPage = () => {
     const addGradeHandler = () => {
         setGrades(prevState => [...prevState, count])
         setCount(countDefault)
+        
     }
-
     return (
         <div id="numbers">
             <input type="number" value={count} min={1} max={10} onChange={counterInputHandler} />

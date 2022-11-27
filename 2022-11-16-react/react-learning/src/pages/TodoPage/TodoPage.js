@@ -1,40 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TodoItem from '../../components/TodoItem/TodoItem'
 
 const TodoPage = () => {
-    let todoList = [
-        {
-            title: 'Task1',
+
+    const [toList, setTodoList] = useState([]);
+    const [todoItem, setTodoItem] = useState('')
+
+    const submitHandler = (event) => {
+        event.preventDefault()
+        let input = event.target.elements['todo-input'].value;
+
+        let todoData = {
+            title: input,
             done: false
-        },
-        {
-            title: 'Task2',
-            done: true
-        },
-        {
-            title: 'Task3',
-            done: false
-        },
-        {
-            title: 'Task4',
-            done: true
         }
 
-    ]
+        setTodoList(prevState => [todoData, ...prevState])
+    }
 
-    let pageTitle = todoList.length > 0 ? 'ToDo List:' : 'No items'
+    let pageTitle = toList.length > 0 ? 'ToDo List:' : 'No items'
 
     function renderTodoItem() {
-        let todoItem = todoList.map((item, i) => {
+        let todoItem = toList.map((item, i) => {
             return <TodoItem key={i} data={item} />
         })
         return todoItem
     }
 
+    const todoInputHandler = event => setTodoItem(event.target.value)
+
+
     return (
         <div className='main-content'>
             <h2 className='page-title'>{pageTitle}</h2>
-            {todoList.length > 0 && renderTodoItem()}
+            <form onSubmit={submitHandler}>
+                <label htmlFor='todo-input'>Enter your todo</label>
+                <input type="text" id='todo-input' value={todoItem} onChange={todoInputHandler} />
+                <input type="submit" value="Add" />
+            </form>
+            {toList.length > 0 && renderTodoItem()}
         </div>
     )
 }
