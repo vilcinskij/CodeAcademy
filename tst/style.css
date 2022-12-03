@@ -1,0 +1,22 @@
+/* section {
+    display: flex;
+    height: 200px;
+    justify-content: flex-end;
+}
+
+h2 {
+    align-self: flex-end;
+} */
+
+section {
+    /* display: grid;
+    grid-template-columns: 150px 200px 1fr;
+    grid-template-rows: 50px 150px;
+    background-color: rgba(0, 0, 0, 0); */
+    font-size: 15px;
+}
+
+/* h2 {
+    font-size: 2em;
+    margin: 1em;
+} */

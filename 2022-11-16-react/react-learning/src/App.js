@@ -14,8 +14,7 @@ import PostPage from './pages/PostPage/PostPage';
 function App() {
   return (
     <>
-    <Navigation/>
-      
+      <Navigation />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/shopping-list' element={<ShoppingPage />} />

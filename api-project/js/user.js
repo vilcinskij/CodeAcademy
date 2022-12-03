@@ -8,8 +8,8 @@ async function init() {
    const postsWrapper = document.querySelector('#posts-wrapper');
    const albumsWrapper = document.querySelector('#albums-wrapper');
 
-   const res = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}?_embed=posts&_embed=albums`)
-   const user = await res.json()
+   const res = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}?_embed=posts&_embed=albums`);
+   const user = await res.json();
 
    document.title = user.name
 
