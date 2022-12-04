@@ -1,0 +1,114 @@
+[
+    {
+        "title": "„Salesforce“ CRM – pradedančių",
+        "description": "„Salesforce“ – įmonės operacinė sistema, leidžianti skirtingiems padaliniams sklandžiai dalintis informacija, sėkmingiau aptarnauti klientus, didinti produktyvumą, o svarbiausia – efektyviau išnaudoti sukauptus duomenis.",
+        "label": "Naujas",
+        "features": {
+            "level": "1 lygys",
+            "time": "Vakarais"
+        },
+        "logo": "https://codeacademy.lt/wp-content/uploads/2022/08/Black-18.svg"
+    },
+    {
+        "title": "Front-end Serverless",
+        "code": "223002583",
+        "description": "Front-End programuotojas, pasitelkdamas HTML, CSS ir JavaScript, kuria vartotojui matomą sąsają. Todėl jo darbas yra ne tik techninio, bet ir kūrybinio pobūdžio.",
+        "label": "Finansuojama UŽT",
+        "features": {
+            "time": "Dienomis"
+        },
+        "logo": "https://codeacademy.lt/wp-content/uploads//2021/03/Fron-End_dark-1.svg"
+    },
+    {
+        "title": "TypeScript programa",
+        "code": "223002404",
+        "description": "Front-End programuotojas – tikra būtinybė moderniam verslui, todėl ši sritis yra paklausiausia darbo rinkoje.",
+        "label": "Finansuojama UŽT",
+        "features": {
+            "time": "Dienomis"
+        },
+        "logo": "https://codeacademy.lt/wp-content/uploads//2021/04/TS_w.svg"
+    },
+    {
+        "title": "Web Dizainas UX/UI – pradedančių",
+        "description": "Web dizainas UX/UI yra būtina puslapio gyvybės sąlyga. Tai informacijos pateikimas vizualiu būdu siekiant geriausios vartotojo patirties ir maksimaliai atsižvelgiant į jo patogumą bei teikiamą naudą.",
+        "label": "Populiaru",
+        "features": {
+            "level": "1 lygys",
+            "time": "Vakarais"
+        },
+        "logo": "https://codeacademy.lt/wp-content/uploads//2021/05/UI_dark.svg"
+    },
+    {
+        "title": "Python – pradedantiesiems užimtiems asmenims",
+        "code": "223002626",
+        "description": "Python – aiškiai suprantama ir greitai išmokstama, tačiau labai universali ir galinga programavimo kalba, todėl šią kalbą išmokti yra nesunku, o ja naudotis – smagu ir patogu.",
+        "label": "Finansuojama UŽT",
+        "features": {
+            "time": "Vakarais"
+        },
+        "logo": "https://codeacademy.lt/wp-content/uploads//2021/03/Python_dark-1.svg"
+    },
+    {
+        "title": "Frontend pradedantiesiems užimtiems asmenims",
+        "code": "223002622",
+        "description": "Front-End programuotojas, pasitelkdamas HTML, CSS ir JavaScript, kuria vartotojui matomą sąsają. Todėl jo darbas yra ne tik techninio, bet ir kūrybinio pobūdžio ir, suprantama, pakankamai glaudžiai susijęs su web dizainu.",
+        "label": "Finansuojama UŽT",
+        "features": {
+            "time": "Vakarais"
+        },
+        "logo": "https://codeacademy.lt/wp-content/uploads//2021/03/Fron-End_dark-1.svg"
+    },
+    {
+        "title": "PHP programa",
+        "code": "223002656",
+        "description": "PHP yra serverio pusės (back-end) programavimo kalba, kuri skaitoma kaip lengvai išmokstama bei viena iš labiausiai naudojamų technologijų visame pasaulyje.",
+        "label": "Finansuojama UŽT",
+        "features": {
+            "time": "Dienomis"
+        },
+        "logo": "https://codeacademy.lt/wp-content/uploads//2021/03/PHP_dark-1.svg"
+    },
+    {
+        "title": "Java 600 val.",
+        "code": "223002560",
+        "description": "Java neformalaus ugdymo programa skirta pradedantiesiems programuotojams, kurie baigę kursus nori gauti formalaus švietimo diplomą.",
+        "label": "Finansuojama UžT",
+        "features": {
+            "time": "Dienomis"
+        },
+        "logo": "https://codeacademy.lt/wp-content/uploads//2021/05/Java_dark.svg"
+    },
+    {
+        "title": "JavaScript programuotojo modulinė profesinio mokymo programa",
+        "code": "T43061306",
+        "description": "JavaScript formalaus ugdymo programa skirta pradedantiesiems programuotojams, kurie baigę kursus nori gauti formalaus švietimo diplomą.",
+        "label": "Formalus švietimas",
+        "features": {
+            "time": "Dienomis"
+        },
+        "logo": "https://codeacademy.lt/wp-content/uploads//2021/03/JS_w.svg"
+    },
+    {
+        "title": "Dirbtinis Intelektas – pradedančių studijos",
+        "code": "Ateities technologija, kurią galite mokytis šiandien! Dirbtinio intelekto išmanymas specialistui suteikia milžinišką profesinį ir finansinį pranašumą darbo rinkoje. ",
+        "description": "",
+        "label": "Nemokama",
+        "features": {
+            "level": "Nemokamos studijos",
+            "time": "Vakarais"
+        },
+        "logo": "https://codeacademy.lt/wp-content/uploads//2021/03/AI_dark-1.svg"
+    },
+    {
+        "title": ".NET – pradedančių studijos",
+        "description": ".NET, tai populiarus ir patikimas C# programavimo kalbos karkasas. .NET pasižymi lankstumu, šį karkasą pakankamai nesunku išmokti, o naudojamas jis yra labai plačiai. ",
+        "label": "Nemokama",
+        "features": {
+            "level": "1 + 2 lygis",
+            "time": "Vakarais"
+        },
+        "logo": "https://codeacademy.lt/wp-content/uploads//2021/03/Net_dark-1.svg"
+    }
+]
+
