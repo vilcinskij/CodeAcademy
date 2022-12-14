@@ -1,0 +1,224 @@
+[
+    {
+        "title": "Black Adam",
+        "rating": {
+            "average": 7.1,
+            "votes": 44000
+        },
+        "year": 2022,
+        "description": "Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods-and imprisoned just as quickly-Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.",
+        "genres": [
+            "action",
+            "adventure",
+            "Fantasy"
+        ],
+        "directors": [
+            "Jaume Collet-Serra"
+        ],
+        "cast": [
+            "Dwayne Johnson",
+            "Aldis Hodge",
+            "Pierce Brosnan"
+        ]
+    },
+    {
+        "title": "Kantara",
+        "rating": {
+            "average": 9.3,
+            "votes": 46000
+        },
+        "year": 2022,
+        "description": "It involves culture of Kambla and Bhootha Kola. A human and nature conflict where Shiva is the rebellion who works against nature. A loop leads to war between villagers and evil forces. Will he able to replace peace in the village?",
+        "genres": [
+            "action",
+            "adventure",
+            "Drama"
+        ],
+        "directors": [
+            "Rishab Shetty"
+        ],
+        "cast": [
+            "Rishab Shetty",
+            "Sapthami Gowda",
+            "Kishore Kumar G."
+        ]
+    },
+    {
+        "title": "House of the Dragon",
+        "rating": {
+            "average": 8.6,
+            "votes": 203000
+        },
+        "year": 2022,
+        "description": "An internal succession war within House Targaryen at the height of its power, 172 years before the birth of Daenerys Targaryen.",
+        "genres": [
+            "action",
+            "adventure",
+            "Drama"
+        ],
+        "directors": [
+            "Ryan J. Condal",
+            "George R.R. Martin"
+        ],
+        "cast": [
+            "Rhys Ifans",
+            "Matt Smith",
+            "Fabien Frankel"
+        ]
+    },
+    {
+        "title": "Dahmer - Monster: The Jeffrey Dahmer Story",
+        "rating": {
+            "average": 8.1,
+            "votes": 88000
+        },
+        "year": 2022,
+        "description": "Story of the Milwaukee Monster told from the perspective of the victims and police incompetence that allowed the Wisconsin native to go on a multiyear killing spree.",
+        "genres": [
+            "Biography",
+            "Crime",
+            "Drama"
+        ],
+        "directors": [
+            "Ian Brennan",
+            "Ryan Murphy"
+        ],
+        "cast": [
+            "Evan Peters",
+            "Richard Jenkins",
+            "Molly Ringwald"
+        ]
+    },
+    {
+        "title": "Bullet Train",
+        "rating": {
+            "average": 7.4,
+            "votes": 149000
+        },
+        "year": 2022,
+        "description": "Five assassins aboard a swiftly-moving bullet train find out that their missions have something in common.",
+        "genres": [
+            "Action",
+            "Comedy",
+            "Thriller"
+        ],
+        "directors": [
+            "David Leitch"
+        ],
+        "cast": [
+            "Brad Pitt",
+            "Joey King",
+            "Aaron Taylor-Johnson"
+        ]
+    },
+    {
+        "title": "Werewolf by Night",
+        "rating": {
+            "average": 7.3,
+            "votes": 37000
+        },
+        "year": 2022,
+        "description": "Follows a lycanthrope superhero who fights evil using the abilities given to him by a curse brought on by his bloodline.",
+        "genres": [
+            "Action",
+            "Adventure",
+            "Comedy"
+        ],
+        "directors": [
+            "Michael Giacchino"
+        ],
+        "cast": [
+            "Gael García Bernal",
+            "Laura Donnelly",
+            "Harriet Sansom Harris"
+        ]
+    },
+    {
+        "title": "Top Gun: Maverick",
+        "rating": {
+            "average": 8.4,
+            "votes": 408000
+        },
+        "year": 2022,
+        "description": "After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past when he leads TOP GUN's elite graduates on a mission that demands the ultimate sacrifice from those chosen to fly it.",
+        "genres": [
+            "Action",
+            "Drama"
+        ],
+        "directors": [
+            "Joseph Kosinski"
+        ],
+        "cast": [
+            "Tom Cruise",
+            "Jennifer Connelly",
+            "Miles Teller"
+        ]
+    },
+    {
+        "title": "Andor",
+        "rating": {
+            "average": 8.1,
+            "votes": 36000
+        },
+        "year": 2022,
+        "description": "Prequel series to Star Wars' 'Rogue One'. In an era filled with danger, deception and intrigue, Cassian will embark on the path that is destined to turn him into a Rebel hero.",
+        "genres": [
+            "Action",
+            "Adventure",
+            "Drama"
+        ],
+        "directors": [
+            "Tony Gilroy"
+        ],
+        "cast": [
+            "Diego Luna",
+            "Stellan Skarsgård",
+            "Genevieve O'Reilly"
+        ]
+    },
+    {
+        "title": "Breaking Bad",
+        "rating": {
+            "average": 9.5,
+            "votes": 1900000
+        },
+        "year": 2008,
+        "description": "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.",
+        "genres": [
+            "Crime",
+            "Drama",
+            "Thriller"
+        ],
+        "directors": [
+            "Vince Gilligan"
+        ],
+        "cast": [
+            "Bryan Cranston",
+            "Aaron Paul",
+            "Anna Gunn"
+        ]
+    },
+    {
+        "title": "Everything Everywhere All at Once",
+        "rating": {
+            "average": 8.1,
+            "votes": 225000
+        },
+        "year": 2022,
+        "description": "An aging Chinese immigrant is swept up in an insane adventure, in which she alone can save the world by exploring other universes connecting with the lives she could have led.",
+        "genres": [
+            "Action",
+            "Adventure",
+            "Comedy"
+        ],
+        "directors": [
+            "Dan Kwan",
+            "Daniel Scheinert"
+        ],
+        "cast": [
+            "Michelle Yeoh",
+            "Stephanie Hsu",
+            "Jamie Lee Curtis"
+        ]
+    }
+]

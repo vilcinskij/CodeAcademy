@@ -6,6 +6,8 @@ import MaxWidth from '../../components/UI/MaxWidth/MaxWidth';
 import ProgramsItem from '../../components/ProgramsItem/ProgramsItem';
 import './ProgramsPage.css';
 import ProgramsFilter from './ProgramsPageSections/ProgramsFilter/ProgramsFilter';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 
 export default function ProgramsPage() {
@@ -51,8 +53,19 @@ export default function ProgramsPage() {
         }
     ]
 
+    const [programs, setPrograms] = useState([])
+
+    useEffect(() => {
+        fetch('./movies.json')
+            .then(res => res.json())
+            .then(programsData => {
+                console.log(programsData);
+                setPrograms(programsData)
+            })
+    }, [])
+
     function renderProgramsItem() {
-        let programsItem = programsArr.map((item, i) => {
+        let programsItem = programs.map((item, i) => {
             return <ProgramsItem key={i} data={item} />
         })
         return programsItem
