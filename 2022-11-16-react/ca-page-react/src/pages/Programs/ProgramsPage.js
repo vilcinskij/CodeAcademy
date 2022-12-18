@@ -12,51 +12,51 @@ import { useState } from 'react';
 
 export default function ProgramsPage() {
 
-    const programsArr = [
-        {
-            title: "„Salesforce“ CRM – pradedančių",
-            description: "„Salesforce“ – įmonės operacinė sistema, leidžianti skirtingiems padaliniams sklandžiai dalintis informacija, sėkmingiau aptarnauti klientus, didinti produktyvumą, o svarbiausia – efektyviau išnaudoti sukauptus duomenis.",
-            label: 'Naujas',
-            features: {
-                level: '1 lygys',
-                time: 'Vakarais'
-            },
-            logo: <SalesforceLogo />
-        },
-        {
-            title: "Front-end Serverless (223002583)",
-            description: "Front-End programuotojas, pasitelkdamas HTML, CSS ir JavaScript, kuria vartotojui matomą sąsają. Todėl jo darbas yra ne tik techninio, bet ir kūrybinio pobūdžio.",
-            label: 'Finansuojama UŽT',
-            features: {
-                time: 'Dienomis'
-            },
-            logo: <FrontendLogo />
-        },
-        {
-            title: "TypeScript programa (223002404)",
-            description: "Front-End programuotojas – tikra būtinybė moderniam verslui, todėl ši sritis yra paklausiausia darbo rinkoje.",
-            label: 'Finansuojama UŽT',
-            features: {
-                time: 'Dienomis'
-            },
-            logo: <TypescriptLogo />
-        },
-        {
-            title: "Web Dizainas UX/UI – pradedančių",
-            description: "Web dizainas UX/UI yra būtina puslapio gyvybės sąlyga. Tai informacijos pateikimas vizualiu būdu siekiant geriausios vartotojo patirties ir maksimaliai atsižvelgiant į jo patogumą bei teikiamą naudą.",
-            label: 'Populiaru',
-            features: {
-                level: '1 lygys',
-                time: 'Vakarais'
-            },
-            logo: <UxuiLogo />
-        }
-    ]
+    // const programsArr = [
+    //     {
+    //         title: "„Salesforce“ CRM – pradedančių",
+    //         description: "„Salesforce“ – įmonės operacinė sistema, leidžianti skirtingiems padaliniams sklandžiai dalintis informacija, sėkmingiau aptarnauti klientus, didinti produktyvumą, o svarbiausia – efektyviau išnaudoti sukauptus duomenis.",
+    //         label: 'Naujas',
+    //         features: {
+    //             level: '1 lygys',
+    //             time: 'Vakarais'
+    //         },
+    //         logo: <SalesforceLogo />
+    //     },
+    //     {
+    //         title: "Front-end Serverless (223002583)",
+    //         description: "Front-End programuotojas, pasitelkdamas HTML, CSS ir JavaScript, kuria vartotojui matomą sąsają. Todėl jo darbas yra ne tik techninio, bet ir kūrybinio pobūdžio.",
+    //         label: 'Finansuojama UŽT',
+    //         features: {
+    //             time: 'Dienomis'
+    //         },
+    //         logo: <FrontendLogo />
+    //     },
+    //     {
+    //         title: "TypeScript programa (223002404)",
+    //         description: "Front-End programuotojas – tikra būtinybė moderniam verslui, todėl ši sritis yra paklausiausia darbo rinkoje.",
+    //         label: 'Finansuojama UŽT',
+    //         features: {
+    //             time: 'Dienomis'
+    //         },
+    //         logo: <TypescriptLogo />
+    //     },
+    //     {
+    //         title: "Web Dizainas UX/UI – pradedančių",
+    //         description: "Web dizainas UX/UI yra būtina puslapio gyvybės sąlyga. Tai informacijos pateikimas vizualiu būdu siekiant geriausios vartotojo patirties ir maksimaliai atsižvelgiant į jo patogumą bei teikiamą naudą.",
+    //         label: 'Populiaru',
+    //         features: {
+    //             level: '1 lygys',
+    //             time: 'Vakarais'
+    //         },
+    //         logo: <UxuiLogo />
+    //     }
+    // ]
 
     const [programs, setPrograms] = useState([])
 
     useEffect(() => {
-        fetch('./movies.json')
+        fetch('programs.JSON')
             .then(res => res.json())
             .then(programsData => {
                 console.log(programsData);
